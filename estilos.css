@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+:root {
+    --color-fondo: radial-gradient(circle at center, #113344 0%, #06111c 70%, #060d33 100%);
+}
+
+body {
+
+    background: var(--color-fondo);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.Imagen img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(rgb(43, 39, 39), rgb(0, 0, 0), rgb(255, 255, 255), alpha);
+
+
+}
+
+
+
+
