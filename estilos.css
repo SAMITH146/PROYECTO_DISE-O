@@ -20,9 +20,7 @@ body {
     width: 300px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(rgb(43, 39, 39), rgb(0, 0, 0), rgb(255, 255, 255), alpha);
-
-
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 
