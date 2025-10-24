@@ -1,34 +1,97 @@
-@import url(estilos.css);
+@import url(estilos.css); 
 
+img{
+        width: 150px;
+        margin:20px auto;
+            
+    
+}
 .login-rol{
-    --color-fondo-login:#1e1e1e;
-    --color-secundario-login:#2c2c2c;
+    --color-fondo-login:#ffffff;
+    --color-secundario-login:#cac1c1;
     --color-principal-login:#00bcd4;
     --color-principal-hover-login:#0097a7;
-    --color-texto-login:#f5f5f5;
-    --color-texto-secundario-login:#bbb;
+    --color-texto-login:#000000;
+    --color-texto-secundario-login:#504343;
     --color-borde-login:#555;
     --fuente-loguin:"Poppins",sans-serif;
-    width: 350px;
+    width: 500px;
     margin: 100px auto;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;   
     border-radius: 15px;
-    background-color:#1e1e1e;
+    background-color:var(--color-fondo-login);
     box-shadow: 0 0 15px rgba(0, 0, 0,0,4);
-    gap: 15px;
+    gap: 37px;
     
 }
-label{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.login-rol label{
+    font-size: 20px;
+    color:var(--color-texto-secundario-login);
+    align-self: flex-start;
+    margin-left: 5px;
+    font-weight: 600;
     
 }
-.login-rol h1{
+.login-rol h2{
+  font-size: 28px;
+  color: var(--color-principal-login);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--color-principal-login);
+  padding-bottom: 5px;
     
-    
+}
+.login-rol input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-borde-login);
+  border-radius: 8px;
+  background: var(--color-secundario-login);
+  color: var(--color-texto-login);
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-rol button {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-principal-login);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-texto-login);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+  
+}
+.login-rol button:hover {
+  background: var(--color-principal-hover-login);
+}
+.cambio-rol {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--color-texto-secundario-login);
+  font-size: 18px;
+}
+
+
+.cambio-rol a {
+  color: var(--color-principal-login);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.cambio-rol a:hover {
+  color: var(--color-principal-hover-login);
 }
