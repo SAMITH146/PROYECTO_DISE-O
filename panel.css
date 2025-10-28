@@ -1,0 +1,54 @@
+@import url(estilos.css);
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    background-color: var(--color-fondo-navbar);
+    padding: 0px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: relative;
+    height: 100px;
+
+
+}
+
+.logo-top {
+    width: 90px;
+    height: auto;
+    padding: 5px;
+
+}
+
+.nav-links {
+    margin-left: 10px;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: var(--color-letra-navbar);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    border-radius: 10px;
+    width: 4rem;
+    text-align: center;
+    padding: 8px 12px;
+
+}
+
+#end {
+    margin-left: 150vh;
+}
+
+.nav-links a:hover {
+    color: var(--color-principal-hover);
+}
+#img-cerrar-secion{
+    width: 25px;
+    height: 20px;
+}
