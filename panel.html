@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="panel.css" />
-    <title>Document</title>
+    <title>Panel de control</title>
   </head>
   <body>
-    <div class="navbar">
-      <img class="logo-top" src="LogoI_mg/Logo_blanco.png" alt="logoMotor" />
-      <nav class="nav-links">
-        <a href="#">Agregar Clientes </a>
-        <a href="#">En actividad</a>
-        <a id="end" href="Login.html">Cerrar Cesion</a>
+    <header class="navbar">
+      <!-- LOGO -->
+      <div class="navbar__logo">
+        <img
+          src="LogoI_mg/Logo_blanco.png"
+          alt="Logo del taller"
+          class="navbar__logo-img"
+        />
+      </div>
 
-        <a img id="img-cerrar-secion" src="LogoI_mg/cerrar-sesion.png" alt="img-cerrar-secion"> </a>
+      <!-- LINKS DE NAVEGACIÓN -->
+      <nav class="navbar__menu">
+        <a href="agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+        <a href="#" class="navbar__menu-item">En Actividad</a>
+        <a href="#" class="navbar__menu-item">En Actividad</a> 
       </nav>
-    </div>
+
+      <!-- BOTÓN DE CERRAR SESIÓN -->
+      <div class="navbar__session">
+        <a href="Login.html" class="navbar__session-btn">
+          <img
+            src="LogoI_mg/cerrar-sesion.png"
+            alt="Cerrar sesión"
+            class="navbar__session-icon"
+          />
+          Cerrar Sesión
+        </a>
+      </div>
+    </header>
   </body>
 </html>

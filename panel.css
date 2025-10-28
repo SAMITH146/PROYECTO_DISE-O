@@ -1,54 +1,69 @@
 @import url(estilos.css);
-
+*{
+    font-family: var(--fuente);
+    cursor: default;
+}
 
 .navbar {
     display: flex;
     align-items: center;
-    height: auto;
     justify-content: space-between;
     background-color: var(--color-fondo-navbar);
-    padding: 0px 40px;
+    padding: 0 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    position: relative;
     height: 100px;
-
-
+    width: 100%;
+    color: var(--color-letra-navbar);
 }
 
-.logo-top {
-    width: 90px;
+
+.navbar__logo-img {
+    width: 80px;
     height: auto;
     padding: 5px;
-
+    background-color: rgb(1, 59, 82);
+    border-radius: 10px;
 }
 
-.nav-links {
-    margin-left: 10px;
+
+.navbar__menu {
     display: flex;
     gap: 40px;
+    position: relative;
+    right: 60vh;
 }
 
-.nav-links a {
-    color: var(--color-letra-navbar);
+.navbar__menu-item {
+    color: var(--color-letra-navbar, );
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    font-size: 1rem;
     border-radius: 10px;
-    width: 4rem;
-    text-align: center;
-    padding: 8px 12px;
-
+    padding: 8px 15px;
+    transition: 0.3s ease;
 }
 
-#end {
-    margin-left: 150vh;
+.navbar__menu-item:hover {
+    background-color: var(--color-principal-hover, );
 }
 
-.nav-links a:hover {
-    color: var(--color-principal-hover);
+.navbar__session-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-principal-login, );
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
 }
-#img-cerrar-secion{
-    width: 25px;
-    height: 20px;
+
+.navbar__session-btn:hover {
+    background-color: var(--color-principal-hover-login, );
+}
+
+.navbar__session-icon {
+    width: 24px;
+    height: 24px;
 }
