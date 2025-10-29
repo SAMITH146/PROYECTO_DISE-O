@@ -1,4 +1,5 @@
 @import url(estilos.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +18,14 @@
     --fuente: 'Nunito';
     --color-fondo-navbar: #0e2ecc44;
     --color-letra-navbar: rgb(255, 255, 255);
+    --color-boton: #007b8f;
+    --color-boton-hover: #00bcd4;
+    --color-input-fondo: #ffffff;
+    --color-input-borde: #ffffff;
 }
+
+
+
 
 body {
     height: 100vh;
