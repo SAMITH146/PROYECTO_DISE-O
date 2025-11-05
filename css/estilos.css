@@ -1,0 +1,32 @@
+@import url(variables.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{ 
+    height: 100vh;
+    font-family: var(--fuente);
+    background: var(--color-fondo);
+    color: var(--color-texto-login);
+    margin: 0;
+    padding: 0;
+
+}
+.container-index {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Img-init {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}

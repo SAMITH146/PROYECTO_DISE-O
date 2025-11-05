@@ -45,22 +45,25 @@
 
 .navbar__menu-item:hover {
     background-color: var(--color-principal-hover, );
+    color:var(--colortexto-segundario-nav);
 }
 
 .navbar__session-btn {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: var(--color-principal-login, );
+
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 8px;
     font-weight: 600;
     transition: background 0.3s ease;
+    color: var(--color-letra-navbar, );
 }
 
 .navbar__session-btn:hover {
-    background-color: var(--color-principal-hover-login, );
+    background-color: var(--color-principal-hover, );
+    color:var(--colortexto-segundario-nav,)
 }
 
 .navbar__session-icon {

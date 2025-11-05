@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Cliente</title>
+    <link rel="stylesheet" href="../css/agregar-cliente.css" />
+  </head>
+  <body class="BodyAgregarCliente">
+    <img
+      src="../LogoI_mg/fondo_engranaje-png.png"
+      alt="Fondo decorativo"
+      class="fondo"
+    />
+
+    <div class="contenedor-formulario">
+      <div class="formulario">
+        <h1 class="formulario__titulo">Agregar Cliente</h1>
+        <p class="formulario__subtitulo">
+          Ingrese los campos correspondientes y emita el registro
+        </p>
+
+        <form class="formulario__campos">
+          <div class="formulario__grupo">
+            <label for="nombre" class="formulario__label">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="formulario__input"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="identificacion" class="formulario__label">
+              Número de identificación
+            </label>
+            <input
+              type="text"
+              id="identificacion"
+              name="identificacion"
+              class="formulario__input"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="telefono" class="formulario__label">Teléfono</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              class="formulario__input"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="correo" class="formulario__label"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              class="formulario__input"
+              required
+            />
+          </div>
+
+          <button type="submit" class="formulario__boton">Siguiente</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
