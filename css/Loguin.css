@@ -67,7 +67,6 @@
 
   .boton {
     width: 100%;
-    display: inline-block;
     background-color: var(--color-boton);
     color: var(--color-texto-login);
     padding: 12px 20px;

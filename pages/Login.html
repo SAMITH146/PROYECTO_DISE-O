@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/Loguin.css" />
-    <title>Loguin</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
-    />
-  </head>
 
-  <body>
-    <div class="container-login">
-      <div class="login">
-        <img
-          class="logo-login"
-          src="../LogoI_mg/Logo de MotorDesk.png"
-          alt="LogoMotor"
-        />
-        <h2 class="texto-login">Login</h2>
-        <form>
-          <label class="pin-login" for="pin">Ingrese su PIN</label>
-          <input class="contraseña-login" type="password" id="pin" maxlength="6" placeholder="••••••" />
-          <a  href="panel.html" class="boton">Continuar</a>
-        </form>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/Loguin.css" />
+  <title>Loguin</title>
+</head>
+
+<body>
+  <div class="container-login">
+    <div class="login">
+      <img class="logo-login" src="../LogoI_mg/LogoMotorDesk.png" alt="LogoMotor" />
+      <h2 class="texto-login">Login</h2>
+
+      <form class="formulario-login" action="../pages/panel.html" method="get" >
+        <label class="pin-login" for="pin">Ingrese su PIN</label>
+        <input class="contraseña-login" type="password" id="pin" maxlength="6" placeholder="••••••" />
+
+        <button class="boton" type="submit">Iniciar Sesión</button>
+
+      </form>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

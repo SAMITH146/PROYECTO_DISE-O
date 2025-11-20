@@ -2,7 +2,7 @@
 
 :root {
     --color-fondo: radial-gradient(circle at center, #113344 0%, #06111c 70%, #060d33 100%);
-    --color-fondo-segundario: rgba(255, 255, 255, 0.579);
+    --color-fondo-segundario: rgba(166, 169, 172, 0.959);
     --color-label: #000000;
     --color-principal-login: #1d1e1e;
     --color-principal-hover: #87ebf6;
