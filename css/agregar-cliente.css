@@ -8,7 +8,7 @@
 
 .contenedor-formulario {
   min-height: 100vh;
-  background: var(--color-fondo);
+  /* background: var(--color-fondo); */
   color: var(--color-texto);
   display: flex;
   align-items: center;
@@ -75,25 +75,28 @@
   background-color: var(--color-boton);
   color: #fff;
   border: none;
-  padding: 12px 0;
+  padding: 15px;
   border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 .formulario__boton:hover {
   background-color: var(--color-principal-hover);
 }
 
-.BodyAgregarCliente .fondo {
-  position: fixed;
-
-  left: 80.6rem;
-  width: 100vh;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.3;
-
+.BodyAgregarCliente {
+  background: var(--color-fondo); ;
 }
+
+.Fondo {
+  background: url("../LogoI_mg/Engranaje_2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:100% auto;
+}
+
+

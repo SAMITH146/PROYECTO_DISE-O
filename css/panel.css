@@ -1,5 +1,6 @@
 @import url(estilos.css);
-*{
+
+* {
     font-family: var(--fuente);
     cursor: default;
 }
@@ -28,9 +29,10 @@
 
 .navbar__menu {
     display: flex;
-    gap: 40px;
+    gap: 8rem;
     position: relative;
-    right: 60vh;
+
+
 }
 
 .navbar__menu-item {
@@ -45,7 +47,7 @@
 
 .navbar__menu-item:hover {
     background-color: var(--color-principal-hover, );
-    color:var(--colortexto-segundario-nav);
+    color: var(--colortexto-segundario-nav);
 }
 
 .navbar__session-btn {
@@ -63,10 +65,113 @@
 
 .navbar__session-btn:hover {
     background-color: var(--color-principal-hover, );
-    color:var(--colortexto-segundario-nav,)
+    color: var(--colortexto-segundario-nav, )
 }
 
 .navbar__session-icon {
     width: 24px;
     height: 24px;
+}
+
+.container-grafica {
+
+  
+    max-width: 800px;
+    background: #6699ff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+  
+
+}
+
+.grafica {
+    height: 200px;
+    background: linear-gradient(to top, #000000 100%, transparent 50%);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 25px 0;
+}
+
+.barra {
+    width: 12%;
+    background: #007bff;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+}
+
+.barra span {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    font-size: 0.75em;
+}
+
+#b1 {
+    left: 5%;
+    height: 50%;
+    background: #0e35b3;
+}
+
+#b2 {
+    left: 20%;
+    height: 89%;
+    background: #2563eb;
+}
+
+#b3 {
+    left: 35%;
+    height: 89%;
+    background: #182955;
+}
+
+#b4 {
+    left: 50%;
+    height: 90%;
+    background: #1e40af;
+}
+
+#b5 {
+    left: 65%;
+    height: 60%;
+    background: #2a4da7;
+    
+}
+
+#b6 {
+    left: 80%;
+    height: 80%;
+    background: #edf2fc;
+    text-align:center
+}   
+
+.resumen {
+    color: var(--color-letra-navbar);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    background: #1c1d20;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.resumen div {
+    text-align: center;
+}
+
+.resumen span {
+    display: block;
+    font-size: 1.5em;
+    color: #00e0ff;
+    margin-top: 5px;
 }

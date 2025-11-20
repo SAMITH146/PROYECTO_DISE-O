@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/panel.css" />
-    <title>Panel de control</title>
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="navbar__logo">
-        <img
-          src="../LogoI_mg/Logo_blanco.png"
-          alt="Logo del taller"
-          class="navbar__logo-img"
-        />
-      </div>
 
-      <!-- LINKS DE NAVEGACIÓN -->
-      <nav class="navbar__menu">
-        <a href="../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
-        <a href="#" class="navbar__menu-item">En Actividad</a>
-        <a href="#" class="navbar__menu-item">En Actividad</a> 
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/panel.css" />
+  <title>Panel de control</title>
+</head>
 
-      <!-- BOTÓN DE CERRAR SESIÓN -->
-      <div class="navbar__session">
-        <a href="Login.html" class="navbar__session-btn">
-          <img
-            src="../LogoI_mg/cerrar-sesion.png"
-            alt="Cerrar sesión"
-            class="navbar__session-icon"
-          />
-          Cerrar Sesión
-        </a>
-      </div>
-    </header>
-  </body>
+<body class="BodyPanel">
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller" class="navbar__logo-img" />
+    </div>
+    <nav class="navbar__menu">
+      <a href="../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+      <a href="#" class="navbar__menu-item">En Actividad</a>
+      <a href="#" class="navbar__menu-item">En Actividad</a>
+    </nav>
+    <div class="navbar__session">
+      <a href="Login.html" class="navbar__session-btn">
+        <img src="../LogoI_mg/cerrar-sesion.png" alt="Cerrar sesión" class="navbar__session-icon" />
+        Cerrar Sesión
+      </a>
+    </div>
+  </header>
+  <div class="container-grafica">
+    <div class="grafica">
+      <div class="barra" id="b1"><span>Lun</span></div>
+      <div class="barra" id="b2"><span>Mar</span></div>
+      <div class="barra" id="b3"><span>Mié</span></div>
+      <div class="barra" id="b4"><span>Jue</span></div>
+      <div class="barra" id="b5"><span>Vie</span></div>
+      <div class="barra" id="b6"><span>Sáb</span></div>
+    </div>
+    <div class="resumen">
+      <div>Servicios<span>18</span></div>
+      <div>Órdenes<span>12</span></div>
+      <div>Total<span>$2.350.000</span></div>
+    </div>
+</body>
+
 </html>
