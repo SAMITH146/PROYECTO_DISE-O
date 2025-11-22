@@ -3,78 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agregar Cliente</title>
+    <title>Agregar Cliente y Vehículo</title>
     <link rel="stylesheet" href="../css/agregar-cliente.css" />
   </head>
 
-  <body class="BodyAgregarCliente">
-     <div class="logo">
-        <img class="logo-img" src="../LogoI_mg/Logo_blanco.png" alt="Logo de la empresa" />
-      </a>
-  </div>
-    <div class= "Fondo ">
- <div class="contenedor-formulario">
-      <div class="formulario">
-        <h1 class="formulario__titulo">Agregar Cliente</h1>
-        <p class="formulario__subtitulo">
-          Ingrese los campos correspondientes y emita el registro
-        </p>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="navbar__logo">
+        <img src="../LogoI_mg/Logo_blanco.png" class="navbar__logo-img" />
+      </div>
 
-        <form class="formulario__campos">
-          <div class="formulario__grupo">
-            <label for="nombre" class="formulario__label">Nombre</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              class="formulario__input"
-              required
-            />
-          </div>
+      <nav class="navbar__menu">
+        <a href="../pages/agregar-clientes.html" class="navbar__menu-item"
+          >Agregar Clientes</a
+        >
+        <a href="#" class="navbar__menu-item">Orden en curso</a>
+        <a href="#" class="navbar__menu-item">Historial</a>
+      </nav>
 
-          <div class="formulario__grupo">
-            <label for="identificacion" class="formulario__label">
-              Número de identificación
-            </label>
-            <input
-              type="text"
-              id="identificacion"
-              name="identificacion"
-              class="formulario__input"
-              required
-            />
-          </div>
-
-          <div class="formulario__grupo">
-            <label for="telefono" class="formulario__label">Teléfono</label>
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              class="formulario__input"
-              required
-            />
-          </div>
-
-          <div class="formulario__grupo">
-            <label for="correo" class="formulario__label"
-              >Correo electrónico</label
-            >
-            <input
-              type="email"
-              id="correo"
-              name="correo"
-              class="formulario__input"
-              required
-            />
-          </div>
-          <a href="agregar-vehiculo.html"class="formulario__boton">Siguiente</a>
-           
-        </form>
+      <div class="navbar__session">
+        <a href="panel.html" class="navbar__session-btn">
+          <img
+            src="../LogoI_mg/flecha-izquierda.png"
+            class="navbar__session-icon"
+          />
+          Atrás
+        </a>
       </div>
     </div>
-    </div>
 
-   
+    <!-- FORMULARIO ÚNICO CON DOS SECCIONES -->
+    <div class="contenedor-formulario">
+      <form id="formularioCompleto" class="formulario-grande" action="../pages/panel.html" method="get">
+        <!-- SECCIÓN CLIENTE -->
+        <div class="formulario" >
+          <h1 class="formulario__titulo">Datos del Cliente</h1>
+          <p class="formulario__subtitulo">Ingrese los datos del cliente</p>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Nombre</label>
+            <input
+              type="text"
+              class="formulario__input"
+              name="cliente_nombre"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Número de identificación</label>
+            <input
+              type="number"
+              class="formulario__input"
+              name="cliente_documento"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Teléfono</label>
+            <input
+              type="tel"
+              class="formulario__input"
+              name="cliente_telefono"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Correo electrónico</label>
+            <input
+              type="email"
+              class="formulario__input"
+              name="cliente_correo"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- SECCIÓN VEHÍCULO -->
+        <div class="formulario">
+          <h1 class="formulario__titulo">Datos del Vehículo</h1>
+          <p class="formulario__subtitulo">Ingrese los datos del vehículo</p>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Tipo de vehículo</label>
+            <input
+              type="text"
+              class="formulario__input"
+              name="veh_tipo"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Marca</label>
+            <input
+              type="text"
+              class="formulario__input"
+              name="veh_marca"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Modelo</label>
+            <input
+              type="text"
+              class="formulario__input"
+              name="veh_modelo"
+              required
+            />
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__label">Número de placa</label>
+            <input
+              type="text"
+              class="formulario__input"
+              name="veh_placa"
+              required
+            />
+          </div>
+        </div>
+      </form>
+      <div class="contenedor-boton">
+        <button class="formulario__boton" type="submit"  form="formularioCompleto">Guardar Todo</button>
+      </div>
+    </div>
   </body>
 </html>
