@@ -9,38 +9,25 @@
 
 .formulario-grande {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   gap: 40px;
-  width: 100%;
-
-}
-
-.contenedor-formulario {
-  height: 89vh;
-  color: var(--color-texto);
-  display: flex;
+  height:auto;
+  min-height: 70vh;
   align-items: center;
-  justify-content: start;
-  gap: 20px;
+  justify-content: center;
 
-  
 }
 
 .formulario {
-  text-align: center;
   max-width: 450px;
   width: 100%;
+  background-color: var(--color-fondo-segundario);
   padding: 20px;
   border-radius: 20px;
-  z-index: 2;
-  background-color: var(--color-fondo-segundario);
-  
 }
 
 .formulario__titulo {
 
-  font-weight: 600;
+  font-weight: 600px;
   margin-bottom: 5px;
   border-bottom: 2px solid var(--color-principal-login);
 }
@@ -81,22 +68,24 @@
 }
 
 .formulario__boton {
-  width: 150px;
+  width: 180px;
   background-color: var(--color-boton);
   color: #fff;
   border: none;
-  padding: 15px;
+  padding: 15px 20px;
   border-radius: 25px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-align: center;
   
 }
 .contenedor-boton {
   width: 100%;
   display: flex;
-  justify-content: center; /* CENTRADO */
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 30px;  
 }
 
 .formulario__boton:hover {
@@ -105,6 +94,6 @@
 
 .BodyAgregarCliente {
   background: var(--color-fondo);
-  ;
+  
 }
 
