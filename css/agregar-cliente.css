@@ -4,7 +4,7 @@
 
 * {
   font-family: var(--fuente);
-  cursor: default;
+
 }
 
 .formulario-grande {
@@ -29,7 +29,7 @@
 
   font-weight: 600px;
   margin-bottom: 5px;
-  border-bottom: 2px solid var(--color-principal-login);
+  border-bottom: 2px solid var(--color-borde-input);
 }
 
 .formulario__subtitulo {
@@ -52,11 +52,10 @@
 }
 
 .formulario__input {
-  width: 100%;
+  width: 80%;
   padding: 12px 15px;
-  border-radius: 25px;
-  border: 2px solid var(--color-input-borde);
-  background-color: var(--color-input-fondo);
+  border-radius: 10px;
+  border: 2px solid var(--color-borde-input);
   outline: none;
   font-size: 0.95rem;
   color: #000;
@@ -92,8 +91,4 @@
   background-color: var(--color-principal-hover);
 }
 
-.BodyAgregarCliente {
-  background: var(--color-fondo);
-  
-}
 
