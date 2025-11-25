@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Loguin.css" />
+    <title>Login</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/Loguin.css" />
-  <title>Loguin</title>
-</head>
+  <body>
+    <!-- MAIN: Contenido principal -->
+    <main class="container-login">
+      <!-- ARTICLE: Bloque principal del login -->
+      <article class="login">
+        <!-- Logo o encabezado del módulo -->
+        <header class="login__header">
+          <img
+            class="logo-login"
+            src="../LogoI_mg/LogoMotorDesk.png"
+            alt="Logo del taller"
+          />
+          <h2 class="texto-login">Login</h2>
+        </header>
 
-<body>
-  <div class="container-login">
-    <div class="login">
-      <img class="logo-login" src="../LogoI_mg/LogoMotorDesk.png" alt="LogoMotor" />
-      <h2 class="texto-login">Login</h2>
+        <!-- FORM correctamente marcado -->
+        <form
+          class="formulario-login"
+          action="../pages/panel.html"
+          method="get"
+        >
+          <div class="form-group">
+            <label class="pin-login" for="pin">Ingrese su PIN</label>
+            <input
+              class="contraseña-login"
+              type="password"
+              id="pin"
+              name="pin"
+              maxlength="6"
+              required
+              placeholder="••••••"
+            />
+          </div>
 
-      <form class="formulario-login" action="../pages/panel.html" method="get" >
-        <label class="pin-login" for="pin">Ingrese su PIN</label>
-        <input class="contraseña-login" type="password" id="pin" maxlength="6" placeholder="••••••" />
-
-        <button class="boton" type="submit">Iniciar Sesión</button>
-
-      </form>
-    </div>
-  </div>
-</body>
-
+          <button class="boton" type="submit">Iniciar Sesión</button>
+        </form>
+      </article>
+    </main>
+  </body>
 </html>
