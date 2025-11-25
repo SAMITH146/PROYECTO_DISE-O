@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
+     --fuente: 'Nunito';
     --color-fondo: radial-gradient(circle at center, #113344 0%, #06111c 70%, #060d33 100%);
     --color-fondo-segundario: rgba(166, 169, 172, 0.959);
     --color-label: #000000;
@@ -9,13 +10,12 @@
     --color-texto-login: #000000;
     --color-texto-secundario-login: #000000;
     --color-borde-login: #555;
-    --fuente: 'Nunito';
     --color-fondo-navbar: #1b2764;
-    --color-letra-navbar: rgb(255, 255, 255);
+    --color-letra-principal: rgb(255, 255, 255);
     --color-boton: #2f8dbd;
     --color-letras-formulario: #000000;
     --color-input-fondo: #f0f0f0;
     --color-input-borde: #000000;
-    --colortexto-segundario-nav: #163256;
+    --colortexto-segundario-nav: #000000;
 }
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Tipo_orden.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar__logo">
+        <img
+          src="../LogoI_mg/Logo_blanco.png"
+          alt="Logo del taller"
+          class="navbar__logo-img"
+        />
+      </div>
+      <nav class="navbar__menu">
+        <a href="../pages/agregar-clientes.html" class="navbar__menu-item"
+          >Agregar Clientes</a
+        >
+        <a href="#" class="navbar__menu-item">Orden en curso</a>
+        <a href="#" class="navbar__menu-item">Historial</a>
+      </nav>
+      <div class="navbar__session">
+        <a href="Login.html" class="navbar__session-btn">
+          <img
+            src="../LogoI_mg/cerrar-sesion.png"
+            alt="Cerrar sesión"
+            class="navbar__session-icon"
+          />
+          Cerrar Sesión
+        </a>
+      </div>
+    </div>
+    <div class="servicio-selector-container">
+  <h2 class="titulo-servicios">Seleccione el tipo de servicio</h2>
+
+  <div class="servicios-grid">
+
+    <div class="card-servicio" data-servicio="preventivo">
+      <h3>Servicio Preventivo</h3>
+      <p>Evita daños futuros.</p>
+    </div>
+
+    <div class="card-servicio" data-servicio="correctivo">
+      <h3>Servicio Correctivo</h3>
+      <p>Reparación de fallas.</p>
+    </div>
+
+    <div class="card-servicio" data-servicio="diagnostico">
+      <h3>Diagnóstico</h3>
+      <p>Revisión técnica del vehículo.</p>
+    </div>
+
+    <div class="card-servicio" data-servicio="frenos">
+      <h3>Sistema de Frenos</h3>
+      <p>Cambio y rectificación.</p>
+    </div>
+
+    <div class="card-servicio" data-servicio="alineacion">
+      <h3>Alineación y Balanceo</h3>
+      <p>Ajuste de ruedas y dirección.</p>
+    </div>
+
+    <div class="card-servicio" data-servicio="aceite">
+      <h3>Cambio de Aceite</h3>
+      <p>Mantenimiento rápido.</p>
+    </div>
+
+  </div>
+
+  <div class="contenedor-boton">
+    <button id="btnContinuar" class="formulario__boton" disabled>Continuar</button>
+  </div>
+</div>
+
+  </body>
+</html>

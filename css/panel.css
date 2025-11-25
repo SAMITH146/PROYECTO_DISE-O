@@ -6,6 +6,10 @@
 }
 
 .navbar {
+    position: sticky;
+    top: 0 ;
+    left: 0;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,7 +18,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     height: 100px;
     width: 100%;
-    color: var(--color-letra-navbar);
+    color: var( --color-letra-principal);
 }
 
 
@@ -151,7 +155,7 @@
 }   
 
 .resumen {
-    color: var(--color-letra-navbar);
+    color: var(--color-letra-principal);
     display: flex;
     justify-content: space-between;
     margin-top: 25px;

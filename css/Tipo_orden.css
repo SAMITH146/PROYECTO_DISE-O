@@ -1,0 +1,54 @@
+@import url(panel.css);
+
+.servicio-selector-container {
+  width: 100%;
+  padding: 40px;
+  color: var(--color-label);
+}
+
+.titulo-servicios {
+  text-align: center;
+  color: var(--color-letra-principal);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+.card-servicio {
+  background: var(--color-fondo-segundario);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+  border-left: 6px solid var(--color-boton);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.card-servicio h3 {
+  font-weight: 700;
+  color: var(--color-label);
+}
+
+.card-servicio p {
+  color: var(--color-letras-formulario);
+}
+
+.card-servicio:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  border-left-color: var(--color-principal-hover);
+}
+
+.card-servicio.selected {
+  background: white;
+  border-left-color: var(--color-principal-hover);
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
