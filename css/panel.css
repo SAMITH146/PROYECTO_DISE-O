@@ -2,7 +2,6 @@
 
 * {
     font-family: var(--fuente);
-    cursor: default;
 }
 
 .navbar {
@@ -18,7 +17,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     height: 100px;
     width: 100%;
-    color: var( --color-letra-principal);
+    color: var(--color-letra-navbar);
 }
 
 
@@ -40,7 +39,7 @@
 }
 
 .navbar__menu-item {
-    color: var(--color-letra-navbar, );
+    color: var(--color-letra2, );
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
@@ -51,25 +50,24 @@
 
 .navbar__menu-item:hover {
     background-color: var(--color-principal-hover, );
-    color: var(--colortexto-segundario-nav);
+    color: var(--colortexto-hover, )
 }
 
 .navbar__session-btn {
     display: flex;
     align-items: center;
     gap: 10px;
-
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 8px;
     font-weight: 600;
     transition: background 0.3s ease;
-    color: var(--color-letra-navbar, );
+    color: var(--color-letra2, );
 }
 
 .navbar__session-btn:hover {
     background-color: var(--color-principal-hover, );
-    color: var(--colortexto-segundario-nav, )
+    color: var(--colortexto-hover, )
 }
 
 .navbar__session-icon {
@@ -81,7 +79,7 @@
     max-width: 800px;
     background: var(--color-fondo-segundario);
     border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgb(9, 44, 85);
     padding: 30px;
     margin: 40px;
     display: flex;
@@ -95,7 +93,7 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    margin: 25px 0;
+    margin: 30px 0;
 }
 
 .barra {
@@ -155,7 +153,7 @@
 }   
 
 .resumen {
-    color: var(--color-letra-principal);
+    color: var(--color-letra-navbar);
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
@@ -172,6 +170,6 @@
 .resumen span {
     display: block;
     font-size: 1.5em;
-    color: #00e0ff;
+    color: var(--color-letra3);
     margin-top: 5px;
 }

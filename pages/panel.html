@@ -9,36 +9,55 @@
 </head>
 
 <body>
-  <div class="navbar">
+
+  <!-- HEADER: Contiene el logo, menú principal y botón de sesión -->
+  <header class="navbar">
     <div class="navbar__logo">
       <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller" class="navbar__logo-img" />
     </div>
-    <nav class="navbar__menu">
+
+    <!-- NAV: navegación principal -->
+    <nav class="navbar__menu" aria-label="Navegacion principal">
       <a href="../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
       <a href="#" class="navbar__menu-item">Orden en curso</a>
       <a href="#" class="navbar__menu-item">Historial</a>
     </nav>
+
     <div class="navbar__session">
       <a href="Login.html" class="navbar__session-btn">
         <img src="../LogoI_mg/cerrar-sesion.png" alt="Cerrar sesión" class="navbar__session-icon" />
         Cerrar Sesión
       </a>
     </div>
-  </div>
-  <div class="container-grafica">
-    <div class="grafica">
-      <div class="barra" id="b1"><span>Lun</span></div>
-      <div class="barra" id="b2"><span>Mar</span></div>
-      <div class="barra" id="b3"><span>Mié</span></div>
-      <div class="barra" id="b4"><span>Jue</span></div>
-      <div class="barra" id="b5"><span>Vie</span></div>
-      <div class="barra" id="b6"><span>Sáb</span></div>
-    </div>
-    <div class="resumen">
-      <div>Servicios<span>18</span></div>
-      <div>Órdenes<span>12</span></div>
-      <div>Total<span>$2.350.000</span></div>
-    </div>
-</body>
+  </header>
 
+  <!-- MAIN: Contenido principal del panel -->
+  <main class="panel">
+
+    <!-- Sección de gráfica -->
+    <section class="container-grafica">
+      <h2 class="visually-hidden">Estadisticas semanales</h2>
+
+      <div class="grafica">
+        <div class="barra" id="b1"><span>Lun</span></div>
+        <div class="barra" id="b2"><span>Mar</span></div>
+        <div class="barra" id="b3"><span>Mié</span></div>
+        <div class="barra" id="b4"><span>Jue</span></div>
+        <div class="barra" id="b5"><span>Vie</span></div>
+        <div class="barra" id="b6"><span>Sáb</span></div>
+      </div>
+
+      <!-- Resumen semanal -->
+      <aside class="resumen">
+        <div>Servicios <span>18</span></div>
+        <div>Órdenes <span>12</span></div>
+        <div>Total <span>$2.350.000</span></div>
+      </aside>
+
+    </section>
+
+  </main>
+
+
+</body>
 </html>
