@@ -8,13 +8,17 @@
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
+    <!-- HEADER: Barra superior -->
+    <header class="navbar">
       <div class="navbar__logo">
-        <img src="../LogoI_mg/Logo_blanco.png" class="navbar__logo-img" />
+        <img
+          src="../LogoI_mg/Logo_blanco.png"
+          alt="Logo del taller"
+          class="navbar__logo-img"
+        />
       </div>
 
-      <nav class="navbar__menu">
+      <nav class="navbar__menu" aria-label="Navegación principal">
         <a href="../pages/agregar-clientes.html" class="navbar__menu-item"
           >Agregar Clientes</a
         >
@@ -26,24 +30,33 @@
         <a href="panel.html" class="navbar__session-btn">
           <img
             src="../LogoI_mg/flecha-izquierda.png"
+            alt="Ir al panel"
             class="navbar__session-icon"
           />
           Atrás
         </a>
       </div>
-    </div>
+    </header>
 
-    <!-- FORMULARIO ÚNICO CON DOS SECCIONES -->
-   
-      <form id="formularioCompleto" class="formulario-grande" action="../pages/Tipo_orden.html" method="get">
+    <!-- MAIN: Contenido principal -->
+    <main class="contenido-principal">
+      <!-- FORMULARIO COMPLETO -->
+      <form
+        id="formularioCompleto"
+        class="formulario-grande"
+        action="../pages/Tipo_orden.html"
+        method="get"
+      >
         <!-- SECCIÓN CLIENTE -->
-        <div class="formulario" >
+        <section class="formulario">
           <h1 class="formulario__titulo">Datos del Cliente</h1>
           <p class="formulario__subtitulo">Ingrese los datos del cliente</p>
+
           <div class="formulario__grupo">
-            <label class="formulario__label">Nombre</label>
+            <label class="formulario__label" for="cliente_nombre">Nombre</label>
             <input
               type="text"
+              id="cliente_nombre"
               class="formulario__input"
               name="cliente_nombre"
               required
@@ -51,9 +64,12 @@
           </div>
 
           <div class="formulario__grupo">
-            <label class="formulario__label">Número de identificación</label>
+            <label class="formulario__label" for="cliente_documento"
+              >Número de identificación</label
+            >
             <input
               type="number"
+              id="cliente_documento"
               class="formulario__input"
               name="cliente_documento"
               required
@@ -61,9 +77,12 @@
           </div>
 
           <div class="formulario__grupo">
-            <label class="formulario__label">Teléfono</label>
+            <label class="formulario__label" for="cliente_telefono"
+              >Teléfono</label
+            >
             <input
               type="tel"
+              id="cliente_telefono"
               class="formulario__input"
               name="cliente_telefono"
               required
@@ -71,25 +90,31 @@
           </div>
 
           <div class="formulario__grupo">
-            <label class="formulario__label">Correo electrónico</label>
+            <label class="formulario__label" for="cliente_correo"
+              >Correo electrónico</label
+            >
             <input
               type="email"
+              id="cliente_correo"
               class="formulario__input"
               name="cliente_correo"
               required
             />
           </div>
-        </div>
+        </section>
 
         <!-- SECCIÓN VEHÍCULO -->
-        <div class="formulario">
+        <section class="formulario">
           <h1 class="formulario__titulo">Datos del Vehículo</h1>
           <p class="formulario__subtitulo">Ingrese los datos del vehículo</p>
 
           <div class="formulario__grupo">
-            <label class="formulario__label">Tipo de vehículo</label>
+            <label class="formulario__label" for="veh_tipo"
+              >Tipo de vehículo</label
+            >
             <input
               type="text"
+              id="veh_tipo"
               class="formulario__input"
               name="veh_tipo"
               required
@@ -97,9 +122,10 @@
           </div>
 
           <div class="formulario__grupo">
-            <label class="formulario__label">Marca</label>
+            <label class="formulario__label" for="veh_marca">Marca</label>
             <input
               type="text"
+              id="veh_marca"
               class="formulario__input"
               name="veh_marca"
               required
@@ -107,9 +133,10 @@
           </div>
 
           <div class="formulario__grupo">
-            <label class="formulario__label">Modelo</label>
+            <label class="formulario__label" for="veh_modelo">Modelo</label>
             <input
               type="text"
+              id="veh_modelo"
               class="formulario__input"
               name="veh_modelo"
               required
@@ -117,18 +144,30 @@
           </div>
 
           <div class="formulario__grupo">
-            <label class="formulario__label">Número de placa</label>
+            <label class="formulario__label" for="veh_placa"
+              >Número de placa</label
+            >
             <input
               type="text"
+              id="veh_placa"
               class="formulario__input"
               name="veh_placa"
               required
             />
           </div>
-        </div>
+        </section>
       </form>
+
+      <!-- BOTÓN afuera pero ligado al form -->
       <div class="contenedor-boton">
-        <button class="formulario__boton" type="submit"  form="formularioCompleto">SIGUIENTE</button>
+        <button
+          class="formulario__boton"
+          type="submit"
+          form="formularioCompleto"
+        >
+          SIGUIENTE
+        </button>
       </div>
+    </main>
   </body>
 </html>

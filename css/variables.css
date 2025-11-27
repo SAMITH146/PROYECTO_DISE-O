@@ -4,6 +4,7 @@
     --fuente: 'Nunito';
     --color-fondo: radial-gradient(circle at center, #113344 0%, #06111c 70%, #060d33 100%);
     --color-fondo-segundario: rgba(166, 169, 172, 0.959);
+    --color-fondo-terciario: #1b2764;
     --color-principal-hover: #10e7ff;
     --color-letra1: #000000;
     --color-fondo-navbar: #1b2764;
@@ -11,6 +12,7 @@
     --color-letra3: #26cbe0;
     --colortexto-hover: #000000;
     --color-borde-input: #000000;
+    --color-borde-input2: #ffffff;
     /* Color botonones */
     --color-boton: #2f8dbd;
 }

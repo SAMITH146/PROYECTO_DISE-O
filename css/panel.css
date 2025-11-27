@@ -153,7 +153,7 @@
 }   
 
 .resumen {
-    color: var(--color-letra-navbar);
+    color: var(--color-letra2);
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
@@ -173,3 +173,4 @@
     color: var(--color-letra3);
     margin-top: 5px;
 }
+

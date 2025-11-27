@@ -30,3 +30,26 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 40px;
 }
+
+/* Tamaño del scroll */
+::-webkit-scrollbar {
+  width: 10px;      /* vertical */
+  height: 10px;     /* horizontal */
+}
+
+/* Fondo del área por donde se mueve la barrita */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 10px;
+}
+
+/* La barrita (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #4b72ff;
+  border-radius: 10px;
+}
+
+/* Efecto hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f54d8;
+}

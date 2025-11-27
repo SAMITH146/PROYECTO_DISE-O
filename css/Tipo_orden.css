@@ -1,31 +1,54 @@
 @import url(panel.css);
 
+
+.main-container {
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
 .servicio-selector-container {
-  width: 100%;
-  padding: 40px;
+  width: 100vh;
+  padding: auto;
+
+  margin: 46px auto;
   color: var(--color-label);
+  border: solid 1px var(--color-borde-input);
+
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  
+  
+
 }
 
+/* TITULO */
 .titulo-servicios {
-  text-align: center;
-  color: var(--color-letra-principal);
-  font-size: 2rem;
-  margin-bottom: 30px;
+  color: var(--color-letra2);
+  margin-bottom: 20px;
   font-weight: 700;
+  padding: 12px;
+  border-bottom: 2px solid var(--color-borde-input);
 }
 
+/* GRID RESPONSIVE */
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
   padding: 10px;
 }
 
+/* TARJETA */
 .card-servicio {
-  background: var(--color-fondo-segundario);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+  text-decoration: none;
+  display: block;
+  background: var(--color-fondo-terciario);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.22);
   border-left: 6px solid var(--color-boton);
   cursor: pointer;
   transition: 0.25s ease;
@@ -33,22 +56,30 @@
 
 .card-servicio h3 {
   font-weight: 700;
-  color: var(--color-label);
+  color: var(--color-letra2);
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  
 }
 
 .card-servicio p {
-  color: var(--color-letras-formulario);
+  color: var(--color-letra3);
+  font-size: 0.95rem;
 }
 
+/* HOVER */
 .card-servicio:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
   border-left-color: var(--color-principal-hover);
 }
 
+/* SELECCIONADA */
+
+/* Seleccionado */
 .card-servicio.selected {
   background: white;
   border-left-color: var(--color-principal-hover);
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  transform: scale(1.03);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.4);
 }
