@@ -1,4 +1,4 @@
-@import url(panel.css);
+@import url(../panel.css);
 
 
 .main-container {
@@ -9,19 +9,13 @@
 .servicio-selector-container {
   width: 100vh;
   padding: auto;
-
   margin: 46px auto;
   color: var(--color-label);
-  border: solid 1px var(--color-borde-input);
-
-  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;  
-  
-
 }
 
 /* TITULO */
@@ -30,7 +24,7 @@
   margin-bottom: 20px;
   font-weight: 700;
   padding: 12px;
-  border-bottom: 2px solid var(--color-borde-input);
+  border-bottom: 2px solid var(--color-borde-input2);
 }
 
 /* GRID RESPONSIVE */

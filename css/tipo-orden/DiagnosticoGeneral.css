@@ -1,0 +1,17 @@
+@import url(/css/panel.css);
+
+.contenedor-diagnostico {
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.Contenedor-type-dignostico {
+  width: 100vh;
+  padding: auto;
+  margin: 46px auto;
+  color: var(--color-label);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/tipo-orden/Tipo_orden.css"/>
+    <title>Seleccionar Tipo de Orden</title>
+  </head>
+
+  <body>
+    <!-- ENCABEZADO -->
+    <header class="navbar">
+      <div class="navbar__logo">
+        <img
+          src="/LogoI_mg/Logo_blanco.png"
+          alt="Logo del taller"
+          class="navbar__logo-img"
+        />
+      </div>
+
+      <nav class="navbar__menu" aria-label="Menu principal">
+        <a href="../pages/agregar-clientes.html" class="navbar__menu-item"
+          >Agregar Clientes</a
+        >
+        <a href="#" class="navbar__menu-item">Orden en curso</a>
+        <a href="#" class="navbar__menu-item">Historial</a>
+      </nav>
+
+      <div class="navbar__session">
+        <a href="agregar-clientes.html" class="navbar__session-btn">
+          <img
+            src=" /LogoI_mg/flecha-izquierda.png"
+            alt="atras"
+            class="navbar__session-icon"
+          />
+          Cerrar Sesión
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+      <div class="servicio-selector-container">
+        <h1 class="titulo-servicios">Seleccione el tipo de servicio</h1>
+
+        <div class="servicios-grid">
+          <a
+            href="/pages/tipo-orden/DiagnosticoGeneral.html"
+            class="card-servicio"
+            data-servicio="diagnostico"
+          >
+            <h3>Diagnostico General</h3>
+            <p>Revision tecnica para detectar fallas.</p>
+          </a>
+
+          <a
+            href="../modulos/preventivo.html"
+            class="card-servicio"
+            data-servicio="preventivo"
+          >
+            <h3>Mantenimiento Preventivo</h3>
+            <p>Evita averias futuras con mantenimiento regular.</p>
+          </a>
+
+          <a
+            href="../modulos/correctivo.html"
+            class="card-servicio"
+            data-servicio="correctivo"
+          >
+            <h3>Reparacion Correctiva</h3>
+            <p>Solucion de fallas mecanicas o electricas.</p>
+          </a>
+
+          <a
+            href="../modulos/frenos.html"
+            class="card-servicio"
+            data-servicio="frenos"
+          >
+            <h3>Sistema de Frenos</h3>
+            <p>Inspeccion y ajuste del sistema de frenado.</p>
+          </a>
+
+          <a
+            href="../modulos/motor.html"
+            class="card-servicio"
+            data-servicio="motor"
+          >
+            <h3>Motor y Afinacion</h3>
+            <p>Ajustes para mejorar rendimiento y consumo.</p>
+          </a>
+
+          <a
+            href="../modulos/aceite.html"
+            class="card-servicio"
+            data-servicio="aceite"
+          >
+            <h3>Cambio de Aceite</h3>
+            <p>Mantenimiento esencial para proteger el motor.</p>
+          </a>
+
+          <a
+            href="../modulos/suspension.html"
+            class="card-servicio"
+            data-servicio="suspension"
+          >
+            <h3>Suspension</h3>
+            <p>Revision de amortiguadores y estabilidad.</p>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
