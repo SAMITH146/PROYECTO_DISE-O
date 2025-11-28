@@ -1,33 +1,31 @@
-@import url(estilos.css);
 @import url(panel.css);
-
-
 * {
   font-family: var(--fuente);
-
 }
 
+/* CONTENEDOR PRINCIPAL */
 .formulario-grande {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
-  height:auto;
   min-height: 70vh;
   align-items: center;
   justify-content: center;
-
+  padding: 20px;
 }
 
+/* FORMULARIO */
 .formulario {
-  max-width: 450px;
   width: 100%;
+  max-width: 450px;
   background-color: var(--color-fondo-segundario);
-  padding: 20px;
+  padding: 25px;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .formulario__titulo {
-
-  font-weight: 600px;
+  font-weight: 600;
   margin-bottom: 5px;
   border-bottom: 2px solid var(--color-borde-input);
 }
@@ -38,12 +36,13 @@
   margin-bottom: 30px;
 }
 
-
+/* GRUPOS */
 .formulario__grupo {
   margin-bottom: 20px;
   text-align: left;
 }
 
+/* LABEL */
 .formulario__label {
   display: block;
   margin-bottom: 5px;
@@ -51,8 +50,9 @@
   font-weight: 500;
 }
 
+/* INPUT */
 .formulario__input {
-  width: 80%;
+  width: 100%;
   padding: 12px 15px;
   border-radius: 10px;
   border: 2px solid var(--color-borde-input);
@@ -60,14 +60,24 @@
   font-size: 0.95rem;
   color: #000;
   transition: 0.3s ease;
+  box-sizing: border-box;
 }
 
 .formulario__input:focus {
   border-color: var(--color-principal-hover);
 }
 
+/* BOTÓN */
+.contenedor-boton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .formulario__boton {
-  width: 180px;
+  width: 100%;
+  max-width: 220px;
   background-color: var(--color-boton);
   color: #fff;
   border: none;
@@ -76,19 +86,25 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
-  text-align: center;
-  
-}
-.contenedor-boton {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;  
+  transition: 0.3s ease;
 }
 
 .formulario__boton:hover {
   background-color: var(--color-principal-hover);
 }
 
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .formulario {
+    padding: 20px;
+  }
 
+  .formulario__input {
+    font-size: 0.9rem;
+  }
+
+  .formulario__boton {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

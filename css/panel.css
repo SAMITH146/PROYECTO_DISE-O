@@ -1,176 +1,233 @@
 @import url(estilos.css);
 
 * {
-    font-family: var(--fuente);
+  font-family: var(--fuente);
+  text-decoration: none;
 }
+
+/* NAVBAR */
 
 .navbar {
-    position: sticky;
-    top: 0 ;
-    left: 0;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-fondo-navbar);
-    padding: 0 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    height: 100px;
-    width: 100%;
-    color: var(--color-letra-navbar);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-fondo-navbar);
+  padding: 0 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  height: 100px;
+  width: 100%;
+  color: var(--color-letra-navbar);
 }
-
 
 .navbar__logo-img {
-    width: 80px;
-    height: auto;
-    padding: 5px;
-    background-color: rgba(1, 59, 82, 0);
-    border-radius: 10px;
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-
 .navbar__menu {
-    display: flex;
-    gap: 8rem;
-    position: relative;
-
-
+  display: flex;
+  gap: 8rem;
 }
 
 .navbar__menu-item {
-    color: var(--color-letra2, );
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    border-radius: 10px;
-    padding: 8px 15px;
-    transition: 0.3s ease;
+  color: var(--color-letra2);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 8px 15px;
+  transition: 0.3s ease;
+  border: solid 2px rgba(46, 132, 202, 0.502);
 }
 
 .navbar__menu-item:hover {
-    background-color: var(--color-principal-hover, );
-    color: var(--colortexto-hover, )
+  background-color: var(--color-principal-hover);
+  color: var(--colortexto-hover);
 }
 
 .navbar__session-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background 0.3s ease;
-    color: var(--color-letra2, );
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  color: var(--color-letra2);
 }
 
 .navbar__session-btn:hover {
-    background-color: var(--color-principal-hover, );
-    color: var(--colortexto-hover, )
+  background-color: var(--color-principal-hover);
+  color: var(--colortexto-hover);
 }
 
 .navbar__session-icon {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
+/* ---------------------- */
+/* GRAFICA */
+/* ---------------------- */
+
 .container-grafica {
-    max-width: 800px;
-    background: var(--color-fondo-segundario);
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgb(9, 44, 85);
-    padding: 30px;
-    margin: 40px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 160px;
+  max-width: 800px;
+  background: var(--color-fondo-segundario);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgb(9, 44, 85);
+  padding: 30px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 160px;
 }
 
 .grafica {
-    height: 200px;
-    background: linear-gradient(to top, #000000 100%, transparent 50%);
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    margin: 30px 0;
+  height: 250px;
+  background: linear-gradient(to top, #000000 100%, transparent 50%);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin: 30px 0;
 }
 
 .barra {
-    width: 12%;
-    background: #007bff;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    color: white;
-    font-size: 0.8em;
+  width: calc(100% / 6 - 15px);
+  background: #007bff;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  font-size: 0.8em;
 }
 
 .barra span {
-    position: absolute;
-    bottom: 100%;
-    width: 100%;
-    font-size: 0.75em;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  font-size: 0.75em;
 }
 
 #b1 {
-    left: 5%;
-    height: 50%;
-    background: #0e35b3;
+  left: 0%;
+  height: 50%;
+  background: #0e35b3;
 }
-
 #b2 {
-    left: 20%;
-    height: 89%;
-    background: #2563eb;
+  left: 16%;
+  height: 89%;
+  background: #2563eb;
 }
-
 #b3 {
-    left: 35%;
-    height: 89%;
-    background: #182955;
+  left: 32%;
+  height: 89%;
+  background: #182955;
 }
-
 #b4 {
-    left: 50%;
-    height: 90%;
-    background: #1e40af;
+  left: 48%;
+  height: 90%;
+  background: #1e40af;
 }
-
 #b5 {
-    left: 65%;
-    height: 60%;
-    background: #2a4da7;
-    
+  left: 64%;
+  height: 60%;
+  background: #2a4da7;
 }
-
 #b6 {
-    left: 80%;
-    height: 80%;
-    background: #edf2fc;
-    text-align:center
-}   
+  left: 80%;
+  height: 80%;
+  background: #57c6ff;
+}
 
 .resumen {
-    color: var(--color-letra2);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-    background: #1c1d20;
-    padding: 15px;
-    border-radius: 12px;
-    font-weight: bold;
+  color: var(--color-letra2);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  background: #1c1d20;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
 }
 
 .resumen div {
-    text-align: center;
+  text-align: center;
 }
 
 .resumen span {
-    display: block;
-    font-size: 1.5em;
-    color: var(--color-letra3);
-    margin-top: 5px;
+  display: block;
+  font-size: 1.5em;
+  color: var(--color-letra3);
+  margin-top: 5px;
 }
 
+/* RESPONSIVE */
+/* Tablets */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar__menu {
+    gap: 3rem;
+  }
+
+  .container-grafica {
+    margin-top: 120px;
+    padding: 20px;
+  }
+
+  .grafica {
+    height: 200px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar__session-btn {
+    margin-top: 10px;
+  }
+
+  .container-grafica {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .grafica {
+    height: 180px;
+  }
+
+  .barra {
+    width: calc(100% / 6 - 8px);
+    font-size: 0.7em;
+  }
+
+  .resumen {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .resumen span {
+    font-size: 1.2em;
+  }
+}

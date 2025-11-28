@@ -1,21 +1,20 @@
 @import url(../panel.css);
-
-
+/* CONTENEDOR GENERAL */
 .main-container {
   height: calc(100vh - 100px);
   overflow: auto;
 }
 
+/* CONTENEDOR QUE ENVUELVE TODO */
 .servicio-selector-container {
-  width: 100vh;
-  padding: auto;
+  width: 100%;
+  max-width: 1000px;
   margin: 46px auto;
   color: var(--color-label);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;  
+  padding: 25px;
+  border-radius: 18px;
+
 }
 
 /* TITULO */
@@ -53,7 +52,6 @@
   color: var(--color-letra2);
   margin-bottom: 8px;
   font-size: 1.3rem;
-  
 }
 
 .card-servicio p {
@@ -67,10 +65,8 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.35);
   border-left-color: var(--color-principal-hover);
 }
-
+  
 /* SELECCIONADA */
-
-/* Seleccionado */
 .card-servicio.selected {
   background: white;
   border-left-color: var(--color-principal-hover);

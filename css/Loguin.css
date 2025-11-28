@@ -1,84 +1,110 @@
 @import url(estilos.css);
+
 * {
   font-family: var(--fuente);
   cursor: default;
-
+  box-sizing: border-box;
 }
 
+/* CONTENEDOR GENERAL */
 .container-login {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  padding: 20px;
 }
+
+/* TARJETA LOGIN */
 .login {
-  width: 500px;
-  margin: 100px auto;
+  width: 100%;
+  max-width: 450px;
   padding: 40px;
+  background-color: var(--color-fondo-segundario);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-radius: 15px;
-  background-color: var(--color-fondo-segundario);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0, 4);
-  gap: 37px;
-
-  .logo-login {
-    width: 120px;
-    display: block;
-    margin: auto;
-    height: auto;
-   
-  }
+  gap: 30px;
 }
 
-  .pin-login {
-    font-size: 16px;   
-    align-self: flex-start;
-    margin-left: 5px;
-    font-weight: 500;
+/* LOGO */
+.logo-login {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
 
+/* TÍTULO */
+.texto-login {
+  font-size: 26px;
+  color: var(--color-letra1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  border-bottom: 2px solid var(--color-borde-input);
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+/* LABEL */
+.pin-login {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-letra1);
+  margin-left: 2px;
+}
+
+/* INPUT */
+.contraseña-login {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 8px;
+  font-size: 17px;
+  outline: none;
+  transition: 0.3s ease;
+  background-color: var(--color-fondo-input, #fff);
+}
+
+.contraseña-login:focus {
+  border-color: var(--color-boton);
+  box-shadow: 0 0 5px var(--color-boton);
+}
+
+/* BOTÓN */
+.boton {
+  width: 100%;
+  padding: 12px 20px;
+  border: solid black 1px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--color-boton);
+  transition: 0.3s ease;
+}
+
+.boton:hover {
+  background-color: var(--color-principal-hover);
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .login {
+    padding: 25px;
   }
 
   .texto-login {
-    font-size: 28px;
-    color: var(--color-letra1);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--color-borde-input);
-    padding-bottom: 5px;
-
+    font-size: 22px;
   }
 
   .contraseña-login {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 8px;
-    background: var();
-    outline: none;
-    font-size: 16px;
-    transition: 0.3s;
-
-
+    font-size: 15px;
   }
 
-  .boton {
-    width: 100%;
-    background-color: var(--color-boton);
-    padding: 12px 20px;
-    border:solid  black 1px ;
-    border-radius:8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background 0.3s;
-    margin-top: 15px;
-    text-align: center;
+  .logo-login {
+    width: 95px;
   }
-
-  .boton:hover {
-    background-color: var(--color-principal-hover);
-  }
-
+}
