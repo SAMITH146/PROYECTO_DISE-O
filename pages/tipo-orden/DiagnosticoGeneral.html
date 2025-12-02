@@ -1,76 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/tipo-orden/DiagnosticoGeneral.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/tipo-orden/DiagnosticoGeneral.css">
-  <title>Document</title>
-</head>
+  <body>
+    <!-- ENCABEZADO -->
+    <header class="navbar">
+      <div class="navbar__logo">
+        <img
+          src="/LogoI_mg/Logo_blanco.png"
+          alt="Logo del taller"
+          class="navbar__logo-img"
+        />
+      </div>
 
-<body>
+      <nav class="navbar__menu" aria-label="Menu principal">
+        <a href="../pages/agregar-clientes.html" class="navbar__menu-item"
+          >Agregar Clientes</a
+        >
+        <a href="#" class="navbar__menu-item">Orden en curso</a>
+        <a href="#" class="navbar__menu-item">Historial</a>
+      </nav>
 
-  <!-- ENCABEZADO -->
-  <header class="navbar">
-    <div class="navbar__logo">
-      <img src="/LogoI_mg/Logo_blanco.png" alt="Logo del taller" class="navbar__logo-img" />
-    </div>
+      <div class="navbar__session">
+        <a href="agregar-clientes.html" class="navbar__session-btn">
+          <img
+            src=" /LogoI_mg/flecha-izquierda.png"
+            alt="atras"
+            class="navbar__session-icon"
+          />
+          Cerrar Sesión
+        </a>
+      </div>
+    </header>
 
-    <nav class="navbar__menu" aria-label="Menu principal">
-      <a href="../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
-      <a href="#" class="navbar__menu-item">Orden en curso</a>
-      <a href="#" class="navbar__menu-item">Historial</a>
-    </nav>
+    <main class="contenedor-diagnostico">
+      <section class="opciones-servicio">
+        <h2 class="titulo-opciones">Diagnóstico General</h2>
 
-    <div class="navbar__session">
-      <a href="agregar-clientes.html" class="navbar__session-btn">
-        <img src=" /LogoI_mg/flecha-izquierda.png" alt="atras" class="navbar__session-icon" />
-        Cerrar Sesión
-      </a>
-    </div>
-  </header>
+        <div class="lista-opciones">
+          <a href="#" class="subcard">
+            <h3>Escaneo computarizado</h3>
+            <p>Lectura completa de códigos de falla desde la ECU.</p>
+          </a>
 
-  <main class="contenedor-diagnostico">
-    <div class="Contenedor-type-dignostico">
-      <div class="diagnostico-container">
+          <a href="#" class="subcard">
+            <h3>Revisión visual general</h3>
+            <p>Inspección de mangueras, correas, líquidos y fugas.</p>
+          </a>
 
-<div class="diagnosticos-grid">
+          <a href="#" class="subcard">
+            <h3>Chequeo tablero</h3>
+            <p>Prueba de testigos, sensores y advertencias.</p>
+          </a>
 
-    <div class="cardx">
-        <h3>Diagnóstico General</h3>
-        <p>Revisión completa del vehículo para detectar fallas mecánicas, eléctricas o electrónicas.</p>
-    </div>
-
-    <div class="cardx">
-        <h3>Diagnóstico de Motor</h3>
-        <p>Análisis de compresión, sensores, inyección y estado general del motor.</p>
-    </div>
-
-    <div class="cardx">
-        <h3>Diagnóstico Eléctrico</h3>
-        <p>Evaluación del sistema eléctrico, batería, alternador y conexiones.</p>
-    </div>
-
-    <div class="cardx">
-        <h3>Diagnóstico de Frenos</h3>
-        <p>Inspección de pastillas, discos, líquido y sistema ABS si aplica.</p>
-    </div>
-
-</div>
-
-
-</div>
-
-
-    </div>
-
-  </main>
-
-  </div>
-
-
-  </script>
-
-</body>
-
+          <a href="#" class="subcard">
+            <h3>Prueba en ruta</h3>
+            <p>Validación de comportamiento del vehículo en movimiento.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

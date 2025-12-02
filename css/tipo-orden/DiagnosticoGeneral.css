@@ -1,63 +1,73 @@
-@import url(/css/panel.css);
-
+@import url(../panel.css);
 .contenedor-diagnostico {
   height: calc(100vh - 100px);
   overflow: auto;
 }
 
-.Contenedor-type-dignostico {
-  width: 100%;
-  max-width: 1200px;      /* SE ARREGLA EL DESBORDE */
+.opciones-servicio {
+  max-width: 700px;
   margin: 40px auto;
-  color: var(--color-label);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+}
+
+.titulo-opciones {
+  color: var(--color-letra2);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--color-borde-input2);
+  padding-bottom: 10px;
+}
+
+/* CONTENEDOR VERTICAL */
+.lista-opciones {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* GRID RESPONSIVO */
-.diagnostico-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  width: 100%;
-}
-
-.diagnosticos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 30px;
-  width: 100%;
-}
-
-.cardx {
-  background: var(--color-fondo-segundario);
-  padding: 25px;
-  border-radius: 16px;
+/* SUB CARD */
+.subcard {
+  text-decoration: none;
+  background: var(--color-fondo-terciario);
+  padding: 20px;
+  border-radius: 15px;
   border-left: 6px solid var(--color-boton);
-  box-shadow: 0 5px 14px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: 0.3s ease;
-  cursor: pointer;
 }
 
-.cardx h3 {
+.subcard h3 {
+  margin-bottom: 6px;
   color: var(--color-letra2);
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  font-weight: 700;
+  font-size: 1.2rem;
 }
 
-.cardx p {
+.subcard p {
   color: var(--color-letra3);
   font-size: 0.95rem;
-  line-height: 1.4rem;
 }
 
-.cardx:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+/* HOVER */
+.subcard:hover {
+  transform: translateY(-5px);
   border-left-color: var(--color-principal-hover);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* RESPONSIVE*/
+@media (max-width: 600px) {
+
+  .opciones-servicio {
+    padding: 10px;
+  }
+
+  .titulo-opciones {
+    font-size: 1.5rem;
+  }
+
+  .subcard {
+    padding: 15px;
+  }
+
 }
