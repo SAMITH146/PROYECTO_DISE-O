@@ -1,4 +1,5 @@
 @import url(panel.css);
+@import url(navbar.css);
 * {
   font-family: var(--fuente);
 }

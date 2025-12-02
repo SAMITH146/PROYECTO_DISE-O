@@ -1,80 +1,15 @@
 @import url(estilos.css);
+@import url(/Componentes-Layaut/Navbar.css);
 
 * {
   font-family: var(--fuente);
   text-decoration: none;
 }
 
-/* NAVBAR */
 
-.navbar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--color-fondo-navbar);
-  padding: 0 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  height: 100px;
-  width: 100%;
-  color: var(--color-letra-navbar);
-}
 
-.navbar__logo-img {
-  width: 80px;
-  height: auto;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.navbar__menu {
-  display: flex;
-  gap: 8rem;
-}
-
-.navbar__menu-item {
-  color: var(--color-letra2);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  border-radius: 10px;
-  padding: 8px 15px;
-  transition: 0.3s ease;
-  border: solid 2px rgba(46, 132, 202, 0.502);
-}
-
-.navbar__menu-item:hover {
-  background-color: var(--color-principal-hover);
-  color: var(--colortexto-hover);
-}
-
-.navbar__session-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-  color: var(--color-letra2);
-}
-
-.navbar__session-btn:hover {
-  background-color: var(--color-principal-hover);
-  color: var(--colortexto-hover);
-}
-
-.navbar__session-icon {
-  width: 24px;
-  height: 24px;
-}
-
-/* ---------------------- */
 /* GRAFICA */
-/* ---------------------- */
+
 
 .container-grafica {
   max-width: 800px;
@@ -123,12 +58,12 @@
 }
 #b2 {
   left: 16%;
-  height: 89%;
+  height: 55%;
   background: #2563eb;
 }
 #b3 {
   left: 32%;
-  height: 89%;
+  height: 75%;
   background: #182955;
 }
 #b4 {

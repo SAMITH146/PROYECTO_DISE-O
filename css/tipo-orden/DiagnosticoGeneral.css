@@ -1,4 +1,5 @@
-@import url(../panel.css);
+@import url(CSSestilos.css);
+@import url(/Componentes-Layaut/Navbar.css);
 .contenedor-diagnostico {
   height: calc(100vh - 100px);
   overflow: auto;
