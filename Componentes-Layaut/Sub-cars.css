@@ -1,66 +1,170 @@
 @import url(/css/estilos.css);
 @import url(/Componentes-Layaut/Navbar.css);
+
 .contenedor-diagnostico {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   overflow: auto;
 }
 
 .opciones-servicio {
-  max-width: 700px;
+  max-width: 750px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 25px;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* TITULO de la sección - con indicador de que es derivado */
 .titulo-opciones {
   color: var(--color-letra2);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
   border-bottom: 2px solid var(--color-borde-input2);
-  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Indicador visual que conecta con la card padre */
+.titulo-opciones::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 28px;
+  background: linear-gradient(180deg, var(--color-acento-secundario), var(--color-acento-primario));
+  border-radius: 2px;
+}
+
+/* Breadcrumb visual sutil */
+.titulo-opciones::after {
+  content: '›';
+  position: absolute;
+  left: 8px;
+  font-size: 1.5rem;
+  color: var(--color-acento-secundario);
+  opacity: 0.5;
 }
 
 /* CONTENEDOR VERTICAL */
 .lista-opciones {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
-/* SUB CARD */
+/* ============================================
+   SUBCARD - DISEÑO DERIVADO DE CARDS PRINCIPALES
+   ============================================ */
 .subcard {
   text-decoration: none;
-  background: var(--color-fondo-terciario);
-  padding: 20px;
-  border-radius: 15px;
-  border-left: 6px solid var(--color-boton);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: 0.3s ease;
+  display: block;
+  background: var(--subcard-bg);
+  padding: 22px 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: var(--sombra-subcard);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Línea lateral que conecta visualmente con la card padre */
+.subcard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg,
+      var(--color-acento-secundario) 0%,
+      var(--color-acento-primario) 50%,
+      var(--color-acento-terciario) 100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+/* Icono de derivación sutil */
+.subcard::after {
+  content: '↳';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: var(--color-letra3);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.subcard h2,
 .subcard h3 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: var(--color-letra2);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding-left: 12px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .subcard p {
   color: var(--color-letra3);
-  font-size: 0.95rem;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  padding-left: 12px;
 }
 
-/* HOVER */
+/* HOVER de Subcard */
 .subcard:hover {
-  transform: translateY(-5px);
-  border-left-color: var(--color-principal-hover);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  background: var(--subcard-bg-hover);
+  transform: translateX(8px);
+  border-color: rgba(34, 211, 238, 0.3);
+  box-shadow: var(--sombra-subcard-hover);
 }
 
-/* RESPONSIVE*/
-@media (max-width: 600px) {
+.subcard:hover::before {
+  opacity: 1;
+  width: 5px;
+  background: linear-gradient(180deg,
+      var(--color-acento-hover) 0%,
+      var(--color-acento-primario) 100%);
+}
+
+.subcard:hover::after {
+  opacity: 0.6;
+  right: 25px;
+}
+
+.subcard:hover h2,
+.subcard:hover h3 {
+  color: var(--color-letra-acento);
+}
+
+.subcard:hover p {
+  color: var(--color-letra2);
+}
+
+/* Estado activo/seleccionado */
+.subcard:active {
+  transform: translateX(4px) scale(0.99);
+}
+
+/* ============================================
+   MEDIA QUERIES - TABLETS (max-width: 992px)
+   ============================================ */
+@media (max-width: 992px) {
+  .contenedor-diagnostico {
+    height: calc(100vh - 70px);
+  }
 
   .opciones-servicio {
-    padding: 10px;
+    max-width: 90%;
+    padding: 20px;
   }
 
   .titulo-opciones {
@@ -68,7 +172,123 @@
   }
 
   .subcard {
-    padding: 15px;
+    padding: 20px 22px;
   }
 
+  .subcard h2,
+  .subcard h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================
+   MEDIA QUERIES - MÓVIL (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .contenedor-diagnostico {
+    height: auto;
+    min-height: calc(100vh - 65px);
+  }
+
+  .opciones-servicio {
+    max-width: 95%;
+    margin: 25px auto;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .titulo-opciones {
+    font-size: 1.35rem;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+
+  .titulo-opciones::before {
+    height: 24px;
+  }
+
+  .lista-opciones {
+    gap: 14px;
+  }
+
+  .subcard {
+    padding: 18px 20px;
+    border-radius: 14px;
+  }
+
+  .subcard h2,
+  .subcard h3 {
+    font-size: 1.05rem;
+    padding-left: 10px;
+  }
+
+  .subcard p {
+    font-size: 0.9rem;
+    padding-left: 10px;
+  }
+
+  .subcard:hover {
+    transform: translateX(5px);
+  }
+
+  .subcard::after {
+    display: none;
+  }
+}
+
+/* ============================================
+   MEDIA QUERIES - MÓVIL PEQUEÑO (max-width: 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .contenedor-diagnostico {
+    min-height: calc(100vh - 60px);
+  }
+
+  .opciones-servicio {
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .titulo-opciones {
+    font-size: 1.2rem;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+
+  .titulo-opciones::before {
+    width: 3px;
+    height: 20px;
+  }
+
+  .lista-opciones {
+    gap: 12px;
+  }
+
+  .subcard {
+    padding: 15px 18px;
+    border-radius: 12px;
+  }
+
+  .subcard::before {
+    width: 3px;
+  }
+
+  .subcard h2,
+  .subcard h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    padding-left: 8px;
+  }
+
+  .subcard p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding-left: 8px;
+  }
+
+  .subcard:hover {
+    transform: translateX(4px);
+  }
 }

@@ -1,173 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agregar Cliente y Vehículo</title>
-    <link rel="stylesheet" href="../css/agregar-cliente.css" />
-  </head>
 
-  <body>
-    <!-- HEADER: Barra superior -->
-    <header class="navbar">
-      <div class="navbar__logo">
-        <img
-          src="../LogoI_mg/Logo_blanco.png"
-          alt="Logo del taller"
-          class="navbar__logo-img"
-        />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agregar Cliente y Vehículo | MotorDesk</title>
+  <link rel="stylesheet" href="../css/agregar-cliente.css" />
+</head>
 
-      <nav class="navbar__menu" aria-label="Navegación principal">
-        <a href="../pages/agregar-clientes.html" class="navbar__menu-item"
-          >Agregar Clientes</a
-        >
-        <a href="#" class="navbar__menu-item">Orden en curso</a>
-        <a href="#" class="navbar__menu-item">Historial</a>
-      </nav>
+<body>
+  <!-- HEADER: Barra superior -->
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+    </div>
 
-      <div class="navbar__session">
-        <a href="panel.html" class="navbar__session-btn">
-          <img
-            src="../LogoI_mg/flecha-izquierda.png"
-            alt="Ir al panel"
-            class="navbar__session-icon"
-          />
-          Atrás
-        </a>
-      </div>
-    </header>
+    <!-- Checkbox + Label para menú hamburguesa (solo CSS, sin JS) -->
+    <input type="checkbox" id="navToggle" class="navbar__toggle" />
+    <label for="navToggle" class="navbar__hamburger" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-    <!-- MAIN: Contenido principal -->
-    <main class="contenido-principal">
-      <!-- FORMULARIO COMPLETO -->
-      <form
-        id="formularioCompleto"
-        class="formulario-grande"
-        action="../pages/tipo-orden/Tipo_orden.html"
-        method="get"
-      >
-        <!-- SECCIÓN CLIENTE -->
-        <section class="formulario">
-          <h1 class="formulario__titulo">Datos del Cliente</h1>
-          <p class="formulario__subtitulo">Ingrese los datos del cliente</p>
+    <nav class="navbar__menu" aria-label="Navegación principal">
+      <a href="../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+      <a href="#" class="navbar__menu-item">Orden en curso</a>
+      <a href="#" class="navbar__menu-item">Historial</a>
+    </nav>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="cliente_nombre">Nombre</label>
-            <input
-              type="text"
-              id="cliente_nombre"
-              class="formulario__input"
-              name="cliente_nombre"
-              required
-            />
-          </div>
+    <div class="navbar__session">
+      <a href="panel.html" class="navbar__session-btn">
+        <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
+        Atrás
+      </a>
+    </div>
+  </header>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="cliente_documento"
-              >Número de identificación</label
-            >
-            <input
-              type="number"
-              id="cliente_documento"
-              class="formulario__input"
-              name="cliente_documento"
-              required
-            />
-          </div>
+  <!-- MAIN: Contenido principal -->
+  <main class="contenido-principal">
+    <h1 class="visually-hidden">Registro de Cliente y Vehículo</h1>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="cliente_telefono"
-              >Teléfono</label
-            >
-            <input
-              type="tel"
-              id="cliente_telefono"
-              class="formulario__input"
-              name="cliente_telefono"
-              required
-            />
-          </div>
+    <!-- FORMULARIO COMPLETO -->
+    <form id="formularioCompleto" class="formulario-grande" action="../pages/tipo-orden/Tipo_orden.html" method="get">
+      <!-- SECCIÓN CLIENTE -->
+      <section class="formulario">
+        <h2 class="formulario__titulo">Datos del Cliente</h2>
+        <p class="formulario__subtitulo">Ingrese los datos del cliente</p>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="cliente_correo"
-              >Correo electrónico</label
-            >
-            <input
-              type="email"
-              id="cliente_correo"
-              class="formulario__input"
-              name="cliente_correo"
-              required
-            />
-          </div>
-        </section>
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="cliente_nombre">Nombre</label>
+          <input type="text" id="cliente_nombre" class="formulario__input" name="cliente_nombre" required />
+        </div>
 
-        <!-- SECCIÓN VEHÍCULO -->
-        <section class="formulario">
-          <h1 class="formulario__titulo">Datos del Vehículo</h1>
-          <p class="formulario__subtitulo">Ingrese los datos del vehículo</p>
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="cliente_documento">Número de identificación</label>
+          <input type="number" id="cliente_documento" class="formulario__input" name="cliente_documento" required />
+        </div>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="veh_tipo"
-              >Tipo de vehículo</label
-            >
-            <input
-              type="text"
-              id="veh_tipo"
-              class="formulario__input"
-              name="veh_tipo"
-              required
-            />
-          </div>
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="cliente_telefono">Teléfono</label>
+          <input type="tel" id="cliente_telefono" class="formulario__input" name="cliente_telefono" required />
+        </div>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="veh_marca">Marca</label>
-            <input
-              type="text"
-              id="veh_marca"
-              class="formulario__input"
-              name="veh_marca"
-              required
-            />
-          </div>
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="cliente_correo">Correo electrónico</label>
+          <input type="email" id="cliente_correo" class="formulario__input" name="cliente_correo" required />
+        </div>
+      </section>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="veh_modelo">Modelo</label>
-            <input
-              type="text"
-              id="veh_modelo"
-              class="formulario__input"
-              name="veh_modelo"
-              required
-            />
-          </div>
+      <!-- SECCIÓN VEHÍCULO -->
+      <section class="formulario">
+        <h2 class="formulario__titulo">Datos del Vehículo</h2>
+        <p class="formulario__subtitulo">Ingrese los datos del vehículo</p>
 
-          <div class="formulario__grupo">
-            <label class="formulario__label" for="veh_placa"
-              >Número de placa</label
-            >
-            <input
-              type="text"
-              id="veh_placa"
-              class="formulario__input"
-              name="veh_placa"
-              required
-            />
-          </div>
-        </section>
-      </form>
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="veh_tipo">Tipo de vehículo</label>
+          <input type="text" id="veh_tipo" class="formulario__input" name="veh_tipo" required />
+        </div>
 
-      <!-- BOTÓN afuera pero ligado al form -->
-      <div class="contenedor-boton">
-        <button
-          class="formulario__boton"
-          type="submit"
-          form="formularioCompleto"
-        >
-          SIGUIENTE
-        </button>
-      </div>
-    </main>
-  </body>
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="veh_marca">Marca</label>
+          <input type="text" id="veh_marca" class="formulario__input" name="veh_marca" required />
+        </div>
+
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="veh_modelo">Modelo</label>
+          <input type="text" id="veh_modelo" class="formulario__input" name="veh_modelo" required />
+        </div>
+
+        <div class="formulario__grupo">
+          <label class="formulario__label" for="veh_placa">Número de placa</label>
+          <input type="text" id="veh_placa" class="formulario__input" name="veh_placa" required />
+        </div>
+      </section>
+    </form>
+
+    <!-- BOTÓN afuera pero ligado al form -->
+    <div class="contenedor-boton">
+      <button class="formulario__boton" type="submit" form="formularioCompleto">
+        SIGUIENTE
+      </button>
+    </div>
+  </main>
+</body>
+
 </html>

@@ -1,5 +1,6 @@
 @import url(panel.css);
 @import url(navbar.css);
+
 * {
   font-family: var(--fuente);
 }
@@ -95,17 +96,76 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 480px) {
+/* Tablets */
+@media (max-width: 992px) {
+  .formulario-grande {
+    gap: 30px;
+    padding: 15px;
+  }
+
   .formulario {
+    max-width: 400px;
+    padding: 22px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .formulario-grande {
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .formulario {
+    max-width: 95%;
     padding: 20px;
+  }
+
+  .formulario__titulo {
+    font-size: 1.3rem;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  .formulario-grande {
+    gap: 20px;
+    min-height: auto;
+    padding-bottom: 20px;
+  }
+
+  .formulario {
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .formulario__titulo {
+    font-size: 1.2rem;
+  }
+
+  .formulario__subtitulo {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .formulario__grupo {
+    margin-bottom: 15px;
   }
 
   .formulario__input {
     font-size: 0.9rem;
+    padding: 10px 12px;
   }
 
   .formulario__boton {
-    padding: 12px;
+    padding: 12px 18px;
     font-size: 0.9rem;
+    max-width: 180px;
+  }
+
+  .contenedor-boton {
+    margin-top: 20px;
   }
 }

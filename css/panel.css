@@ -52,26 +52,31 @@
   height: 50%;
   background: #0e35b3;
 }
+
 #b2 {
   left: 16%;
   height: 55%;
   background: #2563eb;
 }
+
 #b3 {
   left: 32%;
   height: 75%;
   background: #182955;
 }
+
 #b4 {
   left: 48%;
   height: 90%;
   background: #1e40af;
 }
+
 #b5 {
   left: 64%;
   height: 60%;
   background: #2a4da7;
 }
+
 #b6 {
   left: 80%;
   height: 80%;
@@ -102,64 +107,84 @@
 
 /* RESPONSIVE */
 /* Tablets */
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0 20px;
-  }
-
-  .navbar__menu {
-    gap: 3rem;
-  }
-
+@media (max-width: 992px) {
   .container-grafica {
-    margin-top: 120px;
+    margin-top: 100px;
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .grafica {
+    height: 220px;
+  }
+
+  .resumen {
+    font-size: 0.95rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .container-grafica {
+    margin-top: 80px;
     padding: 20px;
+    max-width: 95%;
   }
 
   .grafica {
     height: 200px;
   }
+
+  .resumen {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .resumen div {
+    flex: 1 1 45%;
+    min-width: 120px;
+  }
+
+  .resumen span {
+    font-size: 1.3em;
+  }
 }
 
-/* Celulares */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-    gap: 10px;
-  }
-
-  .navbar__menu {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .navbar__session-btn {
-    margin-top: 10px;
-  }
-
+/* Celulares pequeños */
+@media (max-width: 480px) {
   .container-grafica {
     width: 95%;
-    margin: 20px auto;
+    margin: 30px auto;
+    padding: 15px;
   }
 
   .grafica {
-    height: 180px;
+    height: 160px;
+    margin: 20px 0;
   }
 
   .barra {
-    width: calc(100% / 6 - 8px);
+    width: calc(100% / 6 - 6px);
+    font-size: 0.65em;
+  }
+
+  .barra span {
     font-size: 0.7em;
   }
 
   .resumen {
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .resumen div {
+    flex: 1 1 100%;
   }
 
   .resumen span {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }

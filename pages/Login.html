@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/Loguin.css" />
-    <title>Login</title>
-  </head>
 
-  <body>
-    <!-- MAIN: Contenido principal -->
-    <main class="container-login">
-      <!-- ARTICLE: Bloque principal del login -->
-      <article class="login">
-        <!-- Logo o encabezado del módulo -->
-        <header class="login__header">
-          <img
-            class="logo-login"
-            src="../LogoI_mg/LogoMotorDesk.png"
-            alt="Logo del taller"
-          />
-          <h2 class="texto-login">Login</h2>
-        </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/Loguin.css" />
+  <title>Iniciar Sesión | MotorDesk</title>
+</head>
 
-        <!-- FORM correctamente marcado -->
-        <form
-          class="formulario-login"
-          action="../pages/panel.html"
-          method="get"
-        >
-          <div class="form-group">
-            <label class="pin-login" for="pin">Ingrese su PIN</label>
-            <input
-              class="contraseña-login"
-              type="password"
-              id="pin"
-              name="pin"
-              maxlength="6"
-              required
-              placeholder="••••••"
-            />
-          </div>
+<body>
+  <!-- MAIN: Contenido principal -->
+  <main class="container-login">
+    <!-- ARTICLE: Bloque principal del login -->
+    <article class="login">
+      <!-- Logo o encabezado del módulo -->
+      <header class="login__header">
+        <img class="login__logo" src="../LogoI_mg/LogoMotorDesk.png" alt="Logo del taller MotorDesk" />
+        <h1 class="login__titulo">Iniciar Sesión</h1>
+      </header>
 
-          <button class="boton" type="submit">Iniciar Sesión</button>
-        </form>
-      </article>
-    </main>
-  </body>
+      <!-- FORM correctamente marcado con BEM -->
+      <form class="login__form" action="../pages/panel.html" method="get">
+        <div class="login__grupo">
+          <label class="login__label" for="pin">Ingrese su PIN</label>
+          <input class="login__input" type="password" id="pin" name="pin" maxlength="6" required placeholder="••••••" />
+        </div>
+
+        <button class="login__boton" type="submit">Iniciar Sesión</button>
+      </form>
+    </article>
+  </main>
+</body>
+
 </html>
