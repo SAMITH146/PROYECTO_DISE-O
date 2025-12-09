@@ -35,7 +35,7 @@
   border-radius: 10px;
   padding: 8px 15px;
   transition: 0.3s ease;
-  border: solid 2px rgba(46, 132, 202, 0.502);
+  border: solid 2px var(--color-borde-input);
   white-space: nowrap;
 }
 
@@ -51,17 +51,20 @@
   padding: 10px 15px;
   border-radius: 8px;
   font-weight: 600;
-  color: var(--color-letra1);
+  color: var(--color-letra2);
   white-space: nowrap;
   text-decoration: none;
   border: solid 10px var(--color-fondo-navbar);
   border-radius: 10px;
-  background-color: var(--color-fondo-segundario);
+  background-color: var(--glow-hover);
+   border: solid 2px var(--color-borde-input);
+ 
 }
 
 .navbar__session-btn:hover {
-  background-color: var(--color-principal-hover);
   color: var(--colortexto-hover);
+  background-color: var(--glow-hover);
+ 
 }
 
 .navbar__session-icon {
@@ -69,9 +72,7 @@
   height: 24px;
 }
 
-/* ============================================
-   MEDIA QUERIES - TABLETS (max-width: 992px)
-   ============================================ */
+/* MEDIA QUERIES - TABLETS (max-width: 992px)*/
 @media (max-width: 992px) {
   .navbar {
     padding: 0 25px;

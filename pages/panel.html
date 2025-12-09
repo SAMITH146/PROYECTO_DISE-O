@@ -27,7 +27,7 @@
 
     <div class="navbar__session">
       <a href="Login.html" class="navbar__session-btn">
-        <img src="../LogoI_mg/cerrar-sesion.png" alt="Cerrar sesión" class="navbar__session-icon" />
+        <img src="../LogoI_mg/cerrarseccion_blanco.png" alt="Cerrar sesión" class="navbar__session-icon" />
         Cerrar Sesión
       </a>
     </div>
@@ -55,6 +55,125 @@
         <div>Total <span>$2.350.000</span></div>
       </aside>
     </section>
+
+    <!-- Sección de Inventario - Stock Bajo -->
+    <section class="container-inventario">
+      <h2 class="inventario-titulo">⚠️ Productos con Stock Bajo</h2>
+      <p class="inventario-subtitulo">Productos que necesitan reposición pronto</p>
+      
+      <div class="inventario-grid">
+        
+        <!-- Producto 1 - Stock Crítico -->
+        <article class="producto-card critico">
+          <div class="producto-header">
+            <h3 class="producto-nombre">Aceite Motor 5W-30</h3>
+            <span class="producto-categoria">Lubricantes</span>
+          </div>
+          <div class="producto-info">
+            <div class="stock-cantidad">
+              <span class="stock-numero">3</span>
+              <span class="stock-texto">unidades</span>
+            </div>
+            <div class="stock-estado critico-badge">CRÍTICO</div>
+          </div>
+          <div class="stock-barra">
+            <div class="stock-nivel" style="width: 15%;"></div>
+          </div>
+        </article>
+
+        <!-- Producto 2 - Stock Crítico -->
+        <article class="producto-card critico">
+          <div class="producto-header">
+            <h3 class="producto-nombre">Filtro de Aire</h3>
+            <span class="producto-categoria">Filtros</span>
+          </div>
+          <div class="producto-info">
+            <div class="stock-cantidad">
+              <span class="stock-numero">4</span>
+              <span class="stock-texto">unidades</span>
+            </div>
+            <div class="stock-estado critico-badge">CRÍTICO</div>
+          </div>
+          <div class="stock-barra">
+            <div class="stock-nivel" style="width: 20%;"></div>
+          </div>
+        </article>
+
+        <!-- Producto 3 - Stock Bajo -->
+        <article class="producto-card bajo">
+          <div class="producto-header">
+            <h3 class="producto-nombre">Pastillas de Freno</h3>
+            <span class="producto-categoria">Frenos</span>
+          </div>
+          <div class="producto-info">
+            <div class="stock-cantidad">
+              <span class="stock-numero">8</span>
+              <span class="stock-texto">unidades</span>
+            </div>
+            <div class="stock-estado bajo-badge">BAJO</div>
+          </div>
+          <div class="stock-barra">
+            <div class="stock-nivel" style="width: 40%;"></div>
+          </div>
+        </article>
+
+        <!-- Producto 4 - Stock Bajo -->
+        <article class="producto-card bajo">
+          <div class="producto-header">
+            <h3 class="producto-nombre">Bujías NGK</h3>
+            <span class="producto-categoria">Sistema Eléctrico</span>
+          </div>
+          <div class="producto-info">
+            <div class="stock-cantidad">
+              <span class="stock-numero">12</span>
+              <span class="stock-texto">unidades</span>
+            </div>
+            <div class="stock-estado bajo-badge">BAJO</div>
+          </div>
+          <div class="stock-barra">
+            <div class="stock-nivel" style="width: 60%;"></div>
+          </div>
+        </article>
+
+        <!-- Producto 5 - Stock Bajo -->
+        <article class="producto-card bajo">
+          <div class="producto-header">
+            <h3 class="producto-nombre">Refrigerante Motor</h3>
+            <span class="producto-categoria">Líquidos</span>
+          </div>
+          <div class="producto-info">
+            <div class="stock-cantidad">
+              <span class="stock-numero">10</span>
+              <span class="stock-texto">unidades</span>
+            </div>
+            <div class="stock-estado bajo-badge">BAJO</div>
+          </div>
+          <div class="stock-barra">
+            <div class="stock-nivel" style="width: 50%;"></div>
+          </div>
+        </article>
+
+        <!-- Producto 6 - Stock Crítico -->
+        <article class="producto-card critico">
+          <div class="producto-header">
+            <h3 class="producto-nombre">Correa de Distribución</h3>
+            <span class="producto-categoria">Transmisión</span>
+          </div>
+          <div class="producto-info">
+            <div class="stock-cantidad">
+              <span class="stock-numero">2</span>
+              <span class="stock-texto">unidades</span>
+            </div>
+            <div class="stock-estado critico-badge">CRÍTICO</div>
+          </div>
+          <div class="stock-barra">
+            <div class="stock-nivel" style="width: 10%;"></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 </body>
 

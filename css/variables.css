@@ -9,7 +9,7 @@
     --color-fondo-segundario: rgba(241, 245, 249, 0.95);
     --color-fondo-navbar: #0f172a;
 
-    /* Cards de servicios - Gradientes premium */
+    /*  Gradientes*/
     --card-gradient-1: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
     --card-gradient-hover: linear-gradient(135deg, #234b7a 0%, #153555 100%);
 
@@ -32,7 +32,7 @@
     --color-letra2: #f8fafc;
     --color-letra3: #94a3b8;
     --color-letra-acento: #38bdf8;
-    --colortexto-hover: #ffffff;
+    --colortexto-hover: hsl(170, 94%, 51%);
 
     /* Bordes */
     --color-borde-input: #334155;
