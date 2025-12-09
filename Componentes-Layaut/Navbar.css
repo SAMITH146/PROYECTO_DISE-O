@@ -1,5 +1,3 @@
-/* NAVBAR */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -53,9 +51,12 @@
   padding: 10px 15px;
   border-radius: 8px;
   font-weight: 600;
-  transition: background 0.3s ease;
-  color: var(--color-letra2);
+  color: var(--color-letra1);
   white-space: nowrap;
+  text-decoration: none;
+  border: solid 10px var(--color-fondo-navbar);
+  border-radius: 10px;
+  background-color: var(--color-fondo-segundario);
 }
 
 .navbar__session-btn:hover {
@@ -69,57 +70,17 @@
 }
 
 /* ============================================
-   CHECKBOX HAMBURGUESA - SOLO CSS (SIN JS)
-   ============================================ */
-
-/* Checkbox oculto */
-.navbar__toggle {
-  display: none;
-}
-
-/* Label como botón hamburguesa - oculto en desktop */
-.navbar__hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 10001;
-  order: 3;
-  /* Lo pone a la derecha */
-  margin-left: auto;
-}
-
-.navbar__hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-letra2, #fff);
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-/* Animación X cuando checkbox está checked */
-.navbar__toggle:checked+.navbar__hamburger span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.navbar__toggle:checked+.navbar__hamburger span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar__toggle:checked+.navbar__hamburger span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* ============================================
    MEDIA QUERIES - TABLETS (max-width: 992px)
    ============================================ */
 @media (max-width: 992px) {
   .navbar {
     padding: 0 25px;
-    height: 70px;
+    height: auto;
+    /* Permitir altura variable */
+    min-height: 70px;
+    flex-wrap: wrap;
+    /* Permitir wrap si es necesario */
+    gap: 10px;
   }
 
   .navbar__logo-img {
@@ -127,7 +88,7 @@
   }
 
   .navbar__menu {
-    gap: 1.2rem;
+    gap: 1rem;
   }
 
   .navbar__menu-item {
@@ -146,83 +107,69 @@
    ============================================ */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 20px;
-    height: 65px;
-    flex-wrap: wrap;
+    padding: 10px 20px;
+    height: auto;
+    flex-direction: column;
+    /* Apilar elementos verticalmente en móvil */
+    justify-content: center;
+    gap: 15px;
   }
 
   .navbar__logo-img {
     width: 55px;
   }
 
-  /* Mostrar hamburguesa a la derecha */
-  .navbar__hamburger {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  /* Ocultar menú por defecto en móvil */
+  /* Menú siempre visible, adaptado al flujo */
   .navbar__menu {
-    position: fixed;
-    top: 65px;
-    left: 0;
+    display: flex;
+    flex-direction: row;
+    /* Mantener fila o cambiar a columna según preferencia, aquí flex-wrap ayuda */
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    flex-direction: column;
-    background-color: var(--color-fondo-navbar, #1a1a2e);
-    padding: 20px 0;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.4s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    z-index: 9998;
-  }
-
-  /* Menú visible cuando checkbox está checked */
-  .navbar__toggle:checked~.navbar__menu {
-    max-height: 400px;
+    gap: 10px;
+    position: static;
+    /* Resetear posición fija anterior */
+    background-color: transparent;
+    padding: 0;
+    max-height: none;
     opacity: 1;
-    padding: 20px 0;
+    box-shadow: none;
+    overflow: visible;
+    
   }
 
   .navbar__menu-item {
-    width: 90%;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
     text-align: center;
-    padding: 15px 20px;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border: solid 1px rgba(46, 132, 202, 0.5);
+    /* Restaurar borde sutil */
+    border-radius: 8px;
+    /* Restaurar borde redondeado */
   }
 
-  .navbar__menu-item:last-child {
-    border-bottom: none;
-  }
+
 
   .navbar__menu-item:hover {
-    background-color: rgba(46, 132, 202, 0.2);
+    background-color: var(--color-principal-hover);
     border-radius: 8px;
   }
 
-  /* Botón sesión a la izquierda del hamburger */
   .navbar__session {
-    order: 2;
-    margin-right: 50px;
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .navbar__session-btn {
-    padding: 8px 12px;
-    font-size: 0.8rem;
-  }
-
-  .navbar__session-icon {
-    width: 20px;
-    height: 20px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    width: auto;
+    justify-content: center;
   }
 }
 
@@ -231,41 +178,28 @@
    ============================================ */
 @media (max-width: 480px) {
   .navbar {
-    padding: 0 15px;
-    height: 60px;
+    padding: 10px 15px;
   }
 
   .navbar__logo-img {
     width: 50px;
   }
 
-  .navbar__hamburger {
-    right: 15px;
-    width: 26px;
-    height: 20px;
-  }
-
   .navbar__menu {
-    top: 60px;
+    flex-direction: column;
+    /* En pantallas muy pequeñas, apilar enlaces */
+    width: 100%;
+    align-items: stretch;
+    /* Estirar botones a todo el ancho */
   }
 
   .navbar__menu-item {
-    padding: 12px 15px;
     font-size: 0.95rem;
-  }
-
-  .navbar__session {
-    margin-right: 45px;
+    display: block;
   }
 
   .navbar__session-btn {
-    padding: 6px 10px;
-    font-size: 0.75rem;
-    gap: 6px;
-  }
-
-  .navbar__session-icon {
-    width: 18px;
-    height: 18px;
+    width: 100%;
+    justify-content: center;
   }
 }

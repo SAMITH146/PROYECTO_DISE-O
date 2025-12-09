@@ -41,7 +41,7 @@
 
 /* Breadcrumb visual sutil */
 .titulo-opciones::after {
-  content: '›';
+
   position: absolute;
   left: 8px;
   font-size: 1.5rem;
@@ -74,7 +74,7 @@
 
 /* Línea lateral que conecta visualmente con la card padre */
 .subcard::before {
-  content: '';
+
   position: absolute;
   left: 0;
   top: 0;
@@ -90,7 +90,6 @@
 
 /* Icono de derivación sutil */
 .subcard::after {
-  content: '↳';
   position: absolute;
   top: 50%;
   right: 20px;

@@ -2,88 +2,83 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/Componentes-Layaut/Sub-cars.css" />
-  <title>Diagnóstico General | MotorDesk</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Componentes-Layaut/Sub-cars.css" />
+    <title>Diagnóstico General | MotorDesk</title>
 </head>
 
 <body>
-  <!-- ENCABEZADO -->
-  <header class="navbar">
-    <div class="navbar__logo">
-      <img src="/LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
-    </div>
+    <!-- ENCABEZADO -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+        </div>
 
-    <!-- Checkbox + Label para menú hamburguesa (solo CSS, sin JS) -->
-    <input type="checkbox" id="navToggle" class="navbar__toggle" />
-    <label for="navToggle" class="navbar__hamburger" aria-label="Abrir menú">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+        <!-- Checkbox + Label para menú hamburguesa ELIMINADOS -->
 
-    <nav class="navbar__menu" aria-label="Menu principal">
-      <a href="/pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
-      <a href="#" class="navbar__menu-item">Orden en curso</a>
-      <a href="#" class="navbar__menu-item">Historial</a>
-    </nav>
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="/pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="#" class="navbar__menu-item">Orden en curso</a>
+            <a href="#" class="navbar__menu-item">Historial</a>
+        </nav>
 
-    <div class="navbar__session">
-      <a href="Tipo_orden.html" class="navbar__session-btn">
-        <img src="/LogoI_mg/flecha-izquierda.png" alt="Volver a tipo de orden" class="navbar__session-icon" />
-        Atrás
-      </a>
-    </div>
-  </header>
+        <div class="navbar__session">
+            <a href="Tipo_orden.html" class="navbar__session-btn">
+                <img src="/LogoI_mg/flecha-izquierda.png" alt="Volver a tipo de orden" class="navbar__session-icon" />
+                Atrás
+            </a>
+        </div>
+    </header>
 
-  <main class="contenedor-diagnostico">
-    <section class="opciones-servicio">
-      <h1 class="titulo-opciones">Diagnóstico General</h1>
+    <main class="contenedor-diagnostico">
+        <section class="opciones-servicio">
+            <h1 class="titulo-opciones">Diagnóstico General</h1>
 
-      <div class="lista-opciones">
-        <a href="#" class="subcard">
-          <h2>Escaneo computarizado</h2>
-          <p>Lectura completa de códigos de falla desde la ECU.</p>
-        </a>
+            <div class="lista-opciones">
+                <a href="#" class="subcard">
+                    <h2>Escaneo computarizado</h2>
+                    <p>Lectura completa de códigos de falla desde la ECU.</p>
+                </a>
 
-        <a href="#" class="subcard">
-          <h2>Revisión visual general</h2>
-          <p>Inspección de mangueras, correas, líquidos y fugas.</p>
-        </a>
+                <a href="#" class="subcard">
+                    <h2>Revisión visual general</h2>
+                    <p>Inspección de mangueras, correas, líquidos y fugas.</p>
+                </a>
 
-        <a href="#" class="subcard">
-          <h2>Chequeo tablero</h2>
-          <p>Prueba de testigos, sensores y advertencias.</p>
-        </a>
+                <a href="#" class="subcard">
+                    <h2>Chequeo tablero</h2>
+                    <p>Prueba de testigos, sensores y advertencias.</p>
+                </a>
 
-        <a href="#" class="subcard">
-          <h2>Inspección de luces y tablero</h2>
-          <p>Validación de comportamiento del vehículo en movimiento.</p>
-        </a>
+                <a href="#" class="subcard">
+                    <h2>Inspección de luces y tablero</h2>
+                    <p>Validación de comportamiento del vehículo en movimiento.</p>
+                </a>
 
-        <a href="#" class="subcard">
-          <h2>Inspección básica de frenos</h2>
-          <p>Evaluación visual de pastillas, discos, mangueras y nivel del líquido de frenos.</p>
-        </a>
+                <a href="#" class="subcard">
+                    <h2>Inspección básica de frenos</h2>
+                    <p>Evaluación visual de pastillas, discos, mangueras y nivel del líquido de frenos.</p>
+                </a>
 
-        <a href="#" class="subcard">
-          <h2>Inspección básica de suspensión</h2>
-          <p>Chequeo de amortiguadores, bujes, rótulas y estabilidad general del tren rodante.</p>
-        </a>
+                <a href="#" class="subcard">
+                    <h2>Inspección básica de suspensión</h2>
+                    <p>Chequeo de amortiguadores, bujes, rótulas y estabilidad general del tren rodante.</p>
+                </a>
 
-        <a href="#" class="subcard">
-          <h2>Revisión de fugas</h2>
-          <p>Búsqueda de pérdidas de aceite, refrigerante, combustible o líquidos hidráulicos.</p>
-        </a>
+                <a href="#" class="subcard">
+                    <h2>Revisión de fugas</h2>
+                    <p>Búsqueda de pérdidas de aceite, refrigerante, combustible o líquidos hidráulicos.</p>
+                </a>
 
-        <a href="#" class="subcard">
-          <h2>Reseteo de códigos simples</h2>
-          <p>Borrado de códigos leves del sistema electrónico una vez verificada la ausencia de fallas activas.</p>
-        </a>
-      </div>
-    </section>
-  </main>
+                <a href="#" class="subcard">
+                    <h2>Reseteo de códigos simples</h2>
+                    <p>Borrado de códigos leves del sistema electrónico una vez verificada la ausencia de fallas
+                        activas.</p>
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
