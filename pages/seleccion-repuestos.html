@@ -2,103 +2,144 @@
 <html lang="es">
 
 <head>
+    <!-- Configuración de metadatos básicos del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Hoja de estilos específica para la página de selección de repuestos -->
     <link rel="stylesheet" href="../css/repuestos.css">
+    
     <title>Selección de Repuestos | MotorDesk</title>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
     <header class="navbar">
+        <!-- Logo del taller -->
         <div class="navbar__logo">
-            <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+            <img src="../../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
         </div>
 
+        <!-- Menú de navegación principal -->
         <nav class="navbar__menu" aria-label="Menu principal">
-            <a href="agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
-            <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
-            <a href="#" class="navbar__menu-item">Historial</a>
+            <a href="../../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="../../../pages/orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="../../../pages/historial.html" class="navbar__menu-item">Historial</a>
         </nav>
 
+        <!-- Botón de retroceso a tipo de orden -->
         <div class="navbar__session">
-            <a href="../pages/panel.html" class="navbar__session-btn">
-                <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
-                Volver
+            <a href="../pages/tipo-orden/cards/Tipo_orden.html" class="navbar__session-btn">
+                <img src="../../../LogoI_mg/atras_blanco.png" alt="Volver a tipo de orden"
+                    class="navbar__session-icon" />
+                Atrás
             </a>
         </div>
     </header>
 
-    <!-- KMAIN CONTAINER -->
+    <!-- ==================== CONTENEDOR PRINCIPAL DE REPUESTOS ==================== -->
+    <!-- Aquí se muestran todas las categorías de repuestos organizadas por tipo de vehículo -->
     <main class="contenedor-repuestos">
 
-        <!-- HEADER WITH SKIP OPTION -->
+        <!-- ==================== ENCABEZADO DE LA PÁGINA ==================== -->
+        <!-- Incluye el título de la sección y las opciones de búsqueda/omitir repuestos -->
         <div class="encabezado-pagina">
+            <!-- Título principal de la página -->
             <h1 class="titulo-seccion">Selección de Repuestos</h1>
 
+            <!-- Contenedor de acciones: campo de búsqueda y opción para continuar sin repuestos -->
             <div class="contenedor-acciones-header">
+                <!-- Input de búsqueda para filtrar repuestos (funcionalidad pendiente con JavaScript) -->
                 <input type="text" placeholder="Buscar repuesto..." class="input-busqueda-repuestos">
+                
+                <!-- Enlace para omitir la selección de repuestos y continuar con el proceso -->
+                <!-- Al hacer clic, abre el modal de confirmación -->
                 <a href="#modal-exito" class="btn-sin-repuestos">
                     Continuar sin repuestos ➝
                 </a>
             </div>
         </div>
 
-        <!-- SECTION: MOTOCICLETAS -->
+        <!-- ==================== SECCIÓN: REPUESTOS PARA MOTOCICLETAS ==================== -->
+        <!-- Cuadrícula de repuestos comúnmente utilizados en motocicletas -->
         <section class="seccion-vehiculo">
             <h2 class="titulo-categoria">🏍️ Motocicletas</h2>
+            
+            <!-- Grid responsivo que se adapta a diferentes tamaños de pantalla -->
+            <!-- Cada tarjeta es clickeable y lleva al modal de confirmación -->
             <div class="cuadricula-repuestos">
+                <!-- Aceite sintético 4 Tiempos para motocicletas -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🛢️</div>
                     <span class="nombre-repuesto">Aceite 4T</span>
                     <span class="precio-repuesto">Sintético 10W-40</span>
                 </a>
+                
+                <!-- Kit de arrastre con cadena reforzada -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">⛓️</div>
                     <span class="nombre-repuesto">Kit de Arrastre</span>
                     <span class="precio-repuesto">Cadena Reforzada</span>
                 </a>
+                
+                <!-- Pastillas de freno cerámicas de alto rendimiento -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🛑</div>
                     <span class="nombre-repuesto">Pastillas Freno</span>
                     <span class="precio-repuesto">Cerámica</span>
                 </a>
+                
+                <!-- Batería de gel 12V para motocicletas -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🔋</div>
                     <span class="nombre-repuesto">Batería Moto</span>
                     <span class="precio-repuesto">Gel 12V</span>
                 </a>
+                
+                <!-- Llanta delantera para pista y ciudad -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🛞</div>
                     <span class="nombre-repuesto">Llanta Delantera</span>
                     <span class="precio-repuesto">Pista/Ciudad</span>
                 </a>
+                
+                <!-- Llanta trasera diseñada para todo terreno -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🛞</div>
                     <span class="nombre-repuesto">Llanta Trasera</span>
                     <span class="precio-repuesto">Todo Terreno</span>
                 </a>
+                
+                <!-- Manubrio de aluminio resistente -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🏍️</div>
                     <span class="nombre-repuesto">Manubrio</span>
                     <span class="precio-repuesto">Aluminio</span>
                 </a>
+                
+                <!-- Foco LED H4 con función alta/baja -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">💡</div>
                     <span class="nombre-repuesto">Foco LED</span>
                     <span class="precio-repuesto">H4 Alta/Baja</span>
                 </a>
+                
+                <!-- Chicote de clutch reforzado para mayor durabilidad -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">〰️</div>
                     <span class="nombre-repuesto">Chicote Clutch</span>
                     <span class="precio-repuesto">Reforzado</span>
                 </a>
+                
+                <!-- Filtro de gasolina universal -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">⛽</div>
                     <span class="nombre-repuesto">Filtro Gasolina</span>
                     <span class="precio-repuesto">Universal</span>
                 </a>
+                
+                <!-- Carburador para motos de 150cc a 250cc -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🔧</div>
                     <span class="nombre-repuesto">Carburador</span>
@@ -107,70 +148,98 @@
             </div>
         </section>
 
-        <!-- SECTION: AUTOMOVILES -->
+        <!-- ==================== SECCIÓN: REPUESTOS PARA AUTOMÓVILES ==================== -->
+        <!-- Cuadrícula con los repuestos más comunes para automóviles de pasajeros -->
         <section class="seccion-vehiculo">
             <h2 class="titulo-categoria">🚗 Automóviles</h2>
+            
+            <!-- Grid de repuestos automotrices con diseño responsive -->
             <div class="cuadricula-repuestos">
+                <!-- Filtro de aire de alto flujo para mejor rendimiento del motor -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🌫️</div>
                     <span class="nombre-repuesto">Filtro de Aire</span>
                     <span class="precio-repuesto">Alto Flujo</span>
                 </a>
+                
+                <!-- Pack de 4 bujías de iridium para mejor chispa y durabilidad -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🕯️</div>
                     <span class="nombre-repuesto">Bujías Iridium</span>
                     <span class="precio-repuesto">Pack x4</span>
                 </a>
+                
+                <!-- Discos de freno ventilados para mejor disipación de calor -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">💿</div>
                     <span class="nombre-repuesto">Discos de Freno</span>
                     <span class="precio-repuesto">Ventilados</span>
                 </a>
+                
+                <!-- Par de amortiguadores delanteros -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🔧</div>
                     <span class="nombre-repuesto">Amortiguadores</span>
                     <span class="precio-repuesto">Delanteros</span>
                 </a>
+                
+                <!-- Alternador de 120 amperios para sistema eléctrico -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">⚡</div>
                     <span class="nombre-repuesto">Alternador</span>
                     <span class="precio-repuesto">120 Amperios</span>
                 </a>
+                
+                <!-- Radiador de aluminio para sistema de enfriamiento -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🌡️</div>
                     <span class="nombre-repuesto">Radiador</span>
                     <span class="precio-repuesto">Aluminio</span>
                 </a>
+                
+                <!-- Batería LTH de 600 amperios de arranque en frío -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🔋</div>
                     <span class="nombre-repuesto">Batería Auto</span>
                     <span class="precio-repuesto">LTH 600 amps</span>
                 </a>
+                
+                <!-- Par de limpiaparabrisas delanteros -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🌧️</div>
                     <span class="nombre-repuesto">Limpiaparabrisas</span>
                     <span class="precio-repuesto">Par Delantero</span>
                 </a>
+                
+                <!-- Kit completo de focos halógenos premium -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">💡</div>
                     <span class="nombre-repuesto">Kit Focos</span>
                     <span class="precio-repuesto">Halógeno Premium</span>
                 </a>
+                
+                <!-- Kit completo de distribución (banda, tensores y rodamientos) -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">⚙️</div>
                     <span class="nombre-repuesto">Banda Tiempo</span>
                     <span class="precio-repuesto">Kit Distribución</span>
                 </a>
+                
+                <!-- Bomba de agua de alto flujo para refrigeración -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">💧</div>
                     <span class="nombre-repuesto">Bomba de Agua</span>
                     <span class="precio-repuesto">Alto Flujo</span>
                 </a>
+                
+                <!-- Termostato de 82 grados centígrados -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🌡️</div>
                     <span class="nombre-repuesto">Termostato</span>
                     <span class="precio-repuesto">82°C</span>
                 </a>
+                
+                <!-- Bomba eléctrica de gasolina -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">⛽</div>
                     <span class="nombre-repuesto">Bomba Gasolina</span>
@@ -179,60 +248,84 @@
             </div>
         </section>
 
-        <!-- SECTION: CAMIONES -->
+        <!-- ==================== SECCIÓN: REPUESTOS PARA VEHÍCULOS PESADOS ==================== -->
+        <!-- Repuestos especializados para camiones y vehículos de carga -->
         <section class="seccion-vehiculo">
             <h2 class="titulo-categoria">🚛 Vehículos Pesados</h2>
+            
+            <!-- Grid de repuestos para vehículos pesados -->
             <div class="cuadricula-repuestos">
+                <!-- Filtro de diesel con separador de agua integrado -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">⚫</div>
                     <span class="nombre-repuesto">Filtro Diesel</span>
                     <span class="precio-repuesto">Separador Agua</span>
                 </a>
+                
+                <!-- Válvula de aire para sistema de frenos neumáticos -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">💨</div>
                     <span class="nombre-repuesto">Válvula de Aire</span>
                     <span class="precio-repuesto">Sistema Frenos</span>
                 </a>
+                
+                <!-- Muelles de suspensión reforzados para carga pesada -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🔩</div>
                     <span class="nombre-repuesto">Muelles</span>
                     <span class="precio-repuesto">Reforzados</span>
                 </a>
+                
+                <!-- Kit de luces LED de 24 voltios para camiones -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">💡</div>
                     <span class="nombre-repuesto">Kit Luces</span>
                     <span class="precio-repuesto">LED 24V</span>
                 </a>
+                
+                <!-- Llanta radial 22.5 para carga pesada -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🚛</div>
                     <span class="nombre-repuesto">Llanta Carga</span>
                     <span class="precio-repuesto">22.5 Radial</span>
                 </a>
+                
+                <!-- Batería de 24V para servicio pesado -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🔋</div>
                     <span class="nombre-repuesto">Batería 24V</span>
                     <span class="precio-repuesto">Servicio Pesado</span>
                 </a>
+                
+                <!-- Espejo retrovisor cóncavo lateral -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🔍</div>
                     <span class="nombre-repuesto">Espejo Cóncavo</span>
                     <span class="precio-repuesto">Lateral</span>
                 </a>
+                
+                <!-- Extintor industrial para emergencias -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🧯</div>
                     <span class="nombre-repuesto">Extintor</span>
                     <span class="precio-repuesto">Industrial</span>
                 </a>
+                
+                <!-- Grasa para lubricación de chasis en presentación de cubeta -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">🛢️</div>
                     <span class="nombre-repuesto">Grasa Chasis</span>
                     <span class="precio-repuesto">Cubeta 19L</span>
                 </a>
+                
+                <!-- Crucetas para cardán principal del vehículo -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">➕</div>
                     <span class="nombre-repuesto">Crucetas</span>
                     <span class="precio-repuesto">Cardán Principal</span>
                 </a>
+                
+                <!-- Kit de reparación completo para diferencial -->
                 <a href="#modal-exito" class="tarjeta-repuesto">
                     <div class="icono-repuesto">⚙️</div>
                     <span class="nombre-repuesto">Diferencial</span>
@@ -243,13 +336,26 @@
 
     </main>
 
-    <!-- SUCCESS MODAL (Replaces the one in individual pages) -->
+    <!-- ==================== MODAL DE CONFIRMACIÓN ==================== -->
+    <!-- 
+        Este modal aparece cuando el usuario selecciona un repuesto o continúa sin repuestos.
+        Se activa mediante enlaces con el ancla #modal-exito.
+        El fondo semi-transparente oscurece el contenido detrás para enfocar la atención.
+    -->
     <div id="modal-exito" class="modal-fondo">
+        <!-- Contenedor central del modal con animación de entrada -->
         <div class="modal-contenido">
+            <!-- Icono de confirmación (check ) -->
             <div class="icono-exito">✓</div>
+            
+            <!-- Título del modal -->
             <h2 class="titulo-modal">¡Registro Exitoso!</h2>
+            
+            <!-- Mensaje descriptivo confirmando la acción -->
             <p class="mensaje-modal">La orden de reparación y los repuestos seleccionados han sido registrados
                 correctamente en el sistema.</p>
+            
+            <!-- Botón para cerrar el modal y redirigir al panel de control -->
             <a href="panel.html" class="btn-entendido">Entendido</a>
         </div>
     </div>

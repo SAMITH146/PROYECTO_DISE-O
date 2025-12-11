@@ -1,51 +1,103 @@
+/* ==================== IMPORTACIÓN DE FUENTE GOOGLE FONTS ==================== */
+/*  Importa la fuente Nunito con todos los pesos disponibles para mantener consistencia tipográfica en todo el sitio */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* ==================== VARIABLES CSS GLOBALES ==================== */
+/* 
+ * Sistema de diseño centralizado mediante variables CSS (Custom Properties).
+ * Todas las variables están definidas en :root para acceso global en todo el proyecto.
+ * Esto facilita el mantenimiento y permite cambios de tema consistentes.
+ */
 :root {
-    /* Fuente principal */
+    /* ==================== TIPOGRAFÍA ==================== */
+    /* Fuente principal del sitio - Aplicada globalmente */
     --fuente: 'Nunito', sans-serif;
 
-    /* Fondos principales */
+    /* ==================== FONDOS PRINCIPALES ==================== */
+    /* Fondo degradado radial oscuro para pantallas principales */
     --color-fondo: radial-gradient(circle at center, #0f172a 0%, #020617 70%, #0c1426 100%);
+    
+    /* Fondo claro con transparencia para tarjetas o secciones secundarias */
     --color-fondo-segundario: rgba(241, 245, 249, 0.95);
+    
+    /* Color sólido para la barra de navegación */
     --color-fondo-navbar: #0f172a;
 
-    /*  Gradientes*/
+    /* ==================== GRADIENTES PARA TARJETAS ==================== */
+    /* Gradiente principal para tarjetas en estado normal */
     --card-gradient-1: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+    
+    /* Gradiente para efecto hover en tarjetas */
     --card-gradient-hover: linear-gradient(135deg, #234b7a 0%, #153555 100%);
 
-    /* Subcards - Tonos derivados más claros */
+    /* ==================== GRADIENTES PARA SUBTARJETAS ==================== */
+    /* Tonos más oscuros para elementos anidados dentro de tarjetas */
     --subcard-bg: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     --subcard-bg-hover: linear-gradient(135deg, #334155 0%, #1e293b 100%);
 
-    /* Colores de acento */
+    /* ==================== COLORES DE ACENTO ==================== */
+    /* Azul primario para elementos principales */
     --color-acento-primario: #3b82f6;
+    
+    /* Cyan para elementos secundarios */
     --color-acento-secundario: #06b6d4;
+    
+    /* Púrpura para elementos terciarios */
     --color-acento-terciario: #8b5cf6;
+    
+    /* Color de acento para hover */
     --color-acento-hover: #22d3ee;
 
-    /* Glow effects */
+    /* ==================== EFECTOS DE BRILLO (GLOW) ==================== */
+    /* Sombra brillante para elementos con efecto glow */
     --glow-primario: 0 0 20px rgba(59, 130, 246, 0.3);
+    
+    /* Sombra brillante más intensa para hover */
     --glow-hover: 0 0 30px rgba(34, 211, 238, 0.4);
 
-    /* Textos */
+    /* ==================== COLORES DE TEXTO ==================== */
+    /* Texto oscuro para fondos claros */
     --color-letra1: #0f172a;
+    
+    /* Texto blanco/claro para fondos oscuros */
     --color-letra2: #f8fafc;
+    
+    /* Texto gris para contenido secundario */
     --color-letra3: #94a3b8;
+    
+    /* Texto con color de acento (cyan) */
     --color-letra-acento: #38bdf8;
+    
+    /* Color de texto en hover (turquesa brillante) */
     --colortexto-hover: hsl(170, 94%, 51%);
 
-    /* Bordes */
+    /* ==================== BORDES ==================== */
+    /* Color de borde para inputs oscuros */
     --color-borde-input: #334155;
+    
+    /* Borde semi-transparente blanco para inputs */
     --color-borde-input2: rgba(255, 255, 255, 0.2);
+    
+    /* Borde azul semi-transparente para tarjetas */
     --color-borde-card: rgba(59, 130, 246, 0.3);
 
-    /* Botones */
+    /* ==================== BOTONES ==================== */
+    /* Color base de botones principales */
     --color-boton: #3b82f6;
+    
+    /* Color de botones en hover (azul más oscuro) */
     --color-boton-hover: #2563eb;
 
-    /* Sombras */
+    /* ==================== SOMBRAS ==================== */
+    /* Sombra estándar para tarjetas en estado normal */
     --sombra-card: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 1px rgba(59, 130, 246, 0.3);
+    
+    /* Sombra elevada para tarjetas en hover */
     --sombra-card-hover: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(34, 211, 238, 0.2);
+    
+    /* Sombra para subtarjetas en estado normal */
     --sombra-subcard: 0 4px 20px rgba(0, 0, 0, 0.25);
+    
+    /* Sombra para subtarjetas en hover */
     --sombra-subcard-hover: 0 8px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(59, 130, 246, 0.15);
 }

@@ -2,48 +2,67 @@
 <html lang="es">
 
 <head>
+    <!-- Configuración de metadatos básicos -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Hoja de estilos específica para la página de historial -->
     <link rel="stylesheet" href="../css/historial.css">
+    
     <title>Historial de Servicios | MotorDesk</title>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
     <header class="navbar">
+        <!-- Logo del taller -->
         <div class="navbar__logo">
             <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
         </div>
 
+        <!-- Menú de navegación principal -->
         <nav class="navbar__menu" aria-label="Menu principal">
             <a href="agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
             <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <!-- Item activo en la página actual -->
             <a href="historial.html" class="navbar__menu-item active">Historial</a>
         </nav>
 
+        <!-- Botón de retroceso al panel -->
         <div class="navbar__session">
             <a href="../pages/panel.html" class="navbar__session-btn">
-                <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
+                <img src="../LogoI_mg/atras_blanco.png" alt="Volver al panel" class="navbar__session-icon" />
                 Volver
             </a>
         </div>
     </header>
 
-    <!-- MAIN CONTAINER -->
+    <!-- ==================== CONTENEDOR PRINCIPAL DE HISTORIAL ==================== -->
     <main class="contenedor-historial">
 
+        <!-- Encabezado con título y filtros de búsqueda -->
         <div class="encabezado-historial">
             <h1 class="titulo-pagina">Historial de Servicios</h1>
 
+            <!-- ==================== FILTROS DE BÚSQUEDA ==================== -->
+            <!-- Permite filtrar por nombre de cliente, ID de orden o por fecha -->
             <div class="filtros-busqueda">
+                <!-- Input de búsqueda por texto (cliente o ID de orden) -->
                 <input type="text" placeholder="Buscar por cliente o ID..." class="input-busqueda">
+                
+                <!-- Selector de fecha para filtrar por rango temporal -->
                 <input type="date" class="input-busqueda" style="width: auto;">
             </div>
         </div>
 
-        <!-- LIST HEADER (Desktop only) -->
+        <!-- ==================== TABLA DE HISTORIAL ==================== -->
+        <!-- 
+            Tabla responsiva que muestra todas las órdenes completadas o canceladas.
+            Cada fila es clickeable aunque actualmente no tiene funcionalidad asignada.
+        -->
         <div class="lista-historial">
+            <!-- Cabecera de la tabla (visible solo en pantallas grandes) -->
             <div class="item-historial cabecera-lista">
                 <div class="celda-historial">ID Orden</div>
                 <div class="celda-historial">Cliente</div>
@@ -54,7 +73,7 @@
                 <div class="celda-historial">Estado</div>
             </div>
 
-            <!-- ITEM 1 -->
+            <!-- ==================== REGISTRO 1: ORDEN ENTREGADA ==================== -->
             <div class="item-historial">
                 <div class="celda-historial id-orden">#ORD-845</div>
                 <div class="celda-historial celda-cliente">Roberto Gómez</div>
@@ -67,7 +86,7 @@
                 </div>
             </div>
 
-            <!-- ITEM 2 -->
+            <!-- ==================== REGISTRO 2: ORDEN ENTREGADA ==================== -->
             <div class="item-historial">
                 <div class="celda-historial id-orden">#ORD-842</div>
                 <div class="celda-historial celda-cliente">Laura Méndez</div>
@@ -80,7 +99,7 @@
                 </div>
             </div>
 
-            <!-- ITEM 3 -->
+            <!-- ==================== REGISTRO 3: ORDEN ENTREGADA ==================== -->
             <div class="item-historial">
                 <div class="celda-historial id-orden">#ORD-839</div>
                 <div class="celda-historial celda-cliente">Taller "La Flotilla"</div>
@@ -93,7 +112,8 @@
                 </div>
             </div>
 
-            <!-- ITEM 4 -->
+            <!-- ==================== REGISTRO 4: ORDEN CANCELADA ==================== -->
+            <!-- Este registro muestra un costo de $0 por ser una orden cancelada -->
             <div class="item-historial">
                 <div class="celda-historial id-orden">#ORD-830</div>
                 <div class="celda-historial celda-cliente">Miguel Ángel</div>
@@ -106,7 +126,7 @@
                 </div>
             </div>
 
-            <!-- ITEM 5 -->
+            <!-- ==================== REGISTRO 5: ORDEN ENTREGADA ==================== -->
             <div class="item-historial">
                 <div class="celda-historial id-orden">#ORD-825</div>
                 <div class="celda-historial celda-cliente">Sofía Vergara</div>

@@ -1,14 +1,17 @@
+/* ==================== IMPORTACIONES DE ESTILOS ==================== */
 @import url(panel.css);
 @import url(../Componentes-Layaut/Navbar.css);
 
+/* ==================== ESTILOS GLOBALES ==================== */
 * {
   font-family: var(--fuente);
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* ==================== CONTENEDOR PRINCIPAL DEL FORMULARIO ==================== */
+/* Layout flex que permite mostrar dos formularios lado a lado */
 .formulario-grande {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite que los formularios se envuelvan en pantallas pequeñas */
   gap: 40px;
   min-height: 70vh;
   align-items: center;
@@ -16,7 +19,8 @@
   padding: 20px;
 }
 
-/* FORMULARIO */
+/* ==================== TARJETA DE FORMULARIO ==================== */
+/* Cada sección (cliente/vehículo) tiene su propia tarjeta */
 .formulario {
   width: 100%;
   max-width: 450px;
@@ -26,25 +30,28 @@
   box-sizing: border-box;
 }
 
+/* Título de la sección del formulario */
 .formulario__titulo {
   font-weight: 600;
   margin-bottom: 5px;
   border-bottom: 2px solid var(--color-borde-input);
 }
 
+/* Subtítulo descriptivo debajo del título */
 .formulario__subtitulo {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 30px;
 }
 
-/* GRUPOS */
+/* ==================== GRUPOS DE CAMPOS ==================== */
+/* Contenedor para cada par label-input */
 .formulario__grupo {
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* LABEL */
+/* ==================== LABELS ==================== */
 .formulario__label {
   display: block;
   margin-bottom: 5px;
@@ -52,7 +59,8 @@
   font-weight: 500;
 }
 
-/* INPUT */
+/* ==================== INPUTS ==================== */
+/* Campos de entrada para datos del cliente y vehículo */
 .formulario__input {
   width: 100%;
   padding: 12px 15px;
@@ -65,11 +73,13 @@
   box-sizing: border-box;
 }
 
+/* Estado focus del input */
 .formulario__input:focus {
   border-color: var(--color-principal-hover);
 }
 
-/* BOTÓN */
+/* ==================== CONTENEDOR DE BOTÓN ==================== */
+/* Centra el botón de envío debajo de ambos formularios */
 .contenedor-boton {
   width: 100%;
   display: flex;
@@ -77,6 +87,7 @@
   margin-top: 30px;
 }
 
+/* ==================== BOTÓN DE ENVÍO ==================== */
 .formulario__boton {
   width: 100%;
   max-width: 220px;
@@ -95,8 +106,7 @@
   background-color: var(--color-principal-hover);
 }
 
-/* RESPONSIVE */
-/* Tablets */
+/* ==================== RESPONSIVE: TABLETS ==================== */
 @media (max-width: 992px) {
   .formulario-grande {
     gap: 30px;
@@ -109,8 +119,9 @@
   }
 }
 
-/* Móviles */
+/* ==================== RESPONSIVE: MÓVILES ==================== */
 @media (max-width: 768px) {
+  /* Apila los formularios verticalmente */
   .formulario-grande {
     flex-direction: column;
     gap: 25px;
@@ -128,7 +139,7 @@
   }
 }
 
-/* Celulares pequeños */
+/* ==================== RESPONSIVE: CELULARES PEQUEÑOS ==================== */
 @media (max-width: 480px) {
   .formulario-grande {
     gap: 20px;

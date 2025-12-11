@@ -1,23 +1,29 @@
+/* ==================== IMPORTACIONES DE ESTILOS ==================== */
 @import url(../css/estilos.css);
 @import url(Navbar.css);
+@import url(../css/tipo-orden/registro_realizado.css);
 
-/* Reverted to original layout */
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+/* Altura ajustada restando la altura de el navbar */
 .contenedor-diagnostico {
   height: calc(100vh - 80px);
   overflow: auto;
 }
 
+/* ==================== SECCIÓN DE OPCIONES DE SERVICIO ==================== */
 .opciones-servicio {
   max-width: 750px;
   margin: 40px auto;
   padding: 25px;
   background: rgba(15, 23, 42, 0.3);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* Efecto glassmorphism */
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* TITULO de la sección - con indicador de que es derivado */
+/* ==================== TÍTULO DE LA SECCIÓN ==================== */
+/* Título que indica el servicio específico seleccionado */
 .titulo-opciones {
   color: var(--color-letra2);
   font-size: 1.7rem;
@@ -30,7 +36,7 @@
   gap: 15px;
 }
 
-/* Indicador visual que conecta con la card padre */
+/* Barra decorativa vertical que conecta visualmente con la tarjeta padre */
 .titulo-opciones::before {
   content: '';
   display: inline-block;
@@ -40,26 +46,18 @@
   border-radius: 2px;
 }
 
-/* Breadcrumb visual sutil */
-.titulo-opciones::after {
-
-  position: absolute;
-  left: 8px;
-  font-size: 1.5rem;
-  color: var(--color-acento-secundario);
-  opacity: 0.5;
-}
-
-/* CONTENEDOR VERTICAL */
+/* ==================== LISTA VERTICAL DE OPCIONES ==================== */
 .lista-opciones {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* ============================================
-   SUBCARD - DISEÑO DERIVADO DE CARDS PRINCIPALES
-   ============================================ */
+/* ==================== SUBTARJETAS (SUBCARDS) ==================== */
+/* 
+ * Tarjetas derivadas que muestran opciones específicas dentro de un tipo de servicio.
+ * Diseñadas para verse como sub-elementos de la tarjeta principal.
+ */
 .subcard {
   text-decoration: none;
   display: block;
@@ -73,9 +71,9 @@
   overflow: hidden;
 }
 
-/* Línea lateral que conecta visualmente con la card padre */
+/* Línea lateral decorativa con gradiente */
 .subcard::before {
-
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -89,20 +87,9 @@
   transition: all 0.3s ease;
 }
 
-/* Icono de derivación sutil */
-.subcard::after {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 1.3rem;
-  color: var(--color-letra3);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
 
-.subcard h2,
-.subcard h3 {
+/* Título de la subtarjeta */
+.subcard h2 {
   margin-bottom: 8px;
   color: var(--color-letra2);
   font-size: 1.15rem;
@@ -112,51 +99,51 @@
   transition: color 0.3s ease;
 }
 
+/* Descripción de la opción */
 .subcard p {
   color: var(--color-letra3);
   font-size: 0.93rem;
-  line-height: 1.5;
   padding-left: 12px;
 }
 
-/* HOVER de Subcard */
+/* ==================== EFECTOS HOVER DE SUBTARJETA ==================== */
 .subcard:hover {
   background: var(--subcard-bg-hover);
-  transform: translateX(8px);
+  transform: translateX(8px); /* Desplazamiento a la derecha */
   border-color: rgba(34, 211, 238, 0.3);
   box-shadow: var(--sombra-subcard-hover);
 }
 
+/* Barra lateral más gruesa y brillante en hover */
 .subcard:hover::before {
   opacity: 1;
   width: 5px;
   background: linear-gradient(180deg,
-      var(--color-acento-hover) 0%,
+      var(--color-acento-hover) 1%,
       var(--color-acento-primario) 100%);
 }
 
-.subcard:hover::after {
-  opacity: 0.6;
-  right: 25px;
-}
 
-.subcard:hover h2,
-.subcard:hover h3 {
+/* Cambia color del título en hover */
+.subcard:hover h2 {
   color: var(--color-letra-acento);
 }
 
+/* Cambia color de la descripción en hover */
 .subcard:hover p {
   color: var(--color-letra2);
 }
 
-/* Estado activo/seleccionado */
+/* Estado activo (al hacer clic) */
 .subcard:active {
   transform: translateX(4px) scale(0.99);
 }
 
-/* ============================================
-   MEDIA QUERIES - TABLETS (max-width: 992px)
-   ============================================ */
+
+
+
+
+/* ==================== RESPONSIVE: TABLETS ==================== */
 @media (max-width: 992px) {
   .contenedor-diagnostico {
     height: calc(100vh - 70px);
@@ -181,11 +168,8 @@
   }
 }
 
-/* ============================================
-   MEDIA QUERIES - MÓVIL (max-width: 768px)
-   ============================================ */
+/* ==================== RESPONSIVE: MÓVILES ==================== */
 @media (max-width: 768px) {
-
   .contenedor-diagnostico {
     height: auto;
     min-height: calc(100vh - 65px);
@@ -233,14 +217,9 @@
     transform: translateX(5px);
   }
 
-  .subcard::after {
-    display: none;
-  }
 }
 
-/* ============================================
-   MEDIA QUERIES - MÓVIL PEQUEÑO (max-width: 480px)
-   ============================================ */
+/* ==================== RESPONSIVE: MÓVILES PEQUEÑOS ==================== */
 @media (max-width: 480px) {
   .contenedor-diagnostico {
     min-height: calc(100vh - 60px);

@@ -4,73 +4,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../Componentes-Layaut/Sub-cars.css" />
-    <link rel="stylesheet" href="../../css/tipo-orden/registro_realizado.css" />
+    <link rel="stylesheet" href="../../../Componentes-Layaut/Sub-cars.css" />
+
     <title>Reparación Correctiva | MotorDesk</title>
 </head>
 
 <body>
-
-    <!-- ENCABEZADO -->
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
     <header class="navbar">
+        <!-- Logo del taller -->
         <div class="navbar__logo">
-            <img src="../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+            <img src="../../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
         </div>
 
+        <!-- Menú de navegación principal -->
         <nav class="navbar__menu" aria-label="Menu principal">
-            <a href="../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
-            <a href="../orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
-            <a href="#" class="navbar__menu-item">Historial</a>
+            <a href="../../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="../../../pages/orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="../../../pages/historial.html" class="navbar__menu-item">Historial</a>
         </nav>
 
+        <!-- Botón de retroceso a tipo de orden -->
         <div class="navbar__session">
-            <a href="Tipo_orden.html" class="navbar__session-btn">
-                <img src="../../LogoI_mg/flecha-izquierda.png" alt="Volver a tipo de orden" class="navbar__session-icon" />
+            <a href="../cards/Tipo_orden.html" class="navbar__session-btn">
+                <img src="../../../LogoI_mg/atras_blanco.png" alt="Volver a tipo de orden"
+                    class="navbar__session-icon" />
                 Atrás
             </a>
         </div>
     </header>
-
+    <!-- Contenedor principal con opciones de reparación correctiva -->
     <main class="contenedor-diagnostico">
         <section class="opciones-servicio">
             <h1 class="titulo-opciones">Reparación Correctiva</h1>
-
             <div class="lista-opciones">
                 <a href="../seleccion-repuestos.html" class="subcard">
                     <h2>Cambio de piezas dañadas</h2>
                     <p>Sustitución de componentes defectuosos según diagnóstico.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Reparación de sistemas mecánicos</h2>
                     <p>Corrección de fallas en frenos, transmisión, suspensión, etc.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Reparación eléctrica</h2>
                     <p>Solución de fallas en cableado, sensores y módulos.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Ajustes y calibraciones</h2>
                     <p>Alineaciones mecánicas finales y regulación de sistemas.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Soldaduras y fijaciones</h2>
                     <p>Corrección de soportes, chasis o escapes.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Pruebas posteriores de funcionamiento</h2>
                     <p>Verificación de que la reparación fue exitosa.</p>
                 </a>
             </div>
         </section>
     </main>
-
-    <!-- Modal CSS-only -->
+    <!-- Modal de confirmación activado por CSS -->
     <div id="modal-registro">
         <div class="modal-content">
             <div class="modal-icon">✓</div>
             <h2 class="modal-title">¡Registro Realizado!</h2>
-            <p class="modal-message">Tu selección ha sido registrada correctamente en el sistema.</p>
-            <a href="../panel.html" class="modal-close">Entendido</a>
+            <p class="modal-message">Tu selección ha sido registrada correctamente en el sistema.</p><a
+                href="../panel.html" class="modal-close">Entendido</a>
         </div>
     </div>
 </body>

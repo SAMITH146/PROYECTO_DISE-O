@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración de metadatos básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hojas de estilos para tarjetas de servicio (subcards) y modal de confirmación -->
+    <link rel="stylesheet" href="../../../Componentes-Layaut/Sub-cars.css" />
+
+    <title>Revisión Previa a Viajes | MotorDesk</title>
+</head>
+
+<body>
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
+    <header class="navbar">
+        <!-- Logo del taller -->
+        <div class="navbar__logo">
+            <img src="../../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+        </div>
+
+        <!-- Menú de navegación principal -->
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="../../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="../../../pages/orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="../../../pages/historial.html" class="navbar__menu-item">Historial</a>
+        </nav>
+
+        <!-- Botón de retroceso a tipo de orden -->
+        <div class="navbar__session">
+            <a href="../cards/Tipo_orden.html" class="navbar__session-btn">
+                <img src="../../../LogoI_mg/atras_blanco.png" alt="Volver a tipo de orden"
+                    class="navbar__session-icon" />
+                Atrás
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== CONTENEDOR PRINCIPAL ==================== -->
+    <main class="contenedor-diagnostico">
+        <section class="opciones-servicio">
+            <!-- Título del tipo de servicio seleccionado -->
+            <h1 class="titulo-opciones">Revisión Previa a Viajes</h1>
+
+            <!-- ==================== LISTA DE OPCIONES ESPECÍFICAS ==================== -->
+            <!-- Cada subcard representa una opción de revisión pre-viaje -->
+            <div class="lista-opciones">
+                <!-- Verificación de todos los niveles de fluidos -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Chequeo de niveles (Fluidos)</h2>
+                    <p>Aceite, frenos, dirección, anticongelante y limpiaparabrisas.</p>
+                </a>
+
+                <!-- Inspección del estado y presión de neumáticos -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Revisión de llantas</h2>
+                    <p>Presión, estado de banda y llanta de refacción.</p>
+                </a>
+
+                <!-- Chequeo rápido del sistema de frenos -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Inspección de frenos</h2>
+                    <p>Verificación rápida de balatas para asegurar frenado en carretera.</p>
+                </a>
+
+                <!-- Verificación de sistema de iluminación completo -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Luces y señalización</h2>
+                    <p>Faros, calaveras, direccionales y luces de freno.</p>
+                </a>
+
+                <!-- Prueba de carga y estado de la batería -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Revisión de batería</h2>
+                    <p>Prueba de carga y estado de terminales.</p>
+                </a>
+
+                <!-- Inspección del sistema limpiaparabrisas -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Limpiaparabrisas</h2>
+                    <p>Estado de las gomas y funcionamiento del motor.</p>
+                </a>
+
+                <!-- Verificación de herramientas de emergencia -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Kit de seguridad</h2>
+                    <p>Revisión de gato, llave de cruz y triángulos.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Modal de confirmación activado por CSS -->
+    <div id="modal-registro">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h2 class="modal-title">¡Registro Realizado!</h2>
+            <p class="modal-message">Tu selección ha sido registrada correctamente en el sistema.</p><a
+                href="../panel.html" class="modal-close">Entendido</a>
+        </div>
+    </div>
+</body>
+
+</html>

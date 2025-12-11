@@ -1,12 +1,15 @@
+/* ==================== IMPORTACIONES DE ESTILOS ==================== */
 @import url(estilos.css);
 
+/* ==================== ESTILOS GLOBALES ==================== */
 * {
   font-family: var(--fuente);
-  cursor: default;
+  cursor: default; /* Cursor predeterminado en toda la página */
   box-sizing: border-box;
 }
 
-/* CONTENEDOR GENERAL */
+/* ==================== CONTENEDOR PRINCIPAL DE LOGIN ==================== */
+/* Centra la tarjeta de login en la pantalla completa usando flexbox */
 .container-login {
   min-height: 100vh;
   display: flex;
@@ -15,7 +18,8 @@
   padding: 20px;
 }
 
-/* TARJETA LOGIN (Bloque) */
+/* ==================== TARJETA DE LOGIN ==================== */
+/* Tarjeta principal que contiene el formulario de autenticación */
 .login {
   width: 100%;
   max-width: 450px;
@@ -28,12 +32,12 @@
   gap: 30px;
 }
 
-/* HEADER del login (Elemento) */
+/* ==================== ENCABEZADO DEL LOGIN ==================== */
 .login__header {
   text-align: center;
 }
 
-/* LOGO (Elemento) */
+/* Logo del taller */
 .login__logo {
   width: 120px;
   height: auto;
@@ -41,7 +45,7 @@
   margin: 0 auto 15px;
 }
 
-/* TÍTULO (Elemento) */
+/* Título de la página de login */
 .login__titulo {
   font-size: 26px;
   color: var(--color-letra1);
@@ -53,21 +57,21 @@
   text-align: center;
 }
 
-/* FORMULARIO (Elemento) */
+/* ==================== FORMULARIO DE LOGIN ==================== */
 .login__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* GRUPO de campo (Elemento) */
+/* Grupo de campo (label + input) */
 .login__grupo {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-/* LABEL (Elemento) */
+/* Label del campo de PIN */
 .login__label {
   font-size: 16px;
   font-weight: 500;
@@ -75,7 +79,8 @@
   margin-left: 2px;
 }
 
-/* INPUT (Elemento) */
+/* ==================== INPUT DE PIN ==================== */
+/* Campo de entrada para el PIN de 6 dígitos */
 .login__input {
   width: 100%;
   padding: 12px;
@@ -87,12 +92,13 @@
   background-color: var(--color-fondo-input, #fff);
 }
 
+/* Estado focus del input con efecto de brillo */
 .login__input:focus {
   border-color: var(--color-boton);
   box-shadow: 0 0 5px var(--color-boton);
 }
 
-/* BOTÓN (Elemento) */
+/* ==================== BOTÓN DE ENVÍO ==================== */
 .login__boton {
   width: 100%;
   padding: 12px 20px;
@@ -107,11 +113,12 @@
   transition: 0.3s ease;
 }
 
+/* Efecto hover del botón */
 .login__boton:hover {
   background-color: var(--color-principal-hover);
 }
 
-/* RESPONSIVO */
+/* ==================== RESPONSIVE: MÓVILES PEQUEÑOS ==================== */
 @media (max-width: 480px) {
   .login {
     padding: 25px;

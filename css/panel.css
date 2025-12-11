@@ -1,12 +1,17 @@
+/* ==================== IMPORTACIONES DE ESTILOS ==================== */
+/* Importa los estilos base y el componente de navegación */
 @import url(estilos.css);
 @import url(../Componentes-Layaut/Navbar.css);
 
+/* ==================== ESTILOS GLOBALES ==================== */
+/* Aplica la fuente principal y elimina decoraciones de links */
 * {
   font-family: var(--fuente);
   text-decoration: none;
 }
 
-/* GRAFICA */
+/* ==================== SECCIÓN: GRÁFICA DE BARRAS SEMANALES ==================== */
+/* Contenedor principal de la gráfica de estadísticas */
 .container-grafica {
   max-width: 800px;
   background: var(--color-fondo-segundario);
@@ -16,9 +21,10 @@
   margin: 40px auto;
   display: flex;
   flex-direction: column;
-  margin-top: 160px;
+  margin-top: 160px; /* Espacio para la navbar fija */
 }
 
+/* Área de la gráfica con gradiente de fondo oscuro */
 .grafica {
   height: 250px;
   background: linear-gradient(to top, #000000 100%, transparent 50%);
@@ -28,8 +34,14 @@
   margin: 30px 0;
 }
 
+/* ==================== BARRAS DE LA GRÁFICA ==================== */
+/* 
+ * Cada barra representa un día de la semana.
+ * Usa posicionamiento absoluto para alineación horizontal.
+ * La altura se define individualmente por ID (#b1-#b6).
+ */
 .barra {
-  width: calc(100% / 6 - 15px);
+  width: calc(100% / 6 - 15px); /* Ancho calculado para 6 barras con espacio */
   background: #007bff;
   border-radius: 5px;
   position: absolute;
@@ -37,9 +49,9 @@
   text-align: center;
   color: white;
   font-size: 0.8em;
-
 }
 
+/* Etiqueta del día posicionada arriba de cada barra */
 .barra span {
   position: absolute;
   bottom: 100%;
@@ -47,42 +59,53 @@
   font-size: 0.75em;
 }
 
+/* ==================== ESTILOS INDIVIDUALES DE CADA BARRA ==================== */
+/* Cada día tiene su propia altura y color para representar actividad */
+
+/* Lunes - 50% de altura */
 #b1 {
   left: 0%;
   height: 50%;
   background: #0e35b3;
 }
 
+/* Martes - 55% de altura */
 #b2 {
   left: 16%;
   height: 55%;
   background: #2563eb;
 }
 
+/* Miércoles - 75% de altura (día con más actividad) */
 #b3 {
   left: 32%;
   height: 75%;
   background: #182955;
 }
 
+/* Jueves - 90% de altura (pico de actividad semanal) */
 #b4 {
   left: 48%;
   height: 90%;
   background: #1e40af;
 }
 
+/* Viernes - 60% de altura */
 #b5 {
   left: 64%;
   height: 60%;
   background: #2a4da7;
 }
 
+/* Sábado - 80% de altura */
 #b6 {
   left: 80%;
   height: 80%;
   background: #57c6ff;
 }
 
+/* ==================== PANEL DE RESUMEN ==================== */
+/* Panel con métricas clave: servicios, órdenes y total facturado */
 .resumen {
   color: var(--color-letra2);
   display: flex;
@@ -98,6 +121,7 @@
   text-align: center;
 }
 
+/* Números grandes destacados en el resumen */
 .resumen span {
   display: block;
   font-size: 1.5em;
@@ -105,12 +129,9 @@
   margin-top: 5px;
 }
 
-/* RESPONSIVE */
-/* Tablets */
+/* ==================== RESPONSIVE: TABLETS ==================== */
 @media (max-width: 992px) {
   .container-grafica {
-
-    padding: 25px;
     padding: 25px;
     max-width: 90%;
   }
@@ -124,11 +145,10 @@
   }
 }
 
-/* Móviles */
+/* ==================== RESPONSIVE: MÓVILES ==================== */
 @media (max-width: 768px) {
   .container-grafica {
     margin-top: 80px;
-    padding: 20px;
     padding: 20px;
     max-width: 95%;
   }
@@ -137,6 +157,7 @@
     height: 200px;
   }
 
+  /* Resumen en grid de 2 columnas en móviles */
   .resumen {
     flex-direction: row;
     flex-wrap: wrap;
@@ -154,7 +175,7 @@
   }
 }
 
-/* Celulares pequeños */
+/* ==================== RESPONSIVE: CELULARES PEQUEÑOS ==================== */
 @media (max-width: 480px) {
   .container-grafica {
     width: 95%;
@@ -167,6 +188,7 @@
     margin: 20px 0;
   }
 
+  /* Barras más estrechas en pantallas pequeñas */
   .barra {
     width: calc(100% / 6 - 6px);
     font-size: 0.65em;
@@ -176,6 +198,7 @@
     font-size: 0.7em;
   }
 
+  /* Resumen en columna en pantallas muy pequeñas */
   .resumen {
     flex-direction: column;
     gap: 12px;
@@ -191,13 +214,13 @@
   }
 }
 
-/* INVENTARIO - STOCK BAJO */
+/* ==================== SECCIÓN: INVENTARIO CON STOCK BAJO ==================== */
+/* Contenedor principal del sistema de alertas de inventario */
 .container-inventario {
   max-width: 1200px;
-  background: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.4); /* Fondo semi-transparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque glassmorphism */
   border-radius: 20px;
-  /* box-shadow: 0 4px 12px rgb(9, 44, 85); Remove old heavy shadow */
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 30px;
   margin: 40px auto;
@@ -205,7 +228,6 @@
 
 .inventario-titulo {
   color: var(--color-letra2);
-  /* Changed from letra1 to white/light */
   font-size: 1.8em;
   font-weight: 700;
   margin-bottom: 8px;
@@ -219,12 +241,19 @@
   margin-bottom: 30px;
 }
 
+/* ==================== GRID DE PRODUCTOS ==================== */
+/* Grid responsivo que se adapta automáticamente al espacio disponible */
 .inventario-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
+/* ==================== TARJETAS DE PRODUCTO ==================== */
+/* 
+ * Cada tarjeta muestra información de un producto con stock bajo.
+ * El borde izquierdo cambia de color según el nivel de criticidad.
+ */
 .producto-card {
   background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.6));
   border-radius: 12px;
@@ -232,16 +261,17 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   border: 1px solid rgba(59, 130, 246, 0.15);
-  border-left-width: 4px;
-  /* Maintain thick left border for status */
+  border-left-width: 4px; /* Borde grueso izquierdo para indicador de estado */
 }
 
+/* Efecto hover: eleva la tarjeta */
 .producto-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Estados de stock - Crítico */
+/* ==================== ESTADOS DE STOCK: CRÍTICO ==================== */
+/* Stock muy bajo (< 20%) - Alerta roja con animación pulsante */
 .producto-card.critico {
   border-left-color: #dc2626;
   animation: pulse-critical 2s ease-in-out infinite;
@@ -257,9 +287,8 @@
   font-weight: 700;
 }
 
-
-
-/* Estados de stock - Bajo */
+/* ==================== ESTADOS DE STOCK: BAJO ==================== */
+/* Stock bajo (20-60%) - Alerta naranja */
 .producto-card.bajo {
   border-left-color: #f59e0b;
 }
@@ -274,7 +303,8 @@
   font-weight: 700;
 }
 
-/* Header del producto */
+/* ==================== HEADER DEL PRODUCTO ==================== */
+/* Layout flex para nombre y categoría en la misma línea */
 .producto-header {
   display: flex;
   justify-content: space-between;
@@ -285,13 +315,13 @@
 
 .producto-nombre {
   color: var(--color-letra2);
-  /* White/light text */
   font-size: 1.1em;
   font-weight: 600;
   margin: 0;
   flex: 1;
 }
 
+/* Badge de categoría del producto */
 .producto-categoria {
   background: #e2e8f0;
   color: #475569;
@@ -302,7 +332,8 @@
   white-space: nowrap;
 }
 
-/* Info del producto */
+/* ==================== INFO DEL PRODUCTO ==================== */
+/* Sección con cantidad de stock y badge de estado */
 .producto-info {
   display: flex;
   justify-content: space-between;
@@ -310,6 +341,7 @@
   margin-bottom: 12px;
 }
 
+/* Número de unidades disponibles */
 .stock-cantidad {
   display: flex;
   align-items: baseline;
@@ -320,7 +352,6 @@
   font-size: 2em;
   font-weight: 700;
   color: var(--color-letra2);
-  /* White/light text */
 }
 
 .stock-texto {
@@ -328,6 +359,7 @@
   color: var(--color-letra3);
 }
 
+/* Badge de estado (CRÍTICO/BAJO) */
 .stock-estado {
   padding: 6px 12px;
   border-radius: 6px;
@@ -335,23 +367,24 @@
   letter-spacing: 0.5px;
 }
 
-/* Barra de stock */
+/* ==================== BARRA DE PROGRESO VISUAL ==================== */
+/* Representa visualmente el porcentaje de stock disponible */
 .stock-barra {
   width: 100%;
   height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  /* Darker track for dark theme */
+  background: rgba(255, 255, 255, 0.1); /* Fondo oscuro para track */
   border-radius: 10px;
   overflow: hidden;
 }
 
+/* Nivel de stock con transición animada */
 .stock-nivel {
   height: 100%;
   border-radius: 10px;
   transition: width 0.5s ease;
 }
 
-/* RESPONSIVE - INVENTARIO */
+/* ==================== RESPONSIVE: INVENTARIO - TABLETS ==================== */
 @media (max-width: 992px) {
   .container-inventario {
     padding: 25px;
@@ -364,6 +397,7 @@
   }
 }
 
+/* ==================== RESPONSIVE: INVENTARIO - MÓVILES ==================== */
 @media (max-width: 768px) {
   .container-inventario {
     padding: 20px;
@@ -375,6 +409,7 @@
     font-size: 1.5em;
   }
 
+  /* Una columna en móviles */
   .inventario-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -385,6 +420,7 @@
   }
 }
 
+/* ==================== RESPONSIVE: INVENTARIO - CELULARES PEQUEÑOS ==================== */
 @media (max-width: 480px) {
   .container-inventario {
     padding: 15px;

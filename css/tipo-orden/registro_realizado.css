@@ -1,14 +1,16 @@
-/* Modal CSS-only mechanism */
+/* ==================== MODAL DE CONFIRMACIÓN (Solo CSS) ==================== */
+/* 
+ * Modal activado mediante CSS usando :target.
+ * No requiere JavaScript para mostrar/ocultar.
+ */
 #modal-registro {
-    display: none;
-    /* Hidden by default */
+    display: none; /* Oculto por defecto */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 23, 42, 0.85);
-    /* Dark overlay */
+    background-color: rgba(15, 23, 42, 0.85); /* Overlay oscuro */
     backdrop-filter: blur(5px);
     z-index: 9999;
     justify-content: center;
@@ -17,12 +19,13 @@
     transition: opacity 0.3s ease;
 }
 
-/* When the modal is targeted (clicked) */
+/* Muestra el modal cuando es objetivo de la URL (ej: #modal-registro) */
 #modal-registro:target {
     display: flex !important;
     opacity: 1;
 }
 
+/* ==================== CONTENIDO DEL MODAL ==================== */
 .modal-content {
     background: rgba(30, 41, 59, 0.95);
     padding: 40px;
@@ -36,6 +39,8 @@
     animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* ==================== ANIMACIÓN DE ENTRADA ==================== */
+/* Modal aparece con efecto de zoom elástico */
 @keyframes modalPop {
     0% {
         transform: scale(0.8);
@@ -48,6 +53,8 @@
     }
 }
 
+/* ==================== ICONO DE CONFIRMACIÓN ==================== */
+/* Círculo con check mark y gradiente de fondo */
 .modal-icon {
     width: 80px;
     height: 80px;
@@ -62,6 +69,7 @@
     box-shadow: 0 10px 15px -3px rgba(34, 211, 238, 0.3);
 }
 
+/* ==================== TÍTULO DEL MODAL ==================== */
 .modal-title {
     color: #f1f5f9;
     font-size: 1.5rem;
@@ -70,12 +78,14 @@
     font-family: 'Nunito', sans-serif;
 }
 
+/* ==================== MENSAJE DEL MODAL ==================== */
 .modal-message {
     color: #94a3b8;
     margin-bottom: 25px;
     line-height: 1.6;
 }
 
+/* ==================== BOTÓN DE CERRAR/CONFIRMAR ==================== */
 .modal-close {
     display: inline-block;
     padding: 12px 30px;
@@ -88,6 +98,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Efecto hover del botón - levanta con sombra brillante */
 .modal-close:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5);

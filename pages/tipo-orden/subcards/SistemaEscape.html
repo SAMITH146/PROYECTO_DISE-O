@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración de metadatos básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hojas de estilos para tarjetas de servicio (subcards) y modal de confirmación -->
+    <link rel="stylesheet" href="../../../Componentes-Layaut/Sub-cars.css" />
+
+    <title>Sistema de Escape | MotorDesk</title>
+</head>
+
+<body>
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
+    <header class="navbar">
+        <!-- Logo del taller -->
+        <div class="navbar__logo">
+            <img src="../../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+        </div>
+
+        <!-- Menú de navegación principal -->
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="../../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="../../../pages/orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="../../../pages/historial.html" class="navbar__menu-item">Historial</a>
+        </nav>
+
+        <!-- Botón de retroceso a tipo de orden -->
+        <div class="navbar__session">
+            <a href="../cards/Tipo_orden.html" class="navbar__session-btn">
+                <img src="../../../LogoI_mg/atras_blanco.png" alt="Volver a tipo de orden"
+                    class="navbar__session-icon" />
+                Atrás
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== CONTENEDOR PRINCIPAL ==================== -->
+    <main class="contenedor-diagnostico">
+        <section class="opciones-servicio">
+            <!-- Título del tipo de servicio seleccionado -->
+            <h1 class="titulo-opciones">Sistema de Escape</h1>
+
+            <!-- ==================== LISTA DE OPCIONES ESPECÍFICAS ==================== -->
+            <!-- Cada subcard representa una opción de servicio del sistema de escape -->
+            <div class="lista-opciones">
+                <!-- Sellado de fugas en el escape -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Reparación de fugas (Soldadura)</h2>
+                    <p>Sellado de orificios en silenciador o tuberías.</p>
+                </a>
+
+                <!-- Reemplazo del convertidor catalítico -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Cambio de catalizador</h2>
+                    <p>Sustitución de convertidor catalítico obstruido o ineficiente.</p>
+                </a>
+
+                <!-- Instalación de silenciador nuevo -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Reemplazo de silenciador</h2>
+                    <p>Instalación de silenciador nuevo para reducir ruido.</p>
+                </a>
+
+                <!-- Cambio de sensores de oxígeno -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <p>Diagnóstico y cambio de sensores de O2 dañados.</p>
+                </a>
+
+                <!-- Pre-test de emisiones contaminantes -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Inspección de emisiones</h2>
+                    <p>Pre-verificación de gases contaminantes.</p>
+                </a>
+
+                <!-- Reemplazo de empaques del múltiple de escape -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Cambio de empaques</h2>
+                    <p>Sustitución de juntas de múltiple de escape.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Modal de confirmación activado por CSS -->
+    <div id="modal-registro">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h2 class="modal-title">¡Registro Realizado!</h2>
+            <p class="modal-message">Tu selección ha sido registrada correctamente en el sistema.</p><a
+                href="../panel.html" class="modal-close">Entendido</a>
+        </div>
+    </div>
+</body>
+
+</html>

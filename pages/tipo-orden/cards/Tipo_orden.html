@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración de metadatos básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hoja de estilos específica para la selección de tipo de orden -->
+    <!-- RUTA ACTUALIZADA: +1 nivel de ../ por estar en cards/ -->
+    <link rel="stylesheet" href="../../../css/tipo-orden/Tipo_orden.css" />
+
+    <title>Seleccionar Tipo de Orden</title>
+</head>
+
+<body>
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
+    <header class="navbar">
+        <!-- Logo del taller -->
+        <!-- RUTA ACTUALIZADA: +1 nivel de ../ -->
+        <div class="navbar__logo">
+            <img src="../../../LogoI_mg/Logo_blanco.png" alt="Logo del taller" class="navbar__logo-img" />
+        </div>
+
+        <!-- Menú de navegación principal -->
+        <!-- RUTAS ACTUALIZADAS: +1 nivel de ../ -->
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="../../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="../../orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="#" class="navbar__menu-item">Historial</a>
+        </nav>
+
+        <!-- Botón de retroceso -->
+        <!-- RUTA ACTUALIZADA: +1 nivel de ../ -->
+        <div class="navbar__session">
+            <a href="../../../pages/agregar-clientes.html" class="navbar__session-btn">
+                <img src="../../../LogoI_mg/atras_blanco.png" alt="Ir al agregar cleinte y vehículo"
+                    class="navbar__session-icon" />
+                Atrás
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== CONTENEDOR PRINCIPAL==================== -->
+    <main class="main-container">
+        <div class="servicio-selector-container">
+            <h1 class="titulo-servicios">Seleccione el tipo de servicio</h1>
+
+            <!-- ==================== GRID DE SERVICIOS DISPONIBLES ==================== -->
+            <!-- 
+        Cuadrícula responsiva con todas las opciones de servicio disponibles.
+        Cada tarjeta redirige a un formulario específico para ese tipo de servicio.
+        RUTAS ACTUALIZADAS: Ahora apuntan a ../subcards/ en lugar de ./
+      -->
+            <div class="servicios-grid">
+                <!-- Diagnóstico General - Revisión técnica completa -->
+                <a href="../subcards/DiagnosticoGeneral.html" class="card-servicio" data-servicio="diagnostico">
+                    <h3>Diagnostico General</h3>
+                    <p>Revision tecnica para detectar fallas.</p>
+                </a>
+
+                <!-- Mantenimiento Preventivo - Servicio programado -->
+                <a href="../subcards/MntoPreventivo.html" class="card-servicio" data-servicio="preventivo">
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Evita averias futuras con mantenimiento regular.</p>
+                </a>
+
+                <!-- Reparación Correctiva - Solución de problemas -->
+                <a href="../subcards/ReparacionCorrectiva.html" class="card-servicio" data-servicio="correctivo">
+                    <h3>Reparacion Correctiva</h3>
+                    <p>Solucion de fallas mecanicas o electricas.</p>
+                </a>
+
+                <!-- Sistema de Frenos - Inspección y ajuste -->
+                <a href="../subcards/SitemaFrenos.html" class="card-servicio" data-servicio="frenos">
+                    <h3>Sistema de Frenos</h3>
+                    <p>Inspeccion y ajuste del sistema de frenado.</p>
+                </a>
+
+                <!-- Motor y Afinación - Optimización de rendimiento -->
+                <a href="../subcards/MotorAfinacion.html" class="card-servicio" data-servicio="motor">
+                    <h3>Motor y Afinacion</h3>
+                    <p>Ajustes para mejorar rendimiento y consumo.</p>
+                </a>
+
+                <!-- Suspensión - Revisión de amortiguadores -->
+                <a href="../subcards/Suspension.html" class="card-servicio" data-servicio="suspension">
+                    <h3>Suspension</h3>
+                    <p>Revision de amortiguadores y estabilidad.</p>
+                </a>
+
+                <!-- Transmisión - Diagnóstico de caja y embrague -->
+                <a href="../subcards/Transmision.html" class="card-servicio" data-servicio="Transmisión">
+                    <h3>Diagnóstico de Transmisión</h3>
+                    <p>Revisión de caja manual/automática, embrague, cambios y ruidos anormales.</p>
+                </a>
+
+                <!-- Alineación y Balanceo - Corrección de dirección -->
+                <a href="../subcards/AlineacionBalanceo.html" class="card-servicio" data-servicio="Balanceo">
+                    <h3>Alineación y Balanceo</h3>
+                    <p>Corrección de dirección y balanceo de llantas para evitar desgaste irregular.</p>
+                </a>
+
+                <!-- Sistema de Enfriamiento - Revisión de radiador -->
+                <a href="../subcards/SistemaEnfriamiento.html" class="card-servicio" data-servicio="Enfriamiento">
+                    <h3>Sistema de Enfriamiento</h3>
+                    <p>Chequeo de radiador, mangueras, termostato y nivel de refrigerante.</p>
+                </a>
+
+                <!-- Cambio de Correas - Reemplazo de correas de motor -->
+                <a href="../subcards/CambioCorreas.html" class="card-servicio" data-servicio="Correas">
+                    <h3>Cambio de Correas</h3>
+                    <p>Reemplazo de correa de distribución o accesorios (alternador, dirección, A/C).</p>
+                </a>
+
+                <!-- Sistema de Escape - Revisión de tubos y catalizador -->
+                <a href="../subcards/SistemaEscape.html" class="card-servicio" data-servicio="Escape">
+                    <h3>Sistema de Escape</h3>
+                    <p>RRevisión de tubos, catalizador, sensores y fugas de gases.</p>
+                </a>
+
+                <!-- Aire Acondicionado - Mantenimiento del sistema A/C -->
+                <a href="../subcards/AireAcondicionado.html" class="card-servicio" data-servicio="Aire">
+                    <h3>Mantenimiento de Aire Acondicionado</h3>
+                    <p>Carga de gas refrigerante, limpieza de filtros y revisión de compresor.</p>
+                </a>
+
+                <!-- Sistema de Combustible - Limpieza de inyectores -->
+                <a href="../subcards/SistemaCombustible.html" class="card-servicio" data-servicio="Combustible">
+                    <h3>Sistema de Combustible</h3>
+                    <p>Limpieza de inyectores, revisión de bomba, presión de combustible y filtros.</p>
+                </a>
+
+                <!-- Revisión Previa a Viajes - Chequeo de seguridad -->
+                <a href="../subcards/RevisionViajes.html" class="card-servicio" data-servicio="Viajes">
+                    <h3>Revisión Previa a Viajes</h3>
+                    <p>Chequeo general de seguridad: niveles, frenos, llantas, luces y batería.</p>
+                </a>
+
+                <!-- Diagnóstico de Sonidos y Vibraciones - Localización de problemas -->
+                <a href="../subcards/SonidosVibraciones.html" class="card-servicio" data-servicio="Sonidos">
+                    <h3>Diagnóstico de Sonidos y Vibraciones</h3>
+                    <p>Localización de ruidos, vibraciones en llantas, motor o suspensión.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

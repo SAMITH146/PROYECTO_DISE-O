@@ -1,32 +1,34 @@
+/* ==================== IMPORTACIONES DE ESTILOS ==================== */
 @import url(estilos.css);
 @import url(../Componentes-Layaut/Navbar.css);
 
-/* GLOBAL LAYOUT */
+/* ==================== LAYOUT GLOBAL ==================== */
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; /* Evita scroll en body, solo en el contenedor principal */
     font-family: var(--fuente);
     background: var(--color-fondo);
     color: var(--color-texto-login);
 }
 
+/* ==================== NAVBAR ==================== */
 .navbar {
-    flex-shrink: 0;
+    flex-shrink: 0; /* Evita que se comprima */
     position: relative;
     z-index: 100;
 }
 
-/* MAIN CONTAINER */
+/* ==================== CONTENEDOR PRINCIPAL DE HISTORIAL ==================== */
 .contenedor-historial {
-    flex-grow: 1;
-    overflow-y: auto;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    overflow-y: auto; /* Scroll vertical cuando el contenido excede la altura */
     padding: 30px;
     position: relative;
 }
 
-/* HEADER */
+/* ==================== ENCABEZADO DE HISTORIAL ==================== */
 .encabezado-historial {
     max-width: 1200px;
     margin: 0 auto 30px auto;
@@ -39,6 +41,7 @@ body {
     gap: 20px;
 }
 
+/* Título de la página con barra decorativa */
 .titulo-pagina {
     font-size: 2rem;
     font-weight: 700;
@@ -48,6 +51,7 @@ body {
     gap: 15px;
 }
 
+/* Barra decorativa vertical antes del título */
 .titulo-pagina::before {
     content: '';
     display: block;
@@ -57,12 +61,13 @@ body {
     border-radius: 3px;
 }
 
-/* FILTERS SECTION */
+/* ==================== SECCIÓN DE FILTROS ==================== */
 .filtros-busqueda {
     display: flex;
     gap: 15px;
 }
 
+/* Inputs de búsqueda y fecha */
 .input-busqueda {
     background: rgba(15, 23, 42, 0.6);
     border: 1px solid var(--color-borde-input);
@@ -75,12 +80,13 @@ body {
     width: 250px;
 }
 
+/* Efecto focus en los inputs de búsqueda */
 .input-busqueda:focus {
     border-color: var(--color-acento-primario);
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
 }
 
-/* TABLE / LIST STYLES */
+/* ==================== TABLA/LISTA DE HISTORIAL ==================== */
 .lista-historial {
     max-width: 1200px;
     margin: 0 auto;
@@ -89,9 +95,14 @@ body {
     gap: 15px;
 }
 
+/* ==================== FILA/ITEM DE HISTORIAL ==================== */
+/* 
+ * Cada fila representa una orden completada o cancelada.
+ * Usa CSS Grid para organizar las columnas de manera responsive.
+ */
 .item-historial {
     background: rgba(15, 23, 42, 0.4);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Efecto glassmorphism */
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 20px;
@@ -101,13 +112,14 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Efecto hover en items de historial */
 .item-historial:hover {
     background: rgba(15, 23, 42, 0.7);
     border-color: rgba(59, 130, 246, 0.3);
-    transform: translateX(5px);
+    transform: translateX(5px); /* Desplazamiento sutil a la derecha */
 }
 
-/* HEADERS ROW */
+/* ==================== CABECERA DE TABLA ==================== */
 .cabecera-lista {
     background: rgba(30, 41, 59, 0.8);
     font-weight: 700;
@@ -118,50 +130,57 @@ body {
     border: none;
 }
 
+/* Desactiva efectos hover en la cabecera */
 .cabecera-lista:hover {
     background: rgba(30, 41, 59, 0.8);
     transform: none;
     border-color: transparent;
 }
 
-/* CELL STYLES */
+/* ==================== ESTILOS DE CELDAS ==================== */
 .celda-historial {
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Agrega "..." si el texto es muy largo */
     white-space: nowrap;
     padding: 0 10px;
 }
 
+/* ID de orden con fuente monoespaciada */
 .id-orden {
     font-family: monospace;
     color: var(--color-acento-terciario);
     font-weight: 700;
 }
 
+/* Nombre del cliente destacado */
 .celda-cliente {
     color: white;
     font-weight: 600;
 }
 
+/* Información del vehículo en tono gris */
 .celda-vehiculo {
     color: var(--color-letra3);
 }
 
+/* Tipo de servicio en color cyan */
 .celda-servicio {
     color: var(--color-letra-acento);
 }
 
+/* Fecha de salida */
 .celda-fecha {
     color: var(--color-letra3);
     font-size: 0.9rem;
 }
 
+/* Costo en verde indicando ingreso */
 .celda-costo {
     color: #10b981;
     font-weight: 700;
 }
 
-/* STATUS BADGES */
+/* ==================== BADGES DE ESTADO ==================== */
 .badge-estado {
     padding: 5px 12px;
     border-radius: 20px;
@@ -172,19 +191,21 @@ body {
     width: fit-content;
 }
 
+/* Badge para órdenes entregadas (verde) */
 .estado-entregado {
     background: rgba(16, 185, 129, 0.15);
     color: #10b981;
     border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
+/* Badge para órdenes canceladas (rojo) */
 .estado-cancelado {
     background: rgba(239, 68, 68, 0.15);
     color: #ef4444;
     border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
-/* ACTION BUTTON */
+/* ==================== BOTÓN DE ACCIÓN ==================== */
 .btn-ver-detalle {
     background: rgba(255, 255, 255, 0.1);
     color: white;
@@ -203,14 +224,16 @@ body {
     background: var(--color-acento-primario);
 }
 
-/* RESPONSIVE */
+/* ==================== RESPONSIVE: TABLETS ==================== */
 @media (max-width: 1024px) {
+    /* En tablets, cambia a layout de 2 columnas más flexible */
     .item-historial {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
         height: auto;
     }
 
+    /* Oculta la cabecera en tablets y móviles */
     .cabecera-lista {
         display: none;
     }

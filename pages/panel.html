@@ -2,29 +2,34 @@
 <html lang="es">
 
 <head>
+  <!-- Configuración de metadatos básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Hoja de estilos específica para el panel de control -->
   <link rel="stylesheet" href="../css/panel.css" />
+  
   <title>Panel de control</title>
 </head>
 
 <body>
 
-  <!-- HEADER: Contiene el logo, menú principal y botón de sesión -->
+  <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
+  <!-- Navbar fijo con logo, menú principal y botón de cerrar sesión -->
   <header class="navbar">
+    <!-- Logo del taller alineado a la izquierda -->
     <div class="navbar__logo">
       <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller" class="navbar__logo-img" />
     </div>
 
-    <!-- Checkbox + Label para menú hamburguesa ELIMINADOS -->
-
-    <!-- NAV: navegación principal -->
+    <!-- Menú de navegación principal con enlaces a las secciones clave -->
     <nav class="navbar__menu" aria-label="Navegacion principal">
       <a href="../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
       <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
       <a href="historial.html" class="navbar__menu-item">Historial</a>
     </nav>
 
+    <!-- Botón de cerrar sesión alineado a la derecha -->
     <div class="navbar__session">
       <a href="Login.html" class="navbar__session-btn">
         <img src="../LogoI_mg/cerrarseccion_blanco.png" alt="Cerrar sesión" class="navbar__session-icon" />
@@ -33,14 +38,23 @@
     </div>
   </header>
 
-  <!-- MAIN: Contenido principal del panel -->
+  <!-- ==================== CONTENIDO PRINCIPAL DEL PANEL ==================== -->
   <main class="panel">
 
-    <!-- Sección de gráfica -->
+    <!-- ==================== SECCIÓN: ESTADÍSTICAS SEMANALES ==================== -->
+    <!-- 
+      Gráfica de barras animada que muestra el desempeño semanal del taller.
+      Cada barra representa un día de la semana con altura proporcional a la actividad.
+      Las animaciones se logran con CSS mediante la propiedad 'height' y transiciones.
+    -->
     <section class="container-grafica">
+      <!-- Título oculto visualmente pero accesible para lectores de pantalla -->
       <h2 class="visually-hidden">Estadisticas semanales</h2>
 
+      <!-- Contenedor de la gráfica de barras verticales -->
       <div class="grafica">
+        <!-- Cada barra representa un día de la semana (L-S) -->
+        <!-- El ID permite estilizar cada barra con diferente altura en CSS -->
         <div class="barra" id="b1"><span>Lun</span></div>
         <div class="barra" id="b2"><span>Mar</span></div>
         <div class="barra" id="b3"><span>Mié</span></div>
@@ -48,7 +62,8 @@
         <div class="barra" id="b5"><span>Vie</span></div>
         <div class="barra" id="b6"><span>Sáb</span></div>
       </div>
-      <!-- Resumen semanal -->
+      
+      <!-- Panel lateral con resumen de métricas clave de la semana -->
       <aside class="resumen">
         <div>Servicios <span>18</span></div>
         <div>Órdenes <span>12</span></div>
@@ -56,19 +71,31 @@
       </aside>
     </section>
 
-    <!-- Sección de Inventario - Stock Bajo -->
+    <!-- ==================== SECCIÓN: INVENTARIO CON STOCK BAJO ==================== -->
+    <!-- 
+      Sistema de alertas de inventario que muestra productos que necesitan reposición.
+      Los productos se clasifican en dos niveles:
+      - CRÍTICO: Stock muy bajo (< 20% del inventario normal)
+      - BAJO: Stock bajo pero no crítico (20-60% del inventario normal)
+    -->
     <section class="container-inventario">
+      <!-- Título principal con emoji de advertencia -->
       <h2 class="inventario-titulo">⚠️ Productos con Stock Bajo</h2>
       <p class="inventario-subtitulo">Productos que necesitan reposición pronto</p>
 
+      <!-- Grid responsivo que se adapta de 1 a 3 columnas según el tamaño de pantalla -->
       <div class="inventario-grid">
 
-        <!-- Producto 1 - Stock Crítico -->
+        <!-- ==================== TARJETA DE PRODUCTO 1 ==================== -->
+        <!-- Estado CRÍTICO: solo 3 unidades disponibles (15% del stock) -->
         <article class="producto-card critico">
+          <!-- Encabezado con nombre y categoría del producto -->
           <div class="producto-header">
             <h3 class="producto-nombre">Aceite Motor 5W-30</h3>
             <span class="producto-categoria">Lubricantes</span>
           </div>
+          
+          <!-- Información de stock: cantidad (izquierda) y estado (derecha) -->
           <div class="producto-info">
             <div class="stock-cantidad">
               <span class="stock-numero">3</span>
@@ -76,12 +103,16 @@
             </div>
             <div class="stock-estado critico-badge">CRÍTICO</div>
           </div>
+          
+          <!-- Barra de progreso visual que representa el nivel de stock -->
           <div class="stock-barra">
+            <!-- La anchura (width) indica el porcentaje de stock disponible -->
             <div class="stock-nivel" style="width: 15%;"></div>
           </div>
         </article>
 
-        <!-- Producto 2 - Stock Crítico -->
+        <!-- ==================== TARJETA DE PRODUCTO 2 ==================== -->
+        <!-- Estado CRÍTICO: solo 4 unidades disponibles (20% del stock) -->
         <article class="producto-card critico">
           <div class="producto-header">
             <h3 class="producto-nombre">Filtro de Aire</h3>
@@ -99,7 +130,8 @@
           </div>
         </article>
 
-        <!-- Producto 3 - Stock Bajo -->
+        <!-- ==================== TARJETA DE PRODUCTO 3 ==================== -->
+        <!-- Estado BAJO: 8 unidades disponibles (40% del stock) -->
         <article class="producto-card bajo">
           <div class="producto-header">
             <h3 class="producto-nombre">Pastillas de Freno</h3>
@@ -117,7 +149,8 @@
           </div>
         </article>
 
-        <!-- Producto 4 - Stock Bajo -->
+        <!-- ==================== TARJETA DE PRODUCTO 4 ==================== -->
+        <!-- Estado BAJO: 12 unidades disponibles (60% del stock) -->
         <article class="producto-card bajo">
           <div class="producto-header">
             <h3 class="producto-nombre">Bujías NGK</h3>
@@ -135,7 +168,8 @@
           </div>
         </article>
 
-        <!-- Producto 5 - Stock Bajo -->
+        <!-- ==================== TARJETA DE PRODUCTO 5 ==================== -->
+        <!-- Estado BAJO: 10 unidades disponibles (50% del stock) -->
         <article class="producto-card bajo">
           <div class="producto-header">
             <h3 class="producto-nombre">Refrigerante Motor</h3>
@@ -153,7 +187,8 @@
           </div>
         </article>
 
-        <!-- Producto 6 - Stock Crítico -->
+        <!-- ==================== TARJETA DE PRODUCTO 6 ==================== -->
+        <!-- Estado CRÍTICO: solo 2 unidades disponibles (10% del stock) -->
         <article class="producto-card critico">
           <div class="producto-header">
             <h3 class="producto-nombre">Correa de Distribución</h3>

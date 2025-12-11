@@ -2,64 +2,84 @@
 <html lang="es">
 
 <head>
+    <!-- Configuración de metadatos básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Hoja de estilos específica para órdenes en curso -->
     <link rel="stylesheet" href="../css/orden-en-curso.css">
+    
     <title>Órdenes en Curso | MotorDesk</title>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
     <header class="navbar">
+        <!-- Logo del taller -->
         <div class="navbar__logo">
             <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
         </div>
 
+        <!-- Menú de navegación principal -->
         <nav class="navbar__menu" aria-label="Menu principal">
             <a href="agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
             <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
             <a href="#" class="navbar__menu-item">Historial</a>
         </nav>
 
+        <!-- Botón de retroceso al panel -->
         <div class="navbar__session">
             <a href="../pages/panel.html" class="navbar__session-btn">
-                <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
+                <img src="../LogoI_mg/atras_blanco.png" alt="Volver al panel" class="navbar__session-icon" />
                 Volver
             </a>
         </div>
     </header>
 
-    <!-- MAIN CONTAINER -->
+    <!-- ==================== CONTENEDOR PRINCIPAL DE ÓRDENES ==================== -->
     <main class="contenedor-ordenes">
+        <!-- Encabezado de la página -->
         <div class="encabezado-ordenes">
             <h1 class="titulo-pagina">Órdenes en Proceso</h1>
         </div>
 
+        <!-- ==================== CUADRÍCULA DE TARJETAS DE ÓRDENES ==================== -->
+        <!-- 
+            Grid responsivo de tarjetas clickeables que muestran un resumen de cada orden activa.
+            Cada tarjeta abre un modal con información detallada mediante el selector CSS :target.
+        -->
         <div class="cuadricula-ordenes">
 
-            <!-- SIMULATED CARD 1 -->
+            <!-- ==================== TARJETA 1: MANTENIMIENTO PREVENTIVO ==================== -->
+            <!-- Estado: En Proceso - 4 de 6 tareas completadas -->
             <a href="#modal-orden-1" class="tarjeta-orden">
+                <!-- Encabezado con ID y badge de estado -->
                 <div class="encabezado-orden">
                     <span class="id-orden">ORD-2023-854</span>
                     <span class="estado-orden status-proceso">En Proceso</span>
                 </div>
-                <h2 class="cliente-nombre">Juan Pérez</h2>
+                
+                <!-- Información principal del cliente y vehículo -->
+                <h2 class="cliente-nombre">Yimmer Samith</h2>
                 <div class="vehiculo-info">
                     🚗 Toyota Corolla 2018
                 </div>
+                
+                <!-- Vista previa del servicio con progreso -->
                 <div class="vista-previa-servicio">
                     Servicio: Mantenimiento Preventivo (4/6 tareas completadas)
                 </div>
             </a>
 
-            <!-- SIMULATED CARD 2 -->
+            <!-- ==================== TARJETA 2: REPARACIÓN DE FRENOS ==================== -->
+            <!-- Estado: En Espera de Piezas -->
             <a href="#modal-orden-2" class="tarjeta-orden">
                 <div class="encabezado-orden">
                     <span class="id-orden">ORD-2023-859</span>
                     <span class="estado-orden status-espera">En Espera de Piezas</span>
                 </div>
-                <h2 class="cliente-nombre">María González</h2>
+                <h2 class="cliente-nombre">Camila Andrea</h2>
                 <div class="vehiculo-info">
                     🚙 Honda CR-V 2021
                 </div>
@@ -68,7 +88,8 @@
                 </div>
             </a>
 
-            <!-- SIMULATED CARD 3 -->
+            <!-- ==================== TARJETA 3: DIAGNÓSTICO ==================== -->
+            <!-- Estado: Diagnóstico de sonidos y vibraciones -->
             <a href="#modal-orden-3" class="tarjeta-orden">
                 <div class="encabezado-orden">
                     <span class="id-orden">ORD-2023-861</span>
@@ -83,7 +104,8 @@
                 </div>
             </a>
 
-            <!-- SIMULATED CARD 4 -->
+            <!-- ==================== TARJETA 4: LAVADO ESPECIALIZADO ==================== -->
+            <!-- Estado: Lavado de motor y chasis en proceso -->
             <a href="#modal-orden-4" class="tarjeta-orden">
                 <div class="encabezado-orden">
                     <span class="id-orden">ORD-2023-865</span>
@@ -101,23 +123,33 @@
         </div>
     </main>
 
-    <!-- MODALS (Hidden by default, shown via :target) -->
+    <!-- ==================== MODALES DE DETALLE DE ÓRDENES ==================== -->
+    <!-- 
+        Los modales se muestran/ocultan usando la pseudo-clase :target de CSS.
+        Cuando el usuario hace clic en una tarjeta, el hash en la URL (#modal-orden-X)
+        activa el modal correspondiente sin necesidad de JavaScript.
+    -->
 
-    <!-- MODAL 1 -->
+    <!-- ==================== MODAL 1: MANTENIMIENTO PREVENTIVO ==================== -->
     <div id="modal-orden-1" class="modal-fondo">
         <div class="modal-tarjeta">
+            <!-- Encabezado del modal con título y botón de cerrar -->
             <div class="modal-encabezado">
                 <div class="modal-titulo">
                     <h2>Mantenimiento Preventivo</h2>
                     <span class="modal-subtitulo">Orden #ORD-2023-854</span>
                 </div>
-                <a href="#" class="modal-btn-cerrar">&times;</a>
+                <!-- Botón X para cerrar el modal -->
+                <a href="#" class="modal-btn-cerrar">x</a>
             </div>
+            
+            <!-- Cuerpo del modal con información detallada -->
             <div class="modal-cuerpo">
+                <!-- Grid con datos del cliente, vehículo y técnico -->
                 <div class="detalle-grid">
                     <div class="detalle-item">
                         <h4>Cliente</h4>
-                        <p>Juan Pérez</p>
+                        <p>Yimmer Samith</p>
                     </div>
                     <div class="detalle-item">
                         <h4>Vehículo</h4>
@@ -132,19 +164,24 @@
                         <p>Roberto Gómez</p>
                     </div>
                 </div>
+                
+                <!-- Lista de progreso del servicio con símbolos visuales -->
+                <!-- ✓ = completado, ⟳ = en curso, ○ = pendiente -->
                 <div class="servicio-detalle">
                     <h3>Progreso del Servicio</h3>
                     <p>✓ Cambio de aceite y filtro<br>✓ Revisión de niveles<br>✓ Rotación de llantas<br>✓ Limpieza de
                         filtro de aire<br>⟳ Revisión de frenos (En curso)<br>○ Lavado final</p>
                 </div>
             </div>
+            
+            <!-- Pie del modal con botón de cerrar -->
             <div class="modal-pie">
-                <a href="#" class="btn-cerrar">Cerrar</a>
+                <a href="#" class="btn-cerrar">Cerrar orden</a>
             </div>
         </div>
     </div>
 
-    <!-- MODAL 2 -->
+    <!-- ==================== MODAL 2: REPARACIÓN DE FRENOS ==================== -->
     <div id="modal-orden-2" class="modal-fondo">
         <div class="modal-tarjeta">
             <div class="modal-encabezado">
@@ -152,13 +189,13 @@
                     <h2>Reparación de Frenos</h2>
                     <span class="modal-subtitulo">Orden #ORD-2023-859</span>
                 </div>
-                <a href="#" class="modal-btn-cerrar">&times;</a>
+                <a href="#" class="modal-btn-cerrar">x</a>
             </div>
             <div class="modal-cuerpo">
                 <div class="detalle-grid">
                     <div class="detalle-item">
                         <h4>Cliente</h4>
-                        <p>María González</p>
+                        <p>Camila Andrea</p>
                     </div>
                     <div class="detalle-item">
                         <h4>Vehículo</h4>
@@ -173,21 +210,25 @@
                         <p style="color: #f59e0b;">Esperando Repuestos</p>
                     </div>
                 </div>
+                
+                <!-- Información sobre la espera de piezas -->
                 <div class="servicio-detalle">
                     <h3>Detalle de la Espera</h3>
                     <p>Se ha solicitado el juego de discos traseros originales. El proveedor estima la entrega para
                         mañana a las 10:00 AM. El vehículo permanece en la bahía 4.</p>
                 </div>
             </div>
+            
+            <!-- Pie con opciones adicionales: imprimir factura y editar -->
             <div class="modal-pie">
                 <a href="#" class="btn-imprimir">Imprimir Factura</a>
                 <a href="#" class="btn-editar">Editar</a>
-                <a href="#" class="btn-cerrar">Cerrar</a>
+                <a href="#" class="btn-cerrar">Cerrar Orden</a>
             </div>
         </div>
     </div>
 
-    <!-- MODAL 3 -->
+    <!-- ==================== MODAL 3: DIAGNÓSTICO GENERAL ==================== -->
     <div id="modal-orden-3" class="modal-fondo">
         <div class="modal-tarjeta">
             <div class="modal-encabezado">
@@ -195,7 +236,7 @@
                     <h2>Diagnóstico General</h2>
                     <span class="modal-subtitulo">Orden #ORD-2023-861</span>
                 </div>
-                <a href="#" class="modal-btn-cerrar">&times;</a>
+                <a href="#" class="modal-btn-cerrar">x</a>
             </div>
             <div class="modal-cuerpo">
                 <div class="detalle-grid">
@@ -208,6 +249,8 @@
                         <p>Mazda 3 2020</p>
                     </div>
                 </div>
+                
+                <!-- Reporte inicial del problema del cliente -->
                 <div class="servicio-detalle">
                     <h3>Reporte Inicial</h3>
                     <p>El cliente reporta vibración en el volante al superar los 80 km/h. Se procederá a prueba de ruta
@@ -217,12 +260,12 @@
             <div class="modal-pie">
                 <a href="#" class="btn-imprimir">Imprimir Factura</a>
                 <a href="#" class="btn-editar">Editar</a>
-                <a href="#" class="btn-cerrar">Cerrar</a>
+                <a href="#" class="btn-cerrar">Cerrar Orden</a>
             </div>
         </div>
     </div>
 
-    <!-- MODAL 4 -->
+    <!-- ==================== MODAL 4: LAVADO DETALLADO ==================== -->
     <div id="modal-orden-4" class="modal-fondo">
         <div class="modal-tarjeta">
             <div class="modal-encabezado">
@@ -230,7 +273,7 @@
                     <h2>Lavado Detallado</h2>
                     <span class="modal-subtitulo">Orden #ORD-2023-865</span>
                 </div>
-                <a href="#" class="modal-btn-cerrar">&times;</a>
+                <a href="#" class="modal-btn-cerrar">x</a>
             </div>
             <div class="modal-cuerpo">
                 <div class="detalle-grid">
@@ -243,6 +286,8 @@
                         <p>Ford Explorer 2019</p>
                     </div>
                 </div>
+                
+                <!-- Descripción detallada del servicio de lavado -->
                 <div class="servicio-detalle">
                     <h3>Detalle del Servicio</h3>
                     <p>Lavado profundo de chasis, motor y carrocería. Aplicación de grafito y cera protectora. Limpieza
@@ -251,7 +296,7 @@
             </div>
             <div class="modal-pie">
                 <a href="#" class="btn-editar">Editar</a>
-                <a href="#" class="btn-cerrar">Cerrar</a>
+                <a href="#" class="btn-cerrar">Cerrar Orden</a>
             </div>
         </div>
     </div>

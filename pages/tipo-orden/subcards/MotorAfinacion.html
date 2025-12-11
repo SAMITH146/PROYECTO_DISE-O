@@ -4,69 +4,67 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../Componentes-Layaut/Sub-cars.css" />
-    <link rel="stylesheet" href="../../css/tipo-orden/registro_realizado.css" />
+    <link rel="stylesheet" href="../../../Componentes-Layaut/Sub-cars.css" />
     <title>Alineación y Balanceo | MotorDesk</title>
 </head>
 
 <body>
-
-    <!-- ENCABEZADO -->
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
     <header class="navbar">
+        <!-- Logo del taller -->
         <div class="navbar__logo">
-            <img src="../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+            <img src="../../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
         </div>
 
+        <!-- Menú de navegación principal -->
         <nav class="navbar__menu" aria-label="Menu principal">
-            <a href="../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
-            <a href="../orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
-            <a href="#" class="navbar__menu-item">Historial</a>
+            <a href="../../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="../../../pages/orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="../../../pages/historial.html" class="navbar__menu-item">Historial</a>
         </nav>
 
+        <!-- Botón de retroceso a tipo de orden -->
         <div class="navbar__session">
-            <a href="Tipo_orden.html" class="navbar__session-btn">
-                <img src="../../LogoI_mg/flecha-izquierda.png" alt="Volver a tipo de orden" class="navbar__session-icon" />
+            <a href="../cards/Tipo_orden.html" class="navbar__session-btn">
+                <img src="../../../LogoI_mg/atras_blanco.png" alt="Volver a tipo de orden"
+                    class="navbar__session-icon" />
                 Atrás
             </a>
         </div>
     </header>
-
     <main class="contenedor-diagnostico">
         <section class="opciones-servicio">
             <h1 class="titulo-opciones">Alineación y Balanceo</h1>
-
             <div class="lista-opciones">
-                <a href="../seleccion-repuestos.html" class="subcard">
+              <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Alineación Computarizada</h2>
                     <p>Ajuste preciso de ángulos de convergencia, caída y avance.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Balanceo de neumáticos</h2>
                     <p>Compensación de peso en ruedas para eliminar vibraciones.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Rotación de llantas</h2>
                     <p>Intercambio de posición para igualar el desgaste.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Revisión de presión y estado</h2>
                     <p>Verificación de desgaste irregular, chipotes o cortes.</p>
                 </a>
-                <a href="../seleccion-repuestos.html" class="subcard">
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
                     <h2>Calibración de sensores TPMS</h2>
                     <p>Reinicio o programación de sensores de presión de aire.</p>
                 </a>
             </div>
         </section>
     </main>
-
-    <!-- Modal CSS-only -->
     <div id="modal-registro">
         <div class="modal-content">
             <div class="modal-icon">✓</div>
             <h2 class="modal-title">¡Registro Realizado!</h2>
-            <p class="modal-message">Tu selección ha sido registrada correctamente en el sistema.</p>
-            <a href="../panel.html" class="modal-close">Entendido</a>
+            <p class="modal-message">Tu selección ha sido registrada correctamente en el sistema.</p><a
+                href="../panel.html" class="modal-close">Entendido</a>
         </div>
     </div>
 </body>

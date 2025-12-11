@@ -2,30 +2,50 @@
 <html lang="es">
 
 <head>
+  <!-- Configuración de metadatos básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Hoja de estilos específica para la página de login -->
   <link rel="stylesheet" href="../css/Loguin.css" />
+  
   <title>Iniciar Sesión | MotorDesk</title>
 </head>
 
 <body>
-  <!-- MAIN: Contenido principal -->
+  <!-- ==================== PÁGINA DE INICIO DE SESIÓN ==================== -->
+  <!-- 
+    Formulario simple de autenticación mediante PIN de 6 dígitos.
+    Los usuarios deben ingresar su código PIN para acceder al panel de control.
+  -->
   <main class="container-login">
-    <!-- ARTICLE: Bloque principal del login -->
+    <!-- Tarjeta de inicio de sesión centrada en pantalla -->
     <article class="login">
-      <!-- Logo o encabezado del módulo -->
+      <!-- Encabezado con logo y título del formulario -->
       <header class="login__header">
+        <!-- Logo del taller MotorDesk -->
         <img class="login__logo" src="../LogoI_mg/LogoMotorDesk.png" alt="Logo del taller MotorDesk" />
         <h1 class="login__titulo">Iniciar Sesión</h1>
       </header>
 
-      <!-- FORM correctamente marcado con BEM -->
+      <!-- ==================== FORMULARIO DE AUTENTICACIÓN ==================== -->
+      <!-- 
+        Formulario que redirige al panel principal tras enviar.
+        En producción, debería validar el PIN contra una base de datos.
+      -->
       <form class="login__form" action="../pages/panel.html" method="get">
+        <!-- Grupo de campo de entrada del PIN -->
         <div class="login__grupo">
           <label class="login__label" for="pin">Ingrese su PIN</label>
+          
+          <!-- 
+            Input de tipo password con máximo de 6 caracteres.
+            El atributo 'required' asegura validación básica del formulario.
+          -->
           <input class="login__input" type="password" id="pin" name="pin" maxlength="6" required placeholder="••••••" />
         </div>
 
+        <!-- Botón de envío del formulario -->
         <button class="login__boton" type="submit">Iniciar Sesión</button>
       </form>
     </article>

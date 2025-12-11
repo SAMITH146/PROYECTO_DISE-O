@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración de metadatos básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hojas de estilos para tarjetas de servicio (subcards) y modal de confirmación -->
+    <link rel="stylesheet" href="../../../Componentes-Layaut/Sub-cars.css" />
+
+
+    <title>Diagnóstico de Transmisión | MotorDesk</title>
+</head>
+
+<body>
+    <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
+    <header class="navbar">
+        <!-- Logo del taller -->
+        <div class="navbar__logo">
+            <img src="../../../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+        </div>
+
+        <!-- Menú de navegación principal -->
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="../../../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="../../../pages/orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="../../../pages/historial.html" class="navbar__menu-item">Historial</a>
+        </nav>
+
+        <!-- Botón de retroceso a tipo de orden -->
+        <div class="navbar__session">
+            <a href="../cards/Tipo_orden.html" class="navbar__session-btn">
+                <img src="../../../LogoI_mg/atras_blanco.png" alt="Volver a tipo de orden"
+                    class="navbar__session-icon" />
+                Atrás
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== CONTENEDOR PRINCIPAL ==================== -->
+    <main class="contenedor-diagnostico">
+        <section class="opciones-servicio">
+            <!-- Título del tipo de servicio seleccionado -->
+            <h1 class="titulo-opciones">Diagnóstico de Transmisión</h1>
+
+            <!-- ==================== LISTA DE OPCIONES ESPECÍFICAS ==================== -->
+            <!-- Cada subcard representa una opción de diagnóstico de transmisión disponible -->
+            <div class="lista-opciones">
+                <!-- Escaneo electrónico de transmisión automática -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Escaneo de transmisión automática</h2>
+                    <p>Lectura de códigos de la TCM para detectar fallas electrónicas.</p>
+                </a>
+
+                <!-- Verificación del fluido de transmisión -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Revisión de nivel y estado de aceite</h2>
+                    <p>Verificación de color y olor del fluido de transmisión.</p>
+                </a>
+
+                <!-- Ajuste del embrague en transmisiones manuales -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Ajuste de embrague (Manual)</h2>
+                    <p>Regulación del pedal para un acople correcto.</p>
+                </a>
+
+                <!-- Diagnóstico de patinamiento al cambiar marchas -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Diagnóstico de patinamiento</h2>
+                    <p>Pruebas de ruta para verificar si la transmisión desliza cambios.</p>
+                </a>
+
+                <!-- Inspección de fugas de aceite de transmisión -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Revisión de fugas</h2>
+                    <p>Inspección de retenes de flechas y cárter de transmisión.</p>
+                </a>
+
+                <!-- Servicio de mantenimiento preventivo -->
+                <a href="../../../pages/seleccion-repuestos.html" class="subcard">
+                    <h2>Cambio de aceite de transmisión</h2>
+                    <p>Servicio de mantenimiento preventivo para la caja de cambios.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Modal de confirmación activado por CSS -->
+    <div id="modal-registro">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h2 class="modal-title">¡Registro Realizado!</h2>
+            <p class="modal-message">Tu selección ha sido registrada correctamente en el sistema.</p><a
+                href="../panel.html" class="modal-close">Entendido</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,18 +1,26 @@
+/* ==================== IMPORTACIÓN DE VARIABLES GLOBALES ==================== */
+/* Importa el sistema de variables CSS centralizado */
 @import url(variables.css);
 
+/* ==================== RESET Y ESTILOS BASE ==================== */
+/* Reset de márgenes y padding para consistencia entre navegadores */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==================== ESTILOS GLOBALES DEL BODY ==================== */
+/* Configuración base para toda la aplicación */
 body {
   height: 100vh;
-  font-family: var(--fuente);
-  background: var(--color-fondo);
+  font-family: var(--fuente); /* Tipografía Nunito desde variables */
+  background: var(--color-fondo); /* Gradiente radial oscuro */
   color: var(--color-texto-login);
 }
 
+/* ==================== CONTENEDOR DE PÁGINA DE INICIO ==================== */
+/* Centra el logo en la pantalla completa usando flexbox */
 .container-index {
   min-height: 100vh;
   display: flex;
@@ -20,6 +28,8 @@ body {
   align-items: center;
 }
 
+/* ==================== LOGO INICIAL ==================== */
+/* Estilo para el logo clickeable en la página de bienvenida */
 .Img-init {
   width: 400px;
   height: auto;
@@ -28,30 +38,40 @@ body {
   padding: 40px;
 }
 
-/* Tamaño del scroll */
+/* ==================== ESTILOS PERSONALIZADOS DE SCROLLBAR ==================== */
+/* 
+ * Scrollbar personalizado para navegadores basados en Webkit (Chrome, Edge, Safari).
+ * Mantiene la estética oscura del diseño general del sitio.
+ */
+
+/* Ancho y alto de la barra de desplazamiento */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-/* Fondo del área por donde se mueve la barrita */
+/* Fondo del track (área donde se mueve la barra) */
 ::-webkit-scrollbar-track {
   background: #1e1e1e;
   border-radius: 10px;
 }
 
-/* La barrita (thumb) */
+/* La barra deslizante (thumb) */
 ::-webkit-scrollbar-thumb {
-  background: #4b72ff;
+  background: #4b72ff; /* Azul coherente con la paleta del sitio */
   border-radius: 10px;
 }
 
-/* Efecto hover */
+/* Efecto hover en la barra deslizante */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2f54d8;
+  background: #2f54d8; /* Azul más oscuro en hover */
 }
 
-/* Clase para accesibilidad - oculta visualmente pero accesible para lectores de pantalla */
+/* ==================== CLASE DE ACCESIBILIDAD ==================== */
+/* 
+ * Oculta elementos visualmente pero los mantiene accesibles para lectores de pantalla.
+ * Útil para títulos descriptivos que mejoran la accesibilidad sin afectar el diseño.
+ */
 .visually-hidden {
   position: absolute;
   width: 1px;

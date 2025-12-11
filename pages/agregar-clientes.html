@@ -2,87 +2,112 @@
 <html lang="es">
 
 <head>
+  <!-- Configuración de metadatos básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Agregar Cliente y Vehículo | MotorDesk</title>
+  
+  <!-- Hoja de estilos específica para el formulario de registro -->
   <link rel="stylesheet" href="../css/agregar-cliente.css" />
 </head>
 
 <body>
-  <!-- HEADER: Barra superior -->
+  <!-- ==================== BARRA DE NAVEGACIÓN SUPERIOR ==================== -->
+  <!-- Contiene logo, menú principal y botón de retroceso -->
   <header class="navbar">
+    <!-- Logo del taller alineado a la izquierda -->
     <div class="navbar__logo">
       <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
     </div>
 
-    <!-- Checkbox + Label para menú hamburguesa ELIMINADOS -->
-
+    <!-- Menú de navegación principal -->
     <nav class="navbar__menu" aria-label="Navegación principal">
       <a href="../pages/agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
       <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
       <a href="#" class="navbar__menu-item">Historial</a>
     </nav>
 
+    <!-- Botón para volver al panel de control -->
     <div class="navbar__session">
       <a href="panel.html" class="navbar__session-btn">
-        <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
+        <img src="../LogoI_mg/atras_blanco.png" alt="Volver al panel" class="navbar__session-icon" />
         Atrás
       </a>
     </div>
   </header>
 
-  <!-- MAIN: Contenido principal -->
+  <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
   <main class="contenido-principal">
+    <!-- Título oculto visualmente pero accesible para lectores de pantalla -->
     <h1 class="visually-hidden">Registro de Cliente y Vehículo</h1>
 
-    <!-- FORMULARIO COMPLETO -->
-    <form id="formularioCompleto" class="formulario-grande" action="../pages/tipo-orden/Tipo_orden.html" method="get">
-      <!-- SECCIÓN CLIENTE -->
+    <!-- ==================== FORMULARIO DE REGISTRO COMPLETO ==================== -->
+    <!-- 
+      Formulario dividido en dos secciones principales:
+      1. Datos del Cliente (nombre, documento, teléfono, correo)
+      2. Datos del Vehículo (tipo, marca, modelo, placa)
+      
+      Tras enviar, redirige a la página de selección de tipo de orden.
+    -->
+    <form id="formularioCompleto" class="formulario-grande" action="../pages/tipo-orden/cards/Tipo_orden.html" method="get">
+      
+      <!-- ==================== SECCIÓN 1: DATOS DEL CLIENTE ==================== -->
       <section class="formulario">
+        <!-- Encabezado de la sección -->
         <h2 class="formulario__titulo">Datos del Cliente</h2>
         <p class="formulario__subtitulo">Ingrese los datos del cliente</p>
 
+        <!-- Campo: Nombre del cliente -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="cliente_nombre">Nombre</label>
           <input type="text" id="cliente_nombre" class="formulario__input" name="cliente_nombre" required />
         </div>
 
+        <!-- Campo: Número de identificación (cédula, DNI, etc.) -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="cliente_documento">Número de identificación</label>
           <input type="number" id="cliente_documento" class="formulario__input" name="cliente_documento" required />
         </div>
 
+        <!-- Campo: Teléfono de contacto -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="cliente_telefono">Teléfono</label>
           <input type="tel" id="cliente_telefono" class="formulario__input" name="cliente_telefono" required />
         </div>
 
+        <!-- Campo: Correo electrónico -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="cliente_correo">Correo electrónico</label>
           <input type="email" id="cliente_correo" class="formulario__input" name="cliente_correo" required />
         </div>
       </section>
 
-      <!-- SECCIÓN VEHÍCULO -->
+      <!-- ==================== SECCIÓN 2: DATOS DEL VEHÍCULO ==================== -->
       <section class="formulario">
+        <!-- Encabezado de la sección -->
         <h2 class="formulario__titulo">Datos del Vehículo</h2>
         <p class="formulario__subtitulo">Ingrese los datos del vehículo</p>
 
+        <!-- Campo: Tipo de vehículo (auto, moto, camión, etc.) -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="veh_tipo">Tipo de vehículo</label>
           <input type="text" id="veh_tipo" class="formulario__input" name="veh_tipo" required />
         </div>
 
+        <!-- Campo: Marca del vehículo -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="veh_marca">Marca</label>
           <input type="text" id="veh_marca" class="formulario__input" name="veh_marca" required />
         </div>
 
+        <!-- Campo: Modelo del vehículo -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="veh_modelo">Modelo</label>
           <input type="text" id="veh_modelo" class="formulario__input" name="veh_modelo" required />
         </div>
 
+        <!-- Campo: Número de placa del vehículo -->
         <div class="formulario__grupo">
           <label class="formulario__label" for="veh_placa">Número de placa</label>
           <input type="text" id="veh_placa" class="formulario__input" name="veh_placa" required />
@@ -90,7 +115,11 @@
       </section>
     </form>
 
-    <!-- BOTÓN afuera pero ligado al form -->
+    <!-- ==================== BOTÓN DE ENVÍO ==================== -->
+    <!-- 
+      El botón está fuera del form pero vinculado mediante el atributo 'form'.
+      Esto permite posicionarlo independientemente mientras mantiene su funcionalidad.
+    -->
     <div class="contenedor-boton">
       <button class="formulario__boton" type="submit" form="formularioCompleto">
         SIGUIENTE
