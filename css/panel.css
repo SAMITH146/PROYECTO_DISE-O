@@ -109,7 +109,8 @@
 /* Tablets */
 @media (max-width: 992px) {
   .container-grafica {
-    margin-top: 100px;
+
+    padding: 25px;
     padding: 25px;
     max-width: 90%;
   }
@@ -127,6 +128,7 @@
 @media (max-width: 768px) {
   .container-grafica {
     margin-top: 80px;
+    padding: 20px;
     padding: 20px;
     max-width: 95%;
   }
@@ -192,15 +194,18 @@
 /* INVENTARIO - STOCK BAJO */
 .container-inventario {
   max-width: 1200px;
-  background: var(--color-fondo-segundario);
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgb(9, 44, 85);
+  /* box-shadow: 0 4px 12px rgb(9, 44, 85); Remove old heavy shadow */
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 30px;
   margin: 40px auto;
 }
 
 .inventario-titulo {
-  color: var(--color-letra1);
+  color: var(--color-letra2);
+  /* Changed from letra1 to white/light */
   font-size: 1.8em;
   font-weight: 700;
   margin-bottom: 8px;
@@ -221,12 +226,14 @@
 }
 
 .producto-card {
-  background: #ffffff;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.6));
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  border-left: 4px solid transparent;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-left-width: 4px;
+  /* Maintain thick left border for status */
 }
 
 .producto-card:hover {
@@ -277,7 +284,8 @@
 }
 
 .producto-nombre {
-  color: var(--color-letra1);
+  color: var(--color-letra2);
+  /* White/light text */
   font-size: 1.1em;
   font-weight: 600;
   margin: 0;
@@ -311,7 +319,8 @@
 .stock-numero {
   font-size: 2em;
   font-weight: 700;
-  color: var(--color-letra1);
+  color: var(--color-letra2);
+  /* White/light text */
 }
 
 .stock-texto {
@@ -330,7 +339,8 @@
 .stock-barra {
   width: 100%;
   height: 8px;
-  background: #e2e8f0;
+  background: rgba(255, 255, 255, 0.1);
+  /* Darker track for dark theme */
   border-radius: 10px;
   overflow: hidden;
 }

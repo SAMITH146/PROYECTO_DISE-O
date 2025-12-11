@@ -1,7 +1,7 @@
 @import url(../panel.css);
 @import url(/Componentes-Layaut/Navbar.css);
 
-/* CONTENEDOR GENERAL */
+/* Reverted to original layout */
 .main-container {
   height: calc(100vh - 80px);
   overflow: auto;
@@ -201,6 +201,7 @@
    MEDIA QUERIES - MÓVIL (max-width: 768px)
    ============================================ */
 @media (max-width: 768px) {
+
   .main-container {
     height: auto;
     min-height: calc(100vh - 65px);

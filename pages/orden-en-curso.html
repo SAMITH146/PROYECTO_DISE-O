@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/orden-en-curso.css">
+    <title>Órdenes en Curso | MotorDesk</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+        </div>
+
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="#" class="navbar__menu-item">Historial</a>
+        </nav>
+
+        <div class="navbar__session">
+            <a href="../pages/panel.html" class="navbar__session-btn">
+                <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
+                Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="contenedor-ordenes">
+        <div class="encabezado-ordenes">
+            <h1 class="titulo-pagina">Órdenes en Proceso</h1>
+        </div>
+
+        <div class="cuadricula-ordenes">
+
+            <!-- SIMULATED CARD 1 -->
+            <a href="#modal-orden-1" class="tarjeta-orden">
+                <div class="encabezado-orden">
+                    <span class="id-orden">ORD-2023-854</span>
+                    <span class="estado-orden status-proceso">En Proceso</span>
+                </div>
+                <h2 class="cliente-nombre">Juan Pérez</h2>
+                <div class="vehiculo-info">
+                    🚗 Toyota Corolla 2018
+                </div>
+                <div class="vista-previa-servicio">
+                    Servicio: Mantenimiento Preventivo (4/6 tareas completadas)
+                </div>
+            </a>
+
+            <!-- SIMULATED CARD 2 -->
+            <a href="#modal-orden-2" class="tarjeta-orden">
+                <div class="encabezado-orden">
+                    <span class="id-orden">ORD-2023-859</span>
+                    <span class="estado-orden status-espera">En Espera de Piezas</span>
+                </div>
+                <h2 class="cliente-nombre">María González</h2>
+                <div class="vehiculo-info">
+                    🚙 Honda CR-V 2021
+                </div>
+                <div class="vista-previa-servicio">
+                    Servicio: Sistema de Frenos - Cambio de discos traseros
+                </div>
+            </a>
+
+            <!-- SIMULATED CARD 3 -->
+            <a href="#modal-orden-3" class="tarjeta-orden">
+                <div class="encabezado-orden">
+                    <span class="id-orden">ORD-2023-861</span>
+                    <span class="estado-orden status-proceso">Diagnóstico</span>
+                </div>
+                <h2 class="cliente-nombre">Carlos Rodríguez</h2>
+                <div class="vehiculo-info">
+                    🚗 Mazda 3 2020
+                </div>
+                <div class="vista-previa-servicio">
+                    Servicio: Diagnóstico de Sonidos y Vibraciones
+                </div>
+            </a>
+
+            <!-- SIMULATED CARD 4 -->
+            <a href="#modal-orden-4" class="tarjeta-orden">
+                <div class="encabezado-orden">
+                    <span class="id-orden">ORD-2023-865</span>
+                    <span class="estado-orden status-proceso">Lavado</span>
+                </div>
+                <h2 class="cliente-nombre">Ana Martínez</h2>
+                <div class="vehiculo-info">
+                    🚙 Ford Explorer 2019
+                </div>
+                <div class="vista-previa-servicio">
+                    Servicio: Lavado de Motor y Chasis
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- MODALS (Hidden by default, shown via :target) -->
+
+    <!-- MODAL 1 -->
+    <div id="modal-orden-1" class="modal-fondo">
+        <div class="modal-tarjeta">
+            <div class="modal-encabezado">
+                <div class="modal-titulo">
+                    <h2>Mantenimiento Preventivo</h2>
+                    <span class="modal-subtitulo">Orden #ORD-2023-854</span>
+                </div>
+                <a href="#" class="modal-btn-cerrar">&times;</a>
+            </div>
+            <div class="modal-cuerpo">
+                <div class="detalle-grid">
+                    <div class="detalle-item">
+                        <h4>Cliente</h4>
+                        <p>Juan Pérez</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Vehículo</h4>
+                        <p>Toyota Corolla 2018</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Ingreso</h4>
+                        <p>10/12/2023 - 08:30 AM</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Técnico Asignado</h4>
+                        <p>Roberto Gómez</p>
+                    </div>
+                </div>
+                <div class="servicio-detalle">
+                    <h3>Progreso del Servicio</h3>
+                    <p>✓ Cambio de aceite y filtro<br>✓ Revisión de niveles<br>✓ Rotación de llantas<br>✓ Limpieza de
+                        filtro de aire<br>⟳ Revisión de frenos (En curso)<br>○ Lavado final</p>
+                </div>
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn-cerrar">Cerrar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2 -->
+    <div id="modal-orden-2" class="modal-fondo">
+        <div class="modal-tarjeta">
+            <div class="modal-encabezado">
+                <div class="modal-titulo">
+                    <h2>Reparación de Frenos</h2>
+                    <span class="modal-subtitulo">Orden #ORD-2023-859</span>
+                </div>
+                <a href="#" class="modal-btn-cerrar">&times;</a>
+            </div>
+            <div class="modal-cuerpo">
+                <div class="detalle-grid">
+                    <div class="detalle-item">
+                        <h4>Cliente</h4>
+                        <p>María González</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Vehículo</h4>
+                        <p>Honda CR-V 2021</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Ingreso</h4>
+                        <p>09/12/2023 - 02:15 PM</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Estado</h4>
+                        <p style="color: #f59e0b;">Esperando Repuestos</p>
+                    </div>
+                </div>
+                <div class="servicio-detalle">
+                    <h3>Detalle de la Espera</h3>
+                    <p>Se ha solicitado el juego de discos traseros originales. El proveedor estima la entrega para
+                        mañana a las 10:00 AM. El vehículo permanece en la bahía 4.</p>
+                </div>
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn-cerrar">Cerrar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3 -->
+    <div id="modal-orden-3" class="modal-fondo">
+        <div class="modal-tarjeta">
+            <div class="modal-encabezado">
+                <div class="modal-titulo">
+                    <h2>Diagnóstico General</h2>
+                    <span class="modal-subtitulo">Orden #ORD-2023-861</span>
+                </div>
+                <a href="#" class="modal-btn-cerrar">&times;</a>
+            </div>
+            <div class="modal-cuerpo">
+                <div class="detalle-grid">
+                    <div class="detalle-item">
+                        <h4>Cliente</h4>
+                        <p>Carlos Rodríguez</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Vehículo</h4>
+                        <p>Mazda 3 2020</p>
+                    </div>
+                </div>
+                <div class="servicio-detalle">
+                    <h3>Reporte Inicial</h3>
+                    <p>El cliente reporta vibración en el volante al superar los 80 km/h. Se procederá a prueba de ruta
+                        y revisión de suspensión y balanceo.</p>
+                </div>
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn-cerrar">Cerrar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 4 -->
+    <div id="modal-orden-4" class="modal-fondo">
+        <div class="modal-tarjeta">
+            <div class="modal-encabezado">
+                <div class="modal-titulo">
+                    <h2>Lavado Detallado</h2>
+                    <span class="modal-subtitulo">Orden #ORD-2023-865</span>
+                </div>
+                <a href="#" class="modal-btn-cerrar">&times;</a>
+            </div>
+            <div class="modal-cuerpo">
+                <div class="detalle-grid">
+                    <div class="detalle-item">
+                        <h4>Cliente</h4>
+                        <p>Ana Martínez</p>
+                    </div>
+                    <div class="detalle-item">
+                        <h4>Vehículo</h4>
+                        <p>Ford Explorer 2019</p>
+                    </div>
+                </div>
+                <div class="servicio-detalle">
+                    <h3>Detalle del Servicio</h3>
+                    <p>Lavado profundo de chasis, motor y carrocería. Aplicación de grafito y cera protectora. Limpieza
+                        de tapicería incluida.</p>
+                </div>
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn-cerrar">Cerrar</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

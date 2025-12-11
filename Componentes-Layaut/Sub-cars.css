@@ -1,6 +1,7 @@
 @import url(/css/estilos.css);
 @import url(/Componentes-Layaut/Navbar.css);
 
+/* Reverted to original layout */
 .contenedor-diagnostico {
   height: calc(100vh - 80px);
   overflow: auto;
@@ -184,6 +185,7 @@
    MEDIA QUERIES - MÓVIL (max-width: 768px)
    ============================================ */
 @media (max-width: 768px) {
+
   .contenedor-diagnostico {
     height: auto;
     min-height: calc(100vh - 65px);

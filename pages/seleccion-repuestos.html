@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/repuestos.css">
+    <title>Selección de Repuestos | MotorDesk</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+        </div>
+
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="#" class="navbar__menu-item">Historial</a>
+        </nav>
+
+        <div class="navbar__session">
+            <a href="../pages/panel.html" class="navbar__session-btn">
+                <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
+                Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- KMAIN CONTAINER -->
+    <main class="contenedor-repuestos">
+
+        <!-- HEADER WITH SKIP OPTION -->
+        <div class="encabezado-pagina">
+            <h1 class="titulo-seccion">Selección de Repuestos</h1>
+            <a href="#modal-exito" class="btn-sin-repuestos">
+                Continuar sin repuestos ➝
+            </a>
+        </div>
+
+        <!-- SECTION: MOTOCICLETAS -->
+        <section class="seccion-vehiculo">
+            <h2 class="titulo-categoria">🏍️ Motocicletas</h2>
+            <div class="cuadricula-repuestos">
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">🛢️</div>
+                    <span class="nombre-repuesto">Aceite 4T</span>
+                    <span class="precio-repuesto">Sintético 10W-40</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">⛓️</div>
+                    <span class="nombre-repuesto">Kit de Arrastre</span>
+                    <span class="precio-repuesto">Cadena Reforzada</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">🛑</div>
+                    <span class="nombre-repuesto">Pastillas Freno</span>
+                    <span class="precio-repuesto">Cerámica</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">🔋</div>
+                    <span class="nombre-repuesto">Batería Moto</span>
+                    <span class="precio-repuesto">Gel 12V</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION: AUTOMOVILES -->
+        <section class="seccion-vehiculo">
+            <h2 class="titulo-categoria">🚗 Automóviles</h2>
+            <div class="cuadricula-repuestos">
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">🌫️</div>
+                    <span class="nombre-repuesto">Filtro de Aire</span>
+                    <span class="precio-repuesto">Alto Flujo</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">🕯️</div>
+                    <span class="nombre-repuesto">Bujías Iridium</span>
+                    <span class="precio-repuesto">Pack x4</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">💿</div>
+                    <span class="nombre-repuesto">Discos de Freno</span>
+                    <span class="precio-repuesto">Ventilados</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">🔧</div>
+                    <span class="nombre-repuesto">Amortiguadores</span>
+                    <span class="precio-repuesto">Delanteros</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION: CAMIONES -->
+        <section class="seccion-vehiculo">
+            <h2 class="titulo-categoria">🚛 Vehículos Pesados</h2>
+            <div class="cuadricula-repuestos">
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">⚫</div>
+                    <span class="nombre-repuesto">Filtro Diesel</span>
+                    <span class="precio-repuesto">Separador Agua</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">💨</div>
+                    <span class="nombre-repuesto">Válvula de Aire</span>
+                    <span class="precio-repuesto">Sistema Frenos</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">🔩</div>
+                    <span class="nombre-repuesto">Muelles</span>
+                    <span class="precio-repuesto">Reforzados</span>
+                </a>
+                <a href="#modal-exito" class="tarjeta-repuesto">
+                    <div class="icono-repuesto">💡</div>
+                    <span class="nombre-repuesto">Kit Luces</span>
+                    <span class="precio-repuesto">LED 24V</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SUCCESS MODAL (Replaces the one in individual pages) -->
+    <div id="modal-exito" class="modal-fondo">
+        <div class="modal-contenido">
+            <div class="icono-exito">✓</div>
+            <h2 class="titulo-modal">¡Registro Exitoso!</h2>
+            <p class="mensaje-modal">La orden de reparación y los repuestos seleccionados han sido registrados
+                correctamente en el sistema.</p>
+            <a href="panel.html" class="btn-entendido">Entendido</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
