@@ -8,6 +8,11 @@
 * {
   font-family: var(--fuente);
   text-decoration: none;
+  
+}
+.panel {
+  height: calc(100vh - 80px);
+  overflow: auto;
 }
 
 /* ==================== SECCIÓN: GRÁFICA DE BARRAS SEMANALES ==================== */
