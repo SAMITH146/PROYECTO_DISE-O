@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/historial.css">
+    <title>Historial de Servicios | MotorDesk</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="../LogoI_mg/Logo_blanco.png" alt="Logo del taller MotorDesk" class="navbar__logo-img" />
+        </div>
+
+        <nav class="navbar__menu" aria-label="Menu principal">
+            <a href="agregar-clientes.html" class="navbar__menu-item">Agregar Clientes</a>
+            <a href="orden-en-curso.html" class="navbar__menu-item">Orden en curso</a>
+            <a href="historial.html" class="navbar__menu-item active">Historial</a>
+        </nav>
+
+        <div class="navbar__session">
+            <a href="../pages/panel.html" class="navbar__session-btn">
+                <img src="../LogoI_mg/flecha-izquierda.png" alt="Volver al panel" class="navbar__session-icon" />
+                Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="contenedor-historial">
+
+        <div class="encabezado-historial">
+            <h1 class="titulo-pagina">Historial de Servicios</h1>
+
+            <div class="filtros-busqueda">
+                <input type="text" placeholder="Buscar por cliente o ID..." class="input-busqueda">
+                <input type="date" class="input-busqueda" style="width: auto;">
+            </div>
+        </div>
+
+        <!-- LIST HEADER (Desktop only) -->
+        <div class="lista-historial">
+            <div class="item-historial cabecera-lista">
+                <div class="celda-historial">ID Orden</div>
+                <div class="celda-historial">Cliente</div>
+                <div class="celda-historial">Vehículo</div>
+                <div class="celda-historial">Servicio</div>
+                <div class="celda-historial">Fecha Salida</div>
+                <div class="celda-historial">Costo</div>
+                <div class="celda-historial">Estado</div>
+            </div>
+
+            <!-- ITEM 1 -->
+            <div class="item-historial">
+                <div class="celda-historial id-orden">#ORD-845</div>
+                <div class="celda-historial celda-cliente">Roberto Gómez</div>
+                <div class="celda-historial celda-vehiculo">Nissan Sentra 2018</div>
+                <div class="celda-historial celda-servicio">Afinación Mayor</div>
+                <div class="celda-historial celda-fecha">05/12/2023</div>
+                <div class="celda-historial celda-costo">$3,200</div>
+                <div class="celda-historial">
+                    <span class="badge-estado estado-entregado">Entregado</span>
+                </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="item-historial">
+                <div class="celda-historial id-orden">#ORD-842</div>
+                <div class="celda-historial celda-cliente">Laura Méndez</div>
+                <div class="celda-historial celda-vehiculo">Chevrolet Aveo 2020</div>
+                <div class="celda-historial celda-servicio">Cambio de Aceite</div>
+                <div class="celda-historial celda-fecha">03/12/2023</div>
+                <div class="celda-historial celda-costo">$950</div>
+                <div class="celda-historial">
+                    <span class="badge-estado estado-entregado">Entregado</span>
+                </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="item-historial">
+                <div class="celda-historial id-orden">#ORD-839</div>
+                <div class="celda-historial celda-cliente">Taller "La Flotilla"</div>
+                <div class="celda-historial celda-vehiculo">Ford F-150</div>
+                <div class="celda-historial celda-servicio">Frenos y Suspensión</div>
+                <div class="celda-historial celda-fecha">01/12/2023</div>
+                <div class="celda-historial celda-costo">$8,400</div>
+                <div class="celda-historial">
+                    <span class="badge-estado estado-entregado">Entregado</span>
+                </div>
+            </div>
+
+            <!-- ITEM 4 -->
+            <div class="item-historial">
+                <div class="celda-historial id-orden">#ORD-830</div>
+                <div class="celda-historial celda-cliente">Miguel Ángel</div>
+                <div class="celda-historial celda-vehiculo">VW Jetta A4</div>
+                <div class="celda-historial celda-servicio">Diagnóstico Eléctrico</div>
+                <div class="celda-historial celda-fecha">28/11/2023</div>
+                <div class="celda-historial celda-costo">$0</div>
+                <div class="celda-historial">
+                    <span class="badge-estado estado-cancelado">Cancelado</span>
+                </div>
+            </div>
+
+            <!-- ITEM 5 -->
+            <div class="item-historial">
+                <div class="celda-historial id-orden">#ORD-825</div>
+                <div class="celda-historial celda-cliente">Sofía Vergara</div>
+                <div class="celda-historial celda-vehiculo">Kia Rio 2019</div>
+                <div class="celda-historial celda-servicio">Mantenimiento 40k</div>
+                <div class="celda-historial celda-fecha">25/11/2023</div>
+                <div class="celda-historial celda-costo">$2,800</div>
+                <div class="celda-historial">
+                    <span class="badge-estado estado-entregado">Entregado</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

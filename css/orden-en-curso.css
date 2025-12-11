@@ -295,6 +295,42 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.btn-editar {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, var(--color-acento-primario), var(--color-acento-secundario));
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-right: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-editar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-imprimir {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-right: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-imprimir:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .detalle-grid {
