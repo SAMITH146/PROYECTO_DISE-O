@@ -1,7 +1,7 @@
 # Documentación del Proyecto: MotorDesk
 
 ## 1. Visión General
-**MotorDesk** es una interfaz web moderna diseñada para la gestión operativa de un taller mecánico. El proyecto se centra en ofrecer una experiencia de usuario fluida y visualmente atractiva, utilizando tecnologías web estándar (HTML5 y CSS3) sin dependencia de frameworks pesados de JavaScript para la lógica visual.
+**MotorDesk** esta es una interfaz web moderna diseñada para la gestión operativa de un taller mecánico. El proyecto esta enfocado en ofrecer una experiencia de usuario fluida y visualmente atractiva, utilizando tecnologías web estándar (HTML5 y CSS3) sin dependencia de frameworks pesados de JavaScript para la lógica visual.
 
 ## 2. Sistema de Diseño (Design System)
 
@@ -20,7 +20,7 @@ Las variables principales se encuentran en `css/variables.css`.
 
 ### Tipografía
 -   **Fuente:** 'Nunito', sans-serif (Google Fonts).
--   Se prioriza la legibilidad con altos contrastes de color blanco/gris sobre fondos oscuros.
+-   siendo prioridad la legibilidad con altos contrastes de color blanco/gris sobre fondos oscuros.
 
 ## 3. Estructura del Proyecto
 

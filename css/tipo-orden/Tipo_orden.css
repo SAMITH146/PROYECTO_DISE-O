@@ -1,5 +1,5 @@
 @import url(../panel.css);
-@import url(/Componentes-Layaut/Navbar.css);
+@import url(../../Componentes-Layaut/Navbar.css);
 
 /* Reverted to original layout */
 .main-container {

@@ -1,5 +1,5 @@
-@import url(/css/estilos.css);
-@import url(/Componentes-Layaut/Navbar.css);
+@import url(../css/estilos.css);
+@import url(Navbar.css);
 
 /* Reverted to original layout */
 .contenedor-diagnostico {
