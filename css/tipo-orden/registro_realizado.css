@@ -1,8 +1,5 @@
-/* ==================== MODAL DE CONFIRMACIÓN (Solo CSS) ==================== */
-/* 
- * Modal activado mediante CSS usando :target.
- * No requiere JavaScript para mostrar/ocultar.
- */
+/* ==================== MODAL DE CONFIRMACIÓN ==================== */
+
 #modal-registro {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -21,7 +18,6 @@
 
 /* Muestra el modal cuando es objetivo de la URL (ej: #modal-registro) */
 #modal-registro:target {
-    display: flex !important;
     opacity: 1;
 }
 
@@ -39,19 +35,7 @@
     animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ==================== ANIMACIÓN DE ENTRADA ==================== */
-/* Modal aparece con efecto de zoom elástico */
-@keyframes modalPop {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
 /* ==================== ICONO DE CONFIRMACIÓN ==================== */
 /* Círculo con check mark y gradiente de fondo */

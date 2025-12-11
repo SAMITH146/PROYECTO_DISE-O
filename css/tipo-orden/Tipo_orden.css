@@ -89,18 +89,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* Flecha indicadora (oculta por defecto) */
-.card-servicio::after {
-  content: '→';
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 1.5rem;
-  color: var(--color-acento-secundario);
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
-}
 
 /* Título del servicio */
 .card-servicio h2,

@@ -1,7 +1,6 @@
 /* ==================== BARRA DE NAVEGACIÓN PRINCIPAL ==================== */
 /* 
- * Navbar sticky que permanece fija en la parte superior al hacer scroll.
- * Se adapta a diferentes tamaños de pantalla mediante media queries.
+Navbar que permanece fija en la parte superior al hacer scroll.
  */
 .navbar {
   position: sticky;
